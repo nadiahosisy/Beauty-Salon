@@ -25,6 +25,7 @@ const Clients = () => {
             <img className="img-claient" src="./images/test1.webp"></img>
             <div className="name-client">EMILY HUNT</div>
           </div>
+          //
         </div>
         <div className="upper-div">
           <div className="star-raiting">
