@@ -2,25 +2,19 @@
   font-family: "Monserat-semi-bold";
   src: url("../assets/fonts/montserat/Montserrat-SemiBold.ttf");
 }
+
 @font-face {
   font-family: "Monserat-ligth";
   src: url("../assets/fonts/montserat/Montserrat-Light.ttf");
 }
-@font-face {
-  font-family: "Monserat-semi-bold";
-  src: url("../assets/fonts/montserat/Montserrat-SemiBold.ttf");
-}
-@font-face {
-  font-family: "Monserat-ligth";
-  src: url("../assets/fonts/montserat/Montserrat-Light.ttf");
-}
+
 @font-face {
   font-family: "Monserat-regular";
   src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
 }
 @font-face {
-  font-family: "Monserat-regular";
-  src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
+  font-family: "Monserat-medium";
+  src: url("../assets/fonts/montserat/Montserrat-Medium.ttf");
 }
 
 .main-services {
@@ -59,7 +53,7 @@
 
 .anchor {
   text-decoration: none;
-  font-family: Monserat, sans-serif;
+  font-family: Monserat-medium, sans-serif;
   font-size: 18px;
   text-align: left;
   color: #212121;
