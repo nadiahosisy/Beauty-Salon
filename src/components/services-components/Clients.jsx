@@ -20,6 +20,7 @@ const Clients = () => {
           imageSrc={"./images/test1.webp"}
           clientName={"EMILY HUNT"}
           position={"client-div-left"}
+          rating={"5"}
         />
         <RaitingCard
           stars={4}
@@ -29,6 +30,7 @@ const Clients = () => {
           imageSrc={"./images/test2.webp"}
           clientName={"MORGAN JONATHAN"}
           position={"client-div-right"}
+          rating={"4"}
         />
       </div>
     </div>

@@ -6,22 +6,16 @@
   font-family: "Monserat-ligth";
   src: url("../assets/fonts/montserat/Montserrat-Light.ttf");
 }
+
 @font-face {
-  font-family: "Monserat-semi-bold";
-  src: url("../assets/fonts/montserat/Montserrat-SemiBold.ttf");
-}
-@font-face {
-  font-family: "Monserat-ligth";
-  src: url("../assets/fonts/montserat/Montserrat-Light.ttf");
+  font-family: "Monserat-medium";
+  src: url("../assets/fonts/montserat/Montserrat-Medium.ttf");
 }
 @font-face {
   font-family: "Monserat-regular";
   src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
 }
-@font-face {
-  font-family: "Monserat-regular";
-  src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
-}
+
 .header-client-div {
   display: flex;
   margin-left: 23rem;
@@ -84,8 +78,15 @@
 }
 .name-client {
   text-decoration: none;
-  font-family: Monserat, sans-serif;
+  font-family: Monserat-medium, sans-serif;
   font-size: 18px;
   text-align: left;
   color: #212121;
+}
+.name-client-fives {
+  text-decoration: none;
+  font-family: Monserat-medium, sans-serif;
+  font-size: 18px;
+  text-align: left;
+  color: #ee6043;
 }
