@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Monserat-semi-bold";
+  src: url("../assets/fonts/montserat/Montserrat-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Monserat-ligth";
+  src: url("../assets/fonts/montserat/Montserrat-Light.ttf");
+}
+@font-face {
+  font-family: "Monserat-regular";
+  src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Monserat-regular";
+  src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
+}
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 280px;
+  font-family: Monserat-ligth, sans-serif;
+  align-items: center;
+  height: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.left-navbar-name-div {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.left-navbar-name {
+  font-family: Monserat-regular;
+  font-size: 18px;
+  color: #212121;
+  max-width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  flex-grow: 0;
+  flex-shrink: 0;
+  gap: 50px;
+}
+
+.navLink {
+  text-decoration: none;
+}

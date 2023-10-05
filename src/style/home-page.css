@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Monserat-semi-bold";
+  src: url("../assets/fonts/montserat/Montserrat-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Monserat-ligth";
+  src: url("../assets/fonts/montserat/Montserrat-Light.ttf");
+}
+
+.home-page-jumba {
+  background-color: #fff7f6;
+  max-height: 630px;
+  display: flex;
+  justify-content: center;
+}
+.home-page-inside-jumba {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 1140px;
+  height: 630px;
+  align-content: center;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: #fff7f6;
+}
+
+.jumba-left {
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.jumba-left h1 {
+  font-size: 60px;
+  font-family: Monserat-semi-bold, sans-serif;
+  color: #212121;
+}
+.jumba-left-p {
+  font-size: 18px;
+  font-family: Monserat-ligth, sans-serif;
+}
+
+.jumba-right-image-div {
+  width: 480px;
+  height: 480px;
+}
+
+.jumba-right-image {
+  border-radius: 5px;
+}
