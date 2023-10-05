@@ -28,25 +28,9 @@ const Clients = () => {
             "Beauty-Salon-Nadia is my go-to place for all my beauty needs. I love the relaxing atmosphere and the incredible services they offer."
           }
           imageSrc={"./images/test2.webp"}
-          clientName={"EMILY HUNT"}
-          position={"client-div-left"}
+          clientName={"MORGAN JONATHAN"}
+          position={"client-div-right"}
         />
-
-        <div className="star-raiting">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <div className="upper-div-text">
-            Beauty-Salon-Nadia is my go-to place for all my beauty needs. I love
-            the relaxing atmosphere and the incredible services they offer.
-          </div>
-          <div className="client-div-right">
-            <img className="img-claient" src="./images/test2.webp"></img>
-            <div className="name-client">MORGAN JONATHAN</div>
-          </div>
-        </div>
       </div>
     </div>
   );
