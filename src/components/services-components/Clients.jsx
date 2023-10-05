@@ -15,13 +15,12 @@ const Clients = () => {
         <RaitingCard
           stars={5}
           text={
-            " I've had my nails done at Beauty-Salon-Nadia multiple times and every time I leave with gorgeous nails that last for weeks. Their nail artists are true professionals!"
+            "I've had my nails done at Beauty-Salon-Nadia multiple times and every time I leave with gorgeous nails that last for weeks. Their nail artists are true professionals!"
           }
           imageSrc={"./images/test1.webp"}
           clientName={"EMILY HUNT"}
           position={"client-div-left"}
         />
-
         <RaitingCard
           stars={4}
           text={

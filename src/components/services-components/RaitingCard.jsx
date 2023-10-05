@@ -12,7 +12,7 @@ const RaitingCard = ({ stars, text, imageSrc, clientName, position }) => {
       ))}
       <div className="upper-div-text">{text}</div>
       <div className={clientDivClass}>
-        <img className="img-claient" src={imageSrc} alt={clientName}></img>
+        <img className="img-client" src={imageSrc} alt={clientName}></img>
         <div className="name-client">{clientName}</div>
       </div>
     </div>

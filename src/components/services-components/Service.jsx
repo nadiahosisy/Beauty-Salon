@@ -1,5 +1,5 @@
 import React from "react";
-import "../../style/upper-services-page.css"; // Import your CSS file for styling
+import "../../style/upper-services-page.css";
 
 const Service = ({ imageSrc, title, description }) => {
   return (

@@ -45,7 +45,7 @@
 }
 .upper-div {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -58,12 +58,12 @@
   padding-top: 10px;
   text-align: left;
 }
-.star-raiting {
+.star-rating {
   text-align: left;
   padding-top: 5rem;
   margin-left: 2.5rem;
 }
-.img-claient {
+.img-client {
   width: 33px;
   height: 33px;
   border-radius: 50%;
