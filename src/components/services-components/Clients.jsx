@@ -12,26 +12,50 @@ const Clients = () => {
       </div>
 
       <div className="upper-div">
-        <RaitingCard
-          stars={5}
-          text={
-            "I've had my nails done at Beauty-Salon-Nadia multiple times and every time I leave with gorgeous nails that last for weeks. Their nail artists are true professionals!"
-          }
-          imageSrc={"./images/test1.webp"}
-          clientName={"EMILY HUNT"}
-          position={"client-div-left"}
-          rating={"5"}
-        />
-        <RaitingCard
-          stars={4}
-          text={
-            "Beauty-Salon-Nadia is my go-to place for all my beauty needs. I love the relaxing atmosphere and the incredible services they offer."
-          }
-          imageSrc={"./images/test2.webp"}
-          clientName={"MORGAN JONATHAN"}
-          position={"client-div-right"}
-          rating={"4"}
-        />
+        <div>
+          <RaitingCard
+            stars={5}
+            text={
+              "I've had my nails done at Beauty-Salon-Nadia multiple times and every time I leave with gorgeous nails that last for weeks. Their nail artists are true professionals!"
+            }
+            imageSrc={"./images/test1.webp"}
+            clientName={"EMILY HUNT"}
+            position={"client-div-left"}
+            rating={"5"}
+          />
+          <RaitingCard
+            stars={4}
+            text={
+              "Beauty-Salon-Nadia is my go-to place for all my beauty needs. I love the relaxing atmosphere and the incredible services they offer."
+            }
+            imageSrc={"./images/test2.webp"}
+            clientName={"MORGAN JONATHAN"}
+            position={"client-div-right"}
+            rating={"4"}
+          />
+        </div>
+        <div>
+          <RaitingCard
+            stars={4}
+            text={
+              "Beauty-Salon-Nadia is my go-to place for all my beauty needs. I love the relaxing atmosphere and the incredible services they offer."
+            }
+            imageSrc={"./images/test2.webp"}
+            clientName={"MORGAN JONATHAN"}
+            position={"client-div-right"}
+            rating={"4"}
+          />
+          <RaitingCard
+            stars={4}
+            text={
+              "Beauty-Salon-Nadia is my go-to place for all my beauty needs. I love the relaxing atmosphere and the incredible services they offer."
+            }
+            imageSrc={"./images/test2.webp"}
+            clientName={"MORGAN JONATHAN"}
+            position={"client-div-right"}
+            rating={"4"}
+          />
+        </div>
       </div>
     </div>
   );
