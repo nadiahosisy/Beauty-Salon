@@ -96,10 +96,11 @@
   font-weight: 500;
   border-radius: 6px 6px 6px 6px;
   padding: 10px 40px 10px 40px;
-  font-size: 14px;
-  font-weight: 500;
   font-family: Monserat-ligth, sans-serif;
   background-color: #ee6043;
-  border-color: #ee6043;
+  border: none;
   color: #ffffff;
+}
+.send-btn-div {
+  margin-top: -1rem;
 }

@@ -19,7 +19,7 @@ const Subscribe = () => {
             placeholder="Email Address"
           />
         </div>
-        <div>
+        <div className="send-btn-div">
           <button className="send-btn">
             <span>Send</span>
           </button>
