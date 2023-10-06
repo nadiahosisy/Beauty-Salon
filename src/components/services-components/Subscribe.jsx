@@ -24,6 +24,22 @@ const Subscribe = () => {
             <span>Send</span>
           </button>
         </div>
+        <footer>
+          <div className="social-icons">
+            <a className="icons-subscribe" href="https://www.facebook.com">
+              <i className="fab fa-facebook"></i>
+            </a>
+            <a className="icons-subscribe" href="https://www.instagram.com">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a className="icons-subscribe" href="https://www.twitter.com">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a className="icons-subscribe" href="https://www.youtube.com">
+              <i className="fab fa-youtube"></i>
+            </a>
+          </div>
+        </footer>
       </div>
     </div>
   );

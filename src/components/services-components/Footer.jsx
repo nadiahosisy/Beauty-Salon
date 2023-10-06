@@ -1,7 +1,24 @@
 import React from "react";
 
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <footer>
+      <div className="social-icons">
+        <a href="https://www.facebook.com">
+          <i className="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com">
+          <i className="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.twitter.com">
+          <i className="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.youtube.com">
+          <i className="fab fa-youtube"></i>
+        </a>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
