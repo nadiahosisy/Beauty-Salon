@@ -28,7 +28,7 @@ const Clients = () => {
             text={
               "Beauty-Salon-Nadia is my go-to place for all my beauty needs. I love the relaxing atmosphere and the incredible services they offer."
             }
-            imageSrc={"./images/test2.webp"}
+            imageSrc={"./images/test4.webp"}
             clientName={"JULIE ROBINSON"}
             position={"client-div-right"}
             rating={"4"}
@@ -50,7 +50,7 @@ const Clients = () => {
             text={
               "I was looking for a new beauty salon and I'm so glad I found Beauty-Salon-Nadia. Their staff is exceptional and the services are top-notch!"
             }
-            imageSrc={"./images/test2.webp"}
+            imageSrc={"./images/test3.webp"}
             clientName={"JAMES BROOK"}
             position={"client-div-right"}
             rating={"4"}
