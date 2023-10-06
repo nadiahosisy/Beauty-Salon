@@ -29,7 +29,6 @@ const Services = () => {
         />
       </div>
       <Clients />
-      <Subscribe />
     </div>
   );
 };

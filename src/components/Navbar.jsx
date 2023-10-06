@@ -11,7 +11,7 @@ const Navbar = () => {
         <ul className="nav-links">
           <li>
             {/* <NavLink to="/" activeClassName="active" exact> */}
-            <NavLink style={{ textDecoration: "none" }} to="/home">
+            <NavLink style={{ textDecoration: "none" }} to="/Home">
               Home
             </NavLink>
           </li>
@@ -21,7 +21,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink style={{ textDecoration: "none" }} to="/home">
+            <NavLink style={{ textDecoration: "none" }} to="/About">
               About
             </NavLink>
           </li>

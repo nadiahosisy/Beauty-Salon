@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { SharedLayout } from "./components";
-import { NotFound, Home, Services } from "./pages";
+import { NotFound, Home, Services, About } from "./pages";
 
 const routes = [
   {
@@ -9,20 +9,21 @@ const routes = [
     children: [
       {
         index: true,
-        path: "/home",
+        path: "/Home",
         element: <Home />,
       },
       {
         path: "/Services",
         element: <Services />,
       },
+
+      {
+        path: "/About",
+        element: <About />,
+      },
       // {
-      //   path: "/catalog/:shoeId",
-      //   element: <ShoeDetails />,
-      // },
-      // {
-      //   path: "/addproduct",
-      //   element: <AddProduct />,
+      //   path: "/Contact",
+      //   element: <Contact />,
       // },
       {
         path: "*",
