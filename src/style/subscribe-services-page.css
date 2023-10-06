@@ -99,6 +99,7 @@
   font-family: Monserat-ligth, sans-serif;
   background-color: #ee6043;
   border: none;
+  cursor: pointer;
   color: #ffffff;
 }
 .send-btn-div {
