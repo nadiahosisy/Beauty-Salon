@@ -19,12 +19,12 @@
 
 .main-services {
   text-align: center;
-  padding: 50px 20px;
+  padding-top: 4rem;
 }
 
 .heading-title {
   display: flex;
-  margin-left: 24rem;
+  margin-left: 25rem;
   margin-bottom: 10px;
   font-size: 45px;
   font-family: Monserat-ligth, sans-serif;
