@@ -19,8 +19,10 @@ const Subscribe = () => {
             placeholder="Email Address"
           />
         </div>
-        <div className="button-subscribe-div">
-          <button className="send-btn">Send</button>
+        <div>
+          <button className="send-btn">
+            <span>Send</span>
+          </button>
         </div>
       </div>
     </div>
