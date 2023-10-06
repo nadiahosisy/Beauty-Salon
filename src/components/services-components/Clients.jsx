@@ -4,7 +4,7 @@ import RaitingCard from "./RaitingCard";
 const Clients = () => {
   return (
     <div className="client-div-container">
-      <div>
+      <div className="clients-header">
         <h2 className="header-client-div">What our clients say?</h2>
         <p className="paragraph-client">
           Hear What Our Clients Have to Say About Us

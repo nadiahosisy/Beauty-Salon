@@ -14,18 +14,31 @@
   font-family: "Monserat-regular";
   src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
 }
+.main-navbar-container {
+  display: block;
+  margin-left: 6%;
+  margin-right: 4%;
+  justify-content: center;
+  align-self: center;
+}
 .navbar-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  gap: 280px;
+  justify-content: space-around;
   font-family: Monserat-ligth, sans-serif;
   align-items: center;
   height: 70px;
   padding-left: 20px;
   padding-right: 20px;
 }
-
+.navbar-container-div-left {
+  display: flex;
+  flex-direction: row;
+}
+.navbar-container-div-right {
+  display: flex;
+  flex-direction: row;
+}
 .left-navbar-name-div {
   flex-grow: 0;
   flex-shrink: 0;
@@ -37,7 +50,12 @@
   color: #212121;
   max-width: 100%;
 }
-
+.navbar {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  margin-right: 3rem;
+}
 .nav-links {
   display: flex;
   flex-direction: row;

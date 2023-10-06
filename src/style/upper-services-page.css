@@ -18,16 +18,32 @@
 }
 
 .main-services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   padding-top: 4rem;
 }
-
+.heading-services {
+  display: flex;
+  flex-direction: column;
+  max-width: 2024px;
+  margin-left: 6%;
+  margin-right: 4%;
+}
 .heading-title {
   display: flex;
-  margin-left: 25rem;
-  margin-bottom: 10px;
+  margin-right: 54rem;
   font-size: 45px;
   font-family: Monserat-ligth, sans-serif;
+}
+.heading-container {
+  display: flex;
+  margin-bottom: 10px;
+  max-width: 1200px;
+  justify-content: start;
+  margin: 0 auto;
 }
 
 .main-container {
