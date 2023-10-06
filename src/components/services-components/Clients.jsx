@@ -36,7 +36,7 @@ const Clients = () => {
         </div>
         <div>
           <RaitingCard
-            stars={4}
+            stars={5}
             text={
               "I had my makeup done for a special event and I was blown away by how amazing it looked. The makeup artist at Beauty-Salon-Nadia really knows their craft!"
             }
@@ -46,7 +46,7 @@ const Clients = () => {
             rating={"4"}
           />
           <RaitingCard
-            stars={4}
+            stars={5}
             text={
               "I was looking for a new beauty salon and I'm so glad I found Beauty-Salon-Nadia. Their staff is exceptional and the services are top-notch!"
             }

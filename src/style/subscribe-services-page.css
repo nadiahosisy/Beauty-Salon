@@ -18,11 +18,23 @@
 }
 .main-subscribe-div {
   display: flex;
-  justify-content: center;
+  justify-content: normal;
   align-items: center;
+  justify-content: flex-start;
   flex-direction: column;
   background-color: #fff7f6;
   margin-top: 8rem;
   width: 101%;
   height: 25rem;
+}
+.center-subscribe-div {
+  display: flex;
+  flex-direction: column;
+  line-height: 2.2;
+}
+.header-subscribe {
+  display: flex;
+  font-size: 45px;
+  margin-top: 5rem;
+  font-family: Monserat-ligth, sans-serif;
 }
