@@ -26,7 +26,7 @@ const Clients = () => {
           <RaitingCard
             stars={4}
             text={
-              "Beauty-Salon-Nadia is my go-to place for all my beauty needs. I love the relaxing atmosphere and the incredible services they offer."
+              "I had my makeup done for a special event and I was blown away by how amazing it looked. The makeup artist at Beauty-Salon-Nadia really knows their craft!"
             }
             imageSrc={"./images/test4.webp"}
             clientName={"JULIE ROBINSON"}
@@ -38,7 +38,7 @@ const Clients = () => {
           <RaitingCard
             stars={5}
             text={
-              "I had my makeup done for a special event and I was blown away by how amazing it looked. The makeup artist at Beauty-Salon-Nadia really knows their craft!"
+              "Beauty-Salon-Nadia is my go-to place for all my beauty needs. I love the relaxing atmosphere and the incredible services they offer."
             }
             imageSrc={"./images/test2.webp"}
             clientName={"MORGAN JONATHAN"}
