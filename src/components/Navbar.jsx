@@ -37,7 +37,14 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div> Signup/login</div>
+          <div className="nav-btn-div">
+            <div className="signup-div">
+              <button className="btn-signup">Sign Up</button>
+            </div>
+            <div className="login-div">
+              <button className="btn-login">Log In</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

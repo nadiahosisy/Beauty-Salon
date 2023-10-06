@@ -52,8 +52,8 @@
 }
 .navbar {
   display: flex;
-  justify-content: end;
-  align-items: end;
+  justify-content: center;
+  align-items: center;
   margin-right: 3rem;
 }
 .nav-links {
@@ -67,4 +67,31 @@
 
 .navLink {
   text-decoration: none;
+}
+.nav-btn-div {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+.btn-signup {
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px 6px 6px 6px;
+  padding: 10px 40px 10px 40px;
+  font-family: Monserat-ligth, sans-serif;
+  background-color: #ee6043;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+.btn-login {
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px 6px 6px 6px;
+  padding: 10px 40px 10px 40px;
+  font-family: Monserat-ligth, sans-serif;
+  background-color: #ee6043;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
 }
