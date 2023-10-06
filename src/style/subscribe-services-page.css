@@ -105,12 +105,12 @@
   margin-top: -1rem;
 }
 .icons-subscribe {
-  font-size: 25px;
+  font-size: 18px;
   color: #979797;
   font-family: sans-serif;
   background: #fff7f6;
   line-height: 2px;
-  gap: 10px;
+
   width: 20px;
   height: 10px;
 }
@@ -119,5 +119,5 @@
   margin-top: 7rem;
   margin-right: 60rem;
   align-items: end;
-  gap: 3rem;
+  gap: 1rem;
 }
