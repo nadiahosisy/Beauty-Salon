@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Monserat-semi-bold";
+  src: url("../assets/fonts/montserat/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Monserat-ligth";
+  src: url("../assets/fonts/montserat/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: "Monserat-regular";
+  src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Monserat-medium";
+  src: url("../assets/fonts/montserat/Montserrat-Medium.ttf");
+}
+.main-subscribe-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff7f6;
+  margin-top: 8rem;
+  width: 101%;
+  height: 25rem;
+}
