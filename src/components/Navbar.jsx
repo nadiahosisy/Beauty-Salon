@@ -2,6 +2,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const navStyle = {
+    textDecoration: "none",
+    fontFamily: "Monserat-ligth, sans-serif",
+    color: "#212121",
+    fontSize: "18px",
+  };
   return (
     <div className="main-navbar-container">
       <div className="navbar-container">
@@ -15,17 +21,17 @@ const Navbar = () => {
             <ul className="nav-links">
               <li>
                 {/* <NavLink to="/" activeClassName="active" exact> */}
-                <NavLink style={{ textDecoration: "none" }} to="/home">
+                <NavLink style={navStyle} to="/home">
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink style={{ textDecoration: "none" }} to="/Services">
+                <NavLink style={navStyle} to="/Services">
                   Services
                 </NavLink>
               </li>
               <li>
-                <NavLink style={{ textDecoration: "none" }} to="/About">
+                <NavLink style={navStyle} to="/About">
                   About
                 </NavLink>
               </li>
