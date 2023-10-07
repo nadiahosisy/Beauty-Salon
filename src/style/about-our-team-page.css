@@ -19,10 +19,8 @@
   display: flex;
   max-width: 1080px;
   margin-left: 0 auto;
-
   flex-direction: row;
 }
-
 .our-team-main-div {
   display: flex;
   justify-content: center;
@@ -78,7 +76,6 @@
 .container-text-div {
   -display: flex;
   justify-content: center;
-
   margin-left: 0px;
   padding-top: 0px;
   text-align: left;
@@ -87,11 +84,11 @@
   padding-left: 0px;
 }
 .founder-stylist-div {
-  color: #121212;
-  margin-left: 1rem;
+  color: #212121;
+  margin-left: 2rem;
   margin-bottom: 20px;
   font-size: 18px;
-  font-family: Monserat-ligth, sans-serif;
+  font-family: Monserat-regular, sans-serif;
 }
 .left-text-div {
   display: flex;
