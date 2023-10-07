@@ -12,7 +12,18 @@ const OurTeam = () => {
       </div>
       <div className="description-main-div">
         <div className="left-description-div">
-          {/* <img src="./images/beauty-nadia.jpg"></img> */}
+          <img className="left-img" src="./images/beauty-nadia.jpg"></img>
+          <div className="container-text-div">
+            <h3 className="nadia-img">Nadia</h3>
+            <div className="founder-stylist-div">
+              <h3 className="founder-stylist-div">Founder & Master Stylist</h3>
+            </div>
+            <div className="left-text-div">
+              Nadia’s expertise in hair styling and makeup artistry has made her
+              the most sought-after beauty professional in town. Her warmth and
+              passion for beauty radiate in every service she provides.
+            </div>
+          </div>
         </div>
         <div className="right-description-div"></div>
       </div>
