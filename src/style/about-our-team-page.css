@@ -76,12 +76,18 @@
   font-family: Monserat-ligth, sans-serif;
 }
 .container-text-div {
-  display: flex;
-  max-width: 50%;
+  -display: flex;
+  justify-content: center;
+  transition: 0.3s;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
   text-align: left;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
 }
 .founder-stylist-div {
   color: #121212;
