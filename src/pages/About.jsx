@@ -22,8 +22,9 @@ const About = () => {
         </div>
         <div className="image-container">
           <img
-            className="left-image"
+            className="right-image"
             src="./images/beauty-Salon-test.webp"
+            alt="Beauty Salon"
           ></img>
         </div>
       </div>
