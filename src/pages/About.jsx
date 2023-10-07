@@ -18,8 +18,8 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div>
-        <img></img>
+      <div className="image-container">
+        <img className="left-image"></img>
       </div>
     </div>
   );
