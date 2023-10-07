@@ -16,20 +16,22 @@
   src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
 }
 .our-team-main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #fff7f6;
   width: 100%;
+
   margin-top: 2rem;
 }
 .our-team-div {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  margin-right: 23rem;
   flex-basis: auto;
   flex-grow: 0;
-  margin-left: 26rem;
+  max-width: 100%;
   gap: 10px;
-  transition: 0.3s;
 }
 .our-team {
   display: flex;
