@@ -15,6 +15,13 @@
   font-family: "Monserat-regular";
   src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
 }
+.description-main-div {
+  display: flex;
+  max-width: 1080px;
+  margin-left: 0 auto;
+
+  flex-direction: row;
+}
 
 .our-team-main-div {
   display: flex;
@@ -50,20 +57,11 @@
   padding-top: 10px;
   text-align: left;
 }
-.description-main-div {
-  display: flex;
-  max-width: 2000px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
+
 .left-description-div {
   display: flex;
-  margin-right: 52rem;
-  height: auto;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
+  justify-content: start;
+  align-items: start;
 }
 .left-img {
   width: 15rem;
@@ -73,26 +71,31 @@
 .nadia-img {
   display: flex;
   color: #121212;
+  margin-left: 2rem;
   font-size: 30px;
   font-family: Monserat-ligth, sans-serif;
 }
 .container-text-div {
   display: flex;
+  max-width: 50%;
+  text-align: left;
   flex-direction: column;
   align-items: start;
   justify-content: start;
 }
 .founder-stylist-div {
   color: #121212;
+  margin-left: 1rem;
+  margin-bottom: 5px;
   font-size: 18px;
   font-family: Monserat-ligth, sans-serif;
 }
 .left-text-div {
   display: flex;
-
+  padding-left: 30px;
   font-family: Monserat-ligth, sans-serif;
   color: #4d4d4d;
   font-size: 18px;
-  max-width: 40%;
+  max-width: 50%;
   line-height: 1.7;
 }
