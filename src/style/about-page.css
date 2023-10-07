@@ -31,3 +31,16 @@
   max-width: 1200px;
   margin-left: 0 auto;
 }
+.mission-statement-container {
+  font-family: Monserat-ligth, sans-serif;
+  color: #4d4d4d;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 10px;
+}

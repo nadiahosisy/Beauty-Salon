@@ -6,7 +6,7 @@ const About = () => {
       <div className="main-mission-statement-div">
         <div className="mission-statement-div">
           <div className="mission-statement-container">
-            <h2 className="header-mission-statement"></h2>
+            <h2 className="header-mission-statement">Mission statement</h2>
             <div>
               <div className="text-mission-statement">
                 At Beauty-Salon-Nadia, our mission is to empower every
