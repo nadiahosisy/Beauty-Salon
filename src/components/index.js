@@ -5,6 +5,7 @@ import Service from "./services-components/Service";
 import RaitingCard from "./services-components/RaitingCard";
 import Subscribe from "./services-components/Subscribe";
 import Footer from "./services-components/Footer";
+import OurTeam from "./services-components/about-component/OurTeam";
 
 export {
   SharedLayout,
@@ -14,4 +15,5 @@ export {
   RaitingCard,
   Subscribe,
   Footer,
+  OurTeam,
 };

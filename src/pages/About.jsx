@@ -1,4 +1,5 @@
 import React from "react";
+import { OurTeam } from "../components";
 
 const About = () => {
   return (
@@ -28,6 +29,7 @@ const About = () => {
           ></img>
         </div>
       </div>
+      <OurTeam />
     </div>
   );
 };
