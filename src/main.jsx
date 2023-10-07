@@ -8,6 +8,7 @@ import "./style/upper-services-page.css";
 import "./style/inner-services-page.css";
 import "./style/subscribe-services-page.css";
 import "./style/about-page.css";
+import "./style/about-our-team-page.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

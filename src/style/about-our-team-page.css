@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Monserat-semi-bold";
+  src: url("../assets/fonts/montserat/Montserrat-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Monserat-ligth";
+  src: url("../assets/fonts/montserat/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: "Monserat-medium";
+  src: url("../assets/fonts/montserat/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "Monserat-regular";
+  src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
+}
+.our-team-main-div {
+  background-color: #fff7f6;
+  width: 100%;
+  margin-top: 2rem;
+}
+.our-team-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex-basis: auto;
+  flex-grow: 0;
+  margin-left: 26rem;
+  gap: 10px;
+  transition: 0.3s;
+}
+.our-team {
+  display: flex;
+  color: #121212;
+  font-size: 45px;
+  font-family: Monserat-ligth, sans-serif;
+}
+.our-team-text {
+  font-family: Monserat-ligth, sans-serif;
+  color: #4d4d4d;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  text-align: left;
+}
