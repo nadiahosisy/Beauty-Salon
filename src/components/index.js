@@ -7,6 +7,7 @@ import Subscribe from "./services-components/Subscribe";
 import Footer from "./services-components/Footer";
 import OurTeam from "./services-components/about-component/OurTeam";
 import TitleClients from "./services-components/TitleClients";
+import TeamMember from "./services-components/about-component/TeamMember";
 
 export {
   SharedLayout,
@@ -18,4 +19,5 @@ export {
   Footer,
   OurTeam,
   TitleClients,
+  TeamMember,
 };
