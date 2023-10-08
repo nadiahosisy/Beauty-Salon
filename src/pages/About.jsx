@@ -1,5 +1,6 @@
 import React from "react";
 import { OurTeam } from "../components";
+
 import Clients from "../components/services-components/Clients";
 
 const About = () => {
@@ -31,7 +32,10 @@ const About = () => {
         </div>
       </div>
       <OurTeam />
-      <Clients />
+      <Clients
+        h2={"Client Testimonials"}
+        p={"Hear What Our Clients Have to Say About Us"}
+      />
     </div>
   );
 };

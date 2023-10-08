@@ -1,16 +1,11 @@
 import React from "react";
 import RaitingCard from "./RaitingCard";
+import TitleClients from "./TitleClients";
 
-const Clients = () => {
+const Clients = ({ h2, p }) => {
   return (
     <div className="client-div-container">
-      <div className="clients-header">
-        <h2 className="header-client-div">What our clients say?</h2>
-        <p className="paragraph-client">
-          Hear What Our Clients Have to Say About Us
-        </p>
-      </div>
-
+      <TitleClients h2={h2} p={p} />
       <div className="upper-div">
         <div>
           <RaitingCard

@@ -34,7 +34,10 @@ const Services = () => {
         </div>
       </div>
 
-      <Clients />
+      <Clients
+        h2={"What our clients say?"}
+        p={"Hear What Our Clients Have to Say About Us"}
+      />
     </div>
   );
 };
