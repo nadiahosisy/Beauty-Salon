@@ -15,8 +15,12 @@ const InnerIcons = () => {
       <div>
         <img src="../images/third-logo-ipsum.webp"></img>
       </div>
-      <div></div>
-      <div></div>
+      <div>
+        <img src="../images/fourth-logo-ipsum.webp"></img>
+      </div>
+      <div>
+        <img src="../images/last-logo-ipsum.webp"></img>
+      </div>
     </div>
   );
 };
