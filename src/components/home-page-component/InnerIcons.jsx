@@ -3,8 +3,8 @@ import React from "react";
 const InnerIcons = () => {
   return (
     <div className="main-div-icons">
-      <div>
-        <h5>Featured In</h5>
+      <div className="header-featured-in-div">
+        <h5 className="header-featured-in">Featured In</h5>
       </div>
       <div>
         <img src="../images/Logo-ipsum.webp"></img>

@@ -1,4 +1,12 @@
 .main-div-icons {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 9rem;
+}
+
+.main-div-icons img {
+  width: 8rem; /* Set the desired width for your images */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 3rem; /* Optional: Add some spacing between the images */
 }
