@@ -24,7 +24,7 @@ const OurTeam = () => {
         </div>
         <div className="right-description-div">
           <TeamMember
-            img={"./images/beauty-nadia.jpg"}
+            img={"./images/Emma.webp"}
             name={"Emma"}
             job={"Nail Artist"}
             text={
