@@ -17,10 +17,9 @@
 }
 .description-main-div {
   display: flex;
-  max-width: 1180px;
-  margin-left: 0;
-  justify-content: center;
-  align-items: center;
+  max-width: 1200px;
+  margin-left: 8rem;
+  margin-bottom: 5rem;
   flex-direction: row;
 }
 .our-team-main-div {
