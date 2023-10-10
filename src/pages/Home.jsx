@@ -14,7 +14,7 @@ const Home = () => {
           </div>
           <div className="btn-all-services-div">
             <a className="anchor-all-services">
-              <span></span>
+              <span className="span-all-services">View All Services</span>
             </a>
           </div>
         </div>
