@@ -18,7 +18,7 @@ const OurTeam = () => {
             name={"Nadia"}
             job={"Founder & Master Stylist"}
             text={
-              "Nadia’s expertise in hair styling and makeup artistry has made her the most sought-after beauty professional in town. Her warmth and passion for beauty radiate in every service she provides."
+              "Nadia’s mastery in hair styling and makeup artistry has established her as a highly coveted beauty expert in our community. Her genuine kindness and enthusiasm for the world of beauty shine through in every treatment she offers."
             }
           />
         </div>

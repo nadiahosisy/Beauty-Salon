@@ -17,8 +17,10 @@
 }
 .description-main-div {
   display: flex;
-  max-width: 1080px;
-  margin-left: 0 auto;
+  max-width: 1180px;
+  margin-left: 0;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
 }
 .our-team-main-div {
@@ -76,9 +78,9 @@
 .container-text-div {
   -display: flex;
   justify-content: center;
-  margin-left: 0px;
-  padding-top: 0px;
   text-align: left;
+  max-width: 200rem;
+  max-height: 10rem;
   padding-right: 0px;
   padding-bottom: 0px;
   padding-left: 0px;
@@ -103,4 +105,5 @@
   display: flex;
   justify-content: start;
   align-items: start;
+  margin-left: 2rem;
 }
