@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   flex-basis: auto;
-  margin-left: 10rem;
+  margin-left: 16rem;
   justify-content: flex-start;
   gap: 30px;
 }
@@ -49,10 +49,12 @@
 
 .jumba-right-image-div {
   width: 480px;
-  margin-left: 30px;
   height: 480px;
 }
 
 .jumba-right-image {
   border-radius: 5px;
+}
+.jumba-right {
+  margin-right: 10rem;
 }
