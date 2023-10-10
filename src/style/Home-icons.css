@@ -1,12 +1,42 @@
+@font-face {
+  font-family: "Monserat-semi-bold";
+  src: url("../assets/fonts/montserat/Montserrat-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Monserat-ligth";
+  src: url("../assets/fonts/montserat/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: "Monserat-medium";
+  src: url("../assets/fonts/montserat/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "Monserat-regular";
+  src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
+}
 .main-div-icons {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 9rem;
+  margin-left: 4rem;
 }
 
 .main-div-icons img {
-  width: 8rem; /* Set the desired width for your images */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 3rem; /* Optional: Add some spacing between the images */
+  width: 9rem;
+  height: auto;
+  margin-right: 3rem;
+}
+.header-featured-in-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3rem;
+}
+.header-featured-in {
+  color: #212121;
+  font-family: Monserat-medium, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
 }
