@@ -33,7 +33,7 @@
 .jumba-left {
   display: flex;
   flex-direction: column;
-  flex-basis: auto;
+
   margin-left: 16rem;
   justify-content: flex-start;
   gap: 30px;
@@ -46,8 +46,8 @@
 }
 .jumba-left-p {
   font-size: 18px;
-  line-height: 1.6rem;
-  width: 550px;
+  line-height: 1.6;
+  width: 600px;
   font-family: Monserat-ligth, sans-serif;
 }
 
