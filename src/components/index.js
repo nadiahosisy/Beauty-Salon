@@ -8,6 +8,7 @@ import Footer from "./services-components/Footer";
 import OurTeam from "./services-components/about-component/OurTeam";
 import TitleClients from "./services-components/TitleClients";
 import TeamMember from "./services-components/about-component/TeamMember";
+import InnerIcons from "./home-page-component/InnerIcons";
 
 export {
   SharedLayout,
@@ -20,4 +21,5 @@ export {
   OurTeam,
   TitleClients,
   TeamMember,
+  InnerIcons,
 };
