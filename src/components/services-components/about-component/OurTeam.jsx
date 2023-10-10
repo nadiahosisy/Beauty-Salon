@@ -25,10 +25,10 @@ const OurTeam = () => {
         <div className="right-description-div">
           <TeamMember
             img={"./images/beauty-nadia.jpg"}
-            name={"Nadia"}
-            job={"Founder & Master Stylist"}
+            name={"Emma"}
+            job={"Nail Artist"}
             text={
-              "  Nadia’s expertise in hair styling and makeup artistry has made her the most sought-after beauty professional in town. Her warmth and passion for beauty radiate in every service she provides."
+              "Emma's creativity in nail design and her exceptional artistic talent make her an invaluable member of our team. Her meticulous approach and dedication to excellence guarantee that each customer walks away with impeccable nails."
             }
           />
         </div>
