@@ -58,3 +58,16 @@
 .jumba-right {
   margin-right: 10rem;
 }
+.btn-all-services-div {
+  display: flex;
+  justify-content: flex-start;
+  font-size: large;
+  max-width: 55rem;
+}
+.anchor-all-services {
+  border-radius: 6px 6px 6px 6px;
+  padding: 30px 90px 30px 90px;
+  background-color: #ee6043;
+  font-weight: 400px;
+  font-size: 140px;
+}

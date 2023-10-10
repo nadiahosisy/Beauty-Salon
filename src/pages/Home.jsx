@@ -12,7 +12,11 @@ const Home = () => {
             aestheticians are passionate about helping you achieve your beauty
             goals.
           </div>
-          <div>button</div>
+          <div className="btn-all-services-div">
+            <a className="anchor-all-services">
+              <span></span>
+            </a>
+          </div>
         </div>
         <div className="jumba-right">
           <div className="jumba-right-image-div">
