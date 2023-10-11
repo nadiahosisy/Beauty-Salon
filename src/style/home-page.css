@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 15rem;
+  padding-left: 11.5rem;
   background-color: #fff7f6;
   max-width: 1000%;
   max-height: 630px;
@@ -33,7 +33,6 @@
 .jumba-left {
   display: flex;
   flex-direction: column;
-
   justify-content: flex-start;
   gap: 30px;
 }
