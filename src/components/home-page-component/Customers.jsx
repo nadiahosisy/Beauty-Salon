@@ -5,21 +5,21 @@ const Customers = () => {
     <div className="main-div-customers">
       <div className="left-main-div-ratings">
         <div className="left-ratings-div">
-          <div>
-            <h4>4.8</h4>
+          <div className="heading-title-ratings-div">
+            <h4 className="heading-title-left">4.8</h4>
           </div>
           <div>
-            <h6>★★★★★</h6>
+            <h6 className="heading-stars-ratings-left">★★★★★</h6>
           </div>
           <div>2,394 Ratings</div>
           <div>Google Reviews</div>
         </div>
         <div>
           <div>
-            <h4>A+</h4>
+            <h4 className="heading-title-left">A+</h4>
           </div>
           <div>
-            <h6>★★★★★</h6>
+            <h6 className="heading-stars-ratings-left">★★★★★</h6>
           </div>
           <div>125 Reviews</div>
           <div>BBB Rating</div>
