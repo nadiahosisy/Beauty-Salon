@@ -12,13 +12,13 @@
 }
 
 .home-page-jumba {
-  background-color: #fff7f6;
-  max-height: 630px;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 3rem;
+  padding-left: 15rem;
+  background-color: #fff7f6;
+  max-width: 1000%;
+  max-height: 630px;
 }
 .home-page-inside-jumba {
   display: flex;
@@ -33,14 +33,14 @@
 .jumba-left {
   display: flex;
   flex-direction: column;
-  margin-left: 20rem;
+
   justify-content: flex-start;
   gap: 30px;
 }
 .jumba-left h1 {
   font-size: 60px;
   font-family: Monserat-semi-bold, sans-serif;
-  width: 700px;
+  width: 670px;
   color: #212121;
 }
 .jumba-left-p {
@@ -51,8 +51,9 @@
 }
 
 .jumba-right-image-div {
-  width: 480px;
   height: 480px;
+  width: 480px;
+  padding-right: 15rem;
 }
 
 .jumba-right-image {
