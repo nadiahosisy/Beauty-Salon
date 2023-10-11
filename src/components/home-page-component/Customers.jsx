@@ -3,8 +3,8 @@ import React from "react";
 const Customers = () => {
   return (
     <div className="main-div-customers">
-      <div>
-        <div>
+      <div className="left-main-div-ratings">
+        <div className="left-ratings-div">
           <div>
             <h4>4.8</h4>
           </div>
@@ -14,7 +14,6 @@ const Customers = () => {
           <div>2,394 Ratings</div>
           <div>Google Reviews</div>
         </div>
-
         <div>
           <div>
             <h4>A+</h4>
