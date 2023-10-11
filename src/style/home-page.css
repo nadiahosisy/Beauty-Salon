@@ -53,14 +53,13 @@
 .jumba-right-image-div {
   height: 480px;
   width: 480px;
-  padding-right: 15rem;
 }
 
 .jumba-right-image {
   border-radius: 5px;
 }
 .jumba-right {
-  margin-right: 10rem;
+  margin-right: 8rem;
 }
 .btn-all-services-div {
   display: flex;
