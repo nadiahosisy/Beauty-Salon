@@ -14,17 +14,15 @@
 .home-page-jumba {
   background-color: #fff7f6;
   max-height: 630px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-right: 3rem;
 }
 .home-page-inside-jumba {
   display: flex;
   flex-direction: row;
-  align-items: stretch;
-
-  width: 1140px;
-  height: 630px;
   align-content: center;
   justify-content: center;
   padding-top: 100px;
@@ -35,8 +33,7 @@
 .jumba-left {
   display: flex;
   flex-direction: column;
-
-  margin-left: 16rem;
+  margin-left: 20rem;
   justify-content: flex-start;
   gap: 30px;
 }
