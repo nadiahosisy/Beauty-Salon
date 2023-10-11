@@ -11,8 +11,8 @@ const Customers = () => {
           <div>
             <h6 className="heading-stars-ratings-left">★★★★★</h6>
           </div>
-          <div>2,394 Ratings</div>
-          <div>Google Reviews</div>
+          <div className="ratings-div">2,394 Ratings</div>
+          <div className="ratings-div">Google Reviews</div>
         </div>
         <div>
           <div>
@@ -21,8 +21,8 @@ const Customers = () => {
           <div>
             <h6 className="heading-stars-ratings-left">★★★★★</h6>
           </div>
-          <div>125 Reviews</div>
-          <div>BBB Rating</div>
+          <div className="ratings-div">125 Reviews</div>
+          <div className="ratings-div">BBB Rating</div>
         </div>
       </div>
       <div className="container-div-customers">

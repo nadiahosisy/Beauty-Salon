@@ -17,7 +17,7 @@
 }
 @font-face {
   font-family: "Monserat-Poppins";
-  src: url("../../public/fonts/Poppins/Poppins-Light.ttf");
+  src: url("../../public/fonts/Poppins/Poppins-Bold.ttf");
 }
 .main-div-customers {
   display: flex;
@@ -52,4 +52,9 @@
   color: #f0ad4e;
   font-size: 15px;
   font-weight: 400;
+}
+.ratings-div {
+  font-family: Monserat-Poppins, sans-serif;
+  font-size: 15px;
+  color: #212121;
 }
