@@ -15,6 +15,7 @@
   background-color: #fff7f6;
   max-height: 630px;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 .home-page-inside-jumba {
