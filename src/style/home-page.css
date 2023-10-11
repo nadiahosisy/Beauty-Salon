@@ -67,9 +67,10 @@
 .anchor-all-services {
   display: inline-block;
   height: 1;
+  cursor: pointer;
   background-color: #ee6043;
   font-size: 15px;
-  padding: 23px 24px;
+  padding: 20px 24px;
   border-radius: 5px;
   color: #fff;
   fill: #fff;
