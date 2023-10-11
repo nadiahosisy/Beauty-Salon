@@ -10,6 +10,7 @@ import "./style/subscribe-services-page.css";
 import "./style/about-page.css";
 import "./style/about-our-team-page.css";
 import "./style/home-icons.css";
+import "./style/home-customers.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
