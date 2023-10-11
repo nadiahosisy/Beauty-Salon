@@ -1,4 +1,4 @@
-import { InnerIcons } from "../components";
+import { Customers, InnerIcons } from "../components";
 
 const Home = () => {
   return (
@@ -34,6 +34,7 @@ const Home = () => {
         </div>
       </div>
       <InnerIcons />
+      <Customers />
     </>
   );
 };
