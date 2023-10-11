@@ -8,7 +8,7 @@ const Customers = () => {
           <div className="heading-title-ratings-div">
             <h4 className="heading-title-left">4.8</h4>
           </div>
-          <div>
+          <div className="middle=rating-div">
             <h6 className="heading-stars-ratings-left">★★★★★</h6>
           </div>
           <div className="ratings-div">2,394 Ratings</div>

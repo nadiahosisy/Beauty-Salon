@@ -24,24 +24,35 @@
   flex-direction: row;
   height: 100%;
   flex-grow: 1;
+  flex-wrap: 1;
   justify-content: center;
   align-self: stretch;
-  align-items: stretch;
+  align-items: center;
   gap: 10px;
-  transition: 0.3s;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 1;
   margin-top: 70px;
   margin-right: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
-  padding-top: 050px;
+  padding-top: 50px;
   padding-right: 0px;
   padding-bottom: 70px;
+}
+.left-ratings-div {
+  width: 250px;
 }
 .left-main-div-ratings {
   display: flex;
   flex-direction: row;
-  justify-content: start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
+}
+.container-div-customers {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
 }
 .heading-title-left {
   color: #212121;
@@ -67,4 +78,11 @@
   font-family: Monserat-regular, sans-serif;
   font-size: 18px;
   color: #212121;
+}
+.text-editor-div {
+  font-family: Monserat-ligth, sans-serif;
+  color: #4d4d4d;
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: left;
 }
