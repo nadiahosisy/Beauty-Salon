@@ -1,5 +1,4 @@
-import { Customers, InnerIcons } from "../components";
-import Services from "./Services";
+import { Customers, InnerIcons, ServicesHomePage } from "../components";
 
 const Home = () => {
   return (
@@ -36,7 +35,7 @@ const Home = () => {
       </div>
       <InnerIcons />
       <Customers />
-      <Services />
+      <ServicesHomePage />
     </>
   );
 };

@@ -10,6 +10,7 @@ import TitleClients from "./services-components/TitleClients";
 import TeamMember from "./services-components/about-component/TeamMember";
 import InnerIcons from "./home-page-component/InnerIcons";
 import Customers from "./home-page-component/Customers";
+import ServicesHomePage from "./services-components/ServicesHomePage";
 
 export {
   SharedLayout,
@@ -24,4 +25,5 @@ export {
   TeamMember,
   InnerIcons,
   Customers,
+  ServicesHomePage,
 };
