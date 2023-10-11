@@ -43,6 +43,9 @@
 .left-ratings-div {
   width: 250px;
 }
+.middle-rating-div {
+  width: 250px;
+}
 .left-main-div-ratings {
   display: flex;
   flex-direction: row;

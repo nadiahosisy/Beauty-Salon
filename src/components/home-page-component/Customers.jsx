@@ -8,13 +8,13 @@ const Customers = () => {
           <div className="heading-title-ratings-div">
             <h4 className="heading-title-left">4.8</h4>
           </div>
-          <div className="middle=rating-div">
+          <div>
             <h6 className="heading-stars-ratings-left">★★★★★</h6>
           </div>
           <div className="ratings-div">2,394 Ratings</div>
           <div className="ratings-div">Google Reviews</div>
         </div>
-        <div>
+        <div className="middle-rating-div">
           <div>
             <h4 className="heading-title-left">A+</h4>
           </div>
