@@ -27,8 +27,10 @@ const Customers = () => {
       </div>
       <div className="container-div-customers">
         <div className="text-customrs-div">Hear from Our Happy Customers</div>
-        <div>John Simpson</div>
-        <div>
+        <div className="John-simpson-div">
+          <h5 className="John-simpson-header">John Sempson</h5>
+        </div>
+        <div className="text-editor-div">
           I love coming to Beauty-Salon-Nadia! The staff is so friendly and
           talented, and I always leave feeling refreshed and beautiful.
         </div>
