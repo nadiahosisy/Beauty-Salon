@@ -1,4 +1,9 @@
-import { Customers, InnerIcons, ServicesHomePage } from "../components";
+import {
+  Customers,
+  FeaturesAndBenefits,
+  InnerIcons,
+  ServicesHomePage,
+} from "../components";
 
 const Home = () => {
   return (
@@ -36,6 +41,7 @@ const Home = () => {
       <InnerIcons />
       <Customers />
       <ServicesHomePage />
+      <FeaturesAndBenefits />
     </>
   );
 };

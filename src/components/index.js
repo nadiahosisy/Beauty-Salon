@@ -11,6 +11,7 @@ import TeamMember from "./services-components/about-component/TeamMember";
 import InnerIcons from "./home-page-component/InnerIcons";
 import Customers from "./home-page-component/Customers";
 import ServicesHomePage from "./services-components/ServicesHomePage";
+import FeaturesAndBenefits from "./home-page-component/FeaturesAndBenefits";
 
 export {
   SharedLayout,
@@ -26,4 +27,5 @@ export {
   InnerIcons,
   Customers,
   ServicesHomePage,
+  FeaturesAndBenefits,
 };
