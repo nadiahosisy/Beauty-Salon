@@ -2,7 +2,11 @@
   font-family: "Montserrat-light";
   src: url("../assets/fonts/montserrat/Montserrat-Light.ttf");
 }
-
+.main-div-container-features-benifts {
+  width: 100%;
+  height: 50%;
+  background-color: #fff7f6;
+}
 .features-benifts-main-div {
   display: flex;
   align-items: center;
@@ -21,7 +25,6 @@
 .features-benifts-main-div::after {
   content: "";
   flex: 1;
-
   border-top: 1px solid black; /* Adjust the color and thickness of the line as needed */
   margin: 0 5px; /* Optional: Add spacing between the lines and the text */
 }
@@ -29,7 +32,6 @@
 .text-features-benifits {
   font-size: 15px;
   font-weight: 300;
-
   color: #4d4d4d;
   font-family: "Montserrat-light", sans-serif; /* Specify the font family */
 }
