@@ -2,22 +2,24 @@
   font-family: "Montserrat-light";
   src: url("../assets/fonts/montserrat/Montserrat-Light.ttf");
 }
+
 .main-div-container-features-benifts {
   width: 100%;
   height: 50%;
   background-color: #fff7f6;
 }
+
 .features-benifts-main-div {
   display: flex;
   align-items: center;
   background-color: #fff7f6;
-  margin: 0 auto; /* Center the div horizontally */
+  margin: 0 auto;
   width: 1110px; /* Set a fixed width for the container */
   position: relative;
 }
 
 .features-benifts-main-div span {
-  margin: 0 10px; /* Optional: Add spacing between spans */
+  margin: 0 1px; /* Equal spacing between spans and text */
   background-color: #fff7f6;
 }
 
@@ -25,13 +27,16 @@
 .features-benifts-main-div::after {
   content: "";
   flex: 1;
+  padding: 0;
   border-top: 1px solid black; /* Adjust the color and thickness of the line as needed */
-  margin: 0 5px; /* Optional: Add spacing between the lines and the text */
+  margin: 0 15px; /* Equal spacing between the lines and the text */
 }
 
 .text-features-benifits {
   font-size: 15px;
-  font-weight: 300;
   color: #4d4d4d;
   font-family: "Montserrat-light", sans-serif; /* Specify the font family */
+}
+.right-side {
+  margin-right: 50rem;
 }
