@@ -1,20 +1,35 @@
+@font-face {
+  font-family: "Montserrat-light";
+  src: url("../assets/fonts/montserrat/Montserrat-Light.ttf");
+}
+
 .features-benifts-main-div {
   display: flex;
   align-items: center;
   background-color: #fff7f6;
-  margin-left: 20rem;
-  margin-right: 20rem;
+  margin: 0 auto; /* Center the div horizontally */
+  width: 1110px; /* Set a fixed width for the container */
   position: relative;
 }
 
 .features-benifts-main-div span {
   margin: 0 10px; /* Optional: Add spacing between spans */
+  background-color: #fff7f6;
 }
 
 .features-benifts-main-div::before,
 .features-benifts-main-div::after {
   content: "";
   flex: 1;
+
   border-top: 1px solid black; /* Adjust the color and thickness of the line as needed */
-  margin: 0 10px; /* Optional: Add spacing between the lines and the text */
+  margin: 0 5px; /* Optional: Add spacing between the lines and the text */
+}
+
+.text-features-benifits {
+  font-size: 15px;
+  font-weight: 300;
+
+  color: #4d4d4d;
+  font-family: "Montserrat-light", sans-serif; /* Specify the font family */
 }
