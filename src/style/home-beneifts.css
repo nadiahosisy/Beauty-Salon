@@ -52,9 +52,9 @@
   font-family: Monserat-regular, sans-serif; /* Specify the font family */
 }
 .circle {
-  width: 5rem; /* גודל העיגול */
-  height: 5rem;
-  color: rgb(0, 0, 0); /* רקע של העיגול */
+  width: 15px; /* גודל העיגול */
+  height: 15px;
+  border: 1px solid #212121;
   border-radius: 50%; /* יצירת צור מעגלי */
   display: flex;
   justify-content: center;
@@ -62,8 +62,8 @@
 }
 
 .dot {
-  width: 10px; /* גודל הנקודה */
-  height: 10px;
-  background-color: black; /* צבע הנקודה */
+  width: 5px; /* גודל הנקודה */
+  height: 5px;
+  background-color: #212121; /* צבע הנקודה */
   border-radius: 50%; /* יצירת צור מעגלי לנקודה */
 }
