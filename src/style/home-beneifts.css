@@ -1,0 +1,20 @@
+.features-benifts-main-div {
+  display: flex;
+  align-items: center;
+  background-color: #fff7f6;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  position: relative;
+}
+
+.features-benifts-main-div span {
+  margin: 0 10px; /* Optional: Add spacing between spans */
+}
+
+.features-benifts-main-div::before,
+.features-benifts-main-div::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid black; /* Adjust the color and thickness of the line as needed */
+  margin: 0 10px; /* Optional: Add spacing between the lines and the text */
+}

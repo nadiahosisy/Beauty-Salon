@@ -4,7 +4,7 @@ const FeaturesAndBenefits = () => {
   return (
     <div className="features-benifts-main-div">
       <spn></spn>
-      <span></span>
+      <span>Features & Benefits</span>
       <span></span>
     </div>
   );
