@@ -68,3 +68,9 @@
   background-color: #212121;
   border-radius: 50%;
 }
+.main-div-featuers {
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  height: 450px;
+}

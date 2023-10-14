@@ -11,11 +11,10 @@ const FeaturesAndBenefits = () => {
         </div>
       </div>
       <div className="main-div-featuers">
+        <h3>Features</h3>
         <div className="container-div-featuers">
-          <h3>Features</h3>
           <div className="circle">
             <div className="dot">
-              {" "}
               <span>Expert Hair Styling</span>
             </div>
           </div>
