@@ -10,8 +10,11 @@ const FeaturesAndBenefits = () => {
           <span className="right-side"></span>
         </div>
       </div>
-      <div className="circle">
-        <div className="dot"></div>
+      <div className="main-div-featuers">
+        <h3>Features</h3>
+        <div className="circle">
+          <div className="dot"></div>
+        </div>
       </div>
     </>
   );
