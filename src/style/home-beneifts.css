@@ -70,7 +70,14 @@
 }
 .main-div-featuers {
   display: flex;
-  flex-direction: column;
-  width: 750px;
-  height: 450px;
+  flex-direction: row;
+  height: 100%;
+  flex-grow: 1;
+  align-self: stretch;
+  align-items: stretch;
+  gap: 10px;
+  transition: 0.3s;
+  padding-top: 40px;
+  padding-right: 0px;
+  padding-bottom: 40px;
 }
