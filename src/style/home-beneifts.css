@@ -52,18 +52,19 @@
   font-family: Monserat-regular, sans-serif; /* Specify the font family */
 }
 .circle {
-  width: 15px; /* גודל העיגול */
+  margin-left: 5rem;
+  width: 15px;
   height: 15px;
   border: 1px solid #212121;
-  border-radius: 50%; /* יצירת צור מעגלי */
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .dot {
-  width: 5px; /* גודל הנקודה */
+  width: 5px;
   height: 5px;
-  background-color: #212121; /* צבע הנקודה */
-  border-radius: 50%; /* יצירת צור מעגלי לנקודה */
+  background-color: #212121;
+  border-radius: 50%;
 }
