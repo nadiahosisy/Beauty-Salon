@@ -70,14 +70,12 @@
 }
 .main-div-featuers {
   display: flex;
+  background-color: #fff7f6;
   flex-direction: row;
   height: 100%;
   flex-grow: 1;
-
   gap: 10px;
-
   padding-top: 40px;
-
   padding-bottom: 40px;
 }
 .header-div-features {
@@ -87,6 +85,8 @@
 }
 .header-featuers {
   display: flex;
+  font-size: 30px;
+  font-family: Monserat-ligth, sans-serif;
   bottom: 8rem;
   padding-left: 10rem;
   align-items: center;
