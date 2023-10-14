@@ -11,7 +11,9 @@ const FeaturesAndBenefits = () => {
         </div>
       </div>
       <div className="main-div-featuers">
-        <h3>Features</h3>
+        <div className="header-div-features">
+          <h3 className="header-featuers">Features</h3>
+        </div>
         <div className="container-div-featuers">
           <div className="circle">
             <div className="dot">
