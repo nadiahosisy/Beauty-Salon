@@ -35,7 +35,7 @@ const FeaturesAndBenefits = () => {
             <img
               src="./images/herson-rodriguez.webp"
               alt="Sample"
-              className="image"
+              className="image-herson-rodriguez"
             />
           </div>
         </div>
