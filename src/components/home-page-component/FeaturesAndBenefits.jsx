@@ -21,13 +21,10 @@ const FeaturesAndBenefits = () => {
         <span className="text">Another Feature</span>
       </div>
 
-      {/* Third Section */}
       <div className="section">
-        <h3 className="header">Feature 3</h3>
-        <div className="circle">
-          <div className="dot"></div>
+        <div className="image-container">
+          <img src={sampleImage} alt="Sample" className="image" />
         </div>
-        <span className="text">Yet Another Feature</span>
       </div>
     </div>
   );
