@@ -71,7 +71,6 @@
 .main-div-featuers {
   display: flex;
   background-color: #fff7f6;
-
   height: 100%;
   flex-grow: 1;
   gap: 10px;
