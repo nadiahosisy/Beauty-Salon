@@ -10,7 +10,7 @@ const FeaturesAndBenefits = () => {
           <span className="right-side"></span>
         </div>
       </div>
-      <div className="main-container">
+      <div className="main-container-features-benifts">
         {/* First Section */}
         <div className="section">
           <h3 className="header">Features</h3>

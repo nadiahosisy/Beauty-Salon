@@ -77,6 +77,12 @@
   padding-top: 40px;
   padding-bottom: 40px;
 }
+.main-container-features-benifts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 .header-div-features {
   display: flex;
   bottom: 8rem;
