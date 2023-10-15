@@ -3,14 +3,13 @@ import React from "react";
 const FeaturesAndBenefits = () => {
   return (
     <>
-      <div className="main-div-container-features-benefits">
-        <div className="features-benefits-main-div">
-          <span className="left-side"></span>
-          <div className="text-features-benefits">Features & Benefits</div>
+      <div className="main-div-container-features-benifts">
+        <div className="features-benifts-main-div">
+          <spn className="left-side"></spn>
+          <div className="text-features-benifits">Features & Benefits</div>
           <span className="right-side"></span>
         </div>
       </div>
-
       <div className="main-container">
         {/* First Section */}
         <div className="section">
