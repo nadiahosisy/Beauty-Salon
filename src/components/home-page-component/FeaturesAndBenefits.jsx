@@ -5,7 +5,7 @@ const FeaturesAndBenefits = () => {
     <div className="main-container">
       {/* First Section */}
       <div className="section">
-        <h3 className="header">Feature 1</h3>
+        <h3 className="header">Features</h3>
         <div className="circle">
           <div className="dot"></div>
         </div>
@@ -14,7 +14,7 @@ const FeaturesAndBenefits = () => {
 
       {/* Second Section */}
       <div className="section">
-        <h3 className="header">Feature 2</h3>
+        <h3 className="header">Benefits</h3>
         <div className="circle">
           <div className="dot"></div>
         </div>
