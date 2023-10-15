@@ -97,3 +97,7 @@
   width: 346px;
   height: 346px;
 }
+.circle-dot-text-div {
+  display: flex;
+  flex-direction: row;
+}

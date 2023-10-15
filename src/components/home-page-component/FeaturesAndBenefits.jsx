@@ -23,10 +23,12 @@ const FeaturesAndBenefits = () => {
         {/* Second Section */}
         <div className="section">
           <h3 className="header">Benefits</h3>
-          <div className="circle">
-            <div className="dot"></div>
+          <div className="circle-dot-text-div">
+            <div className="circle">
+              <div className="dot"></div>
+            </div>
+            <span className="text">Another Feature</span>
           </div>
-          <span className="text">Another Feature</span>
         </div>
 
         {/* Third Section with Image */}
