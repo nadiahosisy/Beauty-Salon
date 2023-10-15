@@ -91,6 +91,10 @@
   align-items: center;
   justify-content: center;
 }
+.section {
+  display: flex;
+  flex-direction: column;
+}
 .image-herson-rodriguez {
   border-radius: 6px 6px 6px 6px;
   width: 346px;
