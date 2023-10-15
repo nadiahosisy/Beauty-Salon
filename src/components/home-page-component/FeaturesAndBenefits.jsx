@@ -2,27 +2,34 @@ import React from "react";
 
 const FeaturesAndBenefits = () => {
   return (
-    <>
-      <div className="main-div-container-features-benifts">
-        <div className="features-benifts-main-div">
-          <spn className="left-side"></spn>
-          <div className="text-features-benifits">Features & Benefits</div>
-          <span className="right-side"></span>
+    <div className="main-container">
+      {/* First Section */}
+      <div className="section">
+        <h3 className="header">Feature 1</h3>
+        <div className="circle">
+          <div className="dot"></div>
         </div>
+        <span className="text">Expert Hair Styling</span>
       </div>
-      <div className="main-div-featuers">
-        <div className="header-div-features">
-          <h3 className="header-featuers">Features</h3>
+
+      {/* Second Section */}
+      <div className="section">
+        <h3 className="header">Feature 2</h3>
+        <div className="circle">
+          <div className="dot"></div>
         </div>
-        <div className="container-div-featuers">
-          <div className="circle">
-            <div className="dot">
-              <span>Expert Hair Styling</span>
-            </div>
-          </div>
-        </div>
+        <span className="text">Another Feature</span>
       </div>
-    </>
+
+      {/* Third Section */}
+      <div className="section">
+        <h3 className="header">Feature 3</h3>
+        <div className="circle">
+          <div className="dot"></div>
+        </div>
+        <span className="text">Yet Another Feature</span>
+      </div>
+    </div>
   );
 };
 
