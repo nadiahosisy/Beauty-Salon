@@ -14,10 +14,12 @@ const FeaturesAndBenefits = () => {
         {/* First Section */}
         <div className="section">
           <h3 className="header">Features</h3>
-          <div className="circle">
-            <div className="dot"></div>
+          <div className="circle-dot-text-div">
+            <div className="circle">
+              <div className="dot"></div>
+            </div>
+            <span className="text">Expert Hair Styling</span>
           </div>
-          <span className="text">Expert Hair Styling</span>
         </div>
 
         {/* Second Section */}
