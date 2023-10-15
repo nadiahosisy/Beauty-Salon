@@ -80,8 +80,15 @@
 .main-container-features-benifts {
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
+  align-self: center;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
+  transition: 0.3s;
+  padding-top: 040px;
+
+  padding-bottom: 040px;
+  padding-left: 0px;
 }
 .header-div-features {
   display: flex;
