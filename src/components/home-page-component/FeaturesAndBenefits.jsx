@@ -35,6 +35,7 @@ const FeaturesAndBenefits = () => {
               className="image-herson-rodriguez"
             />
           </div>
+          <span className="text">Yet Another Feature</span>
         </div>
       </div>
     </div>
