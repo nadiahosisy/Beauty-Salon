@@ -100,4 +100,6 @@
 .circle-dot-text-div {
   display: flex;
   flex-direction: row;
+  align-items: start;
+  justify-content: start;
 }
