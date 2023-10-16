@@ -54,7 +54,9 @@ const FeaturesAndBenefits = () => {
           </div>
         </div>
       </div>
-      <OurTeam />
+      <div className="our-team-main-div">
+        <OurTeam />
+      </div>
     </>
   );
 };
