@@ -45,7 +45,6 @@
   justify-content: start;
   margin: 0 auto;
 }
-
 .main-container {
   display: flex;
   justify-content: space-around;
@@ -53,20 +52,17 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .card-container {
   flex: 0 1 calc(30% - 20px);
   margin-bottom: 30px;
   padding: 15px;
   text-align: center;
 }
-
 .img {
   width: 120%;
   object-fit: cover;
   margin-bottom: 20px;
 }
-
 .anchor {
   text-decoration: none;
   font-family: Monserat-medium, sans-serif;
@@ -74,7 +70,6 @@
   text-align: left;
   color: #212121;
 }
-
 .content-div-services {
   font-family: Monserat-ligth, sans-serif;
   color: #4d4d4d;
