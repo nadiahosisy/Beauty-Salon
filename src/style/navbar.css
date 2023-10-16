@@ -45,7 +45,6 @@
   flex-grow: 0;
   flex-shrink: 0;
 }
-
 .left-navbar-name {
   font-family: Monserat-regular;
   font-size: 18px;
@@ -66,7 +65,6 @@
   flex-shrink: 0;
   gap: 50px;
 }
-
 .navLink {
   text-decoration: none;
 }
