@@ -21,6 +21,10 @@ const FeaturesAndBenefits = () => {
             </div>
             <span className="span-text">Expert Hair Styling</span>
           </div>
+          <CircleDotText text="Professional Nail Services" />
+          <CircleDotText text="Flawless Makeup Application" />
+          <CircleDotText text="Relaxing Spa Treatments" />
+          <CircleDotText text="Ongoing Support" />
         </div>
 
         {/* Second Section */}
