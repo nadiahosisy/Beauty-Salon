@@ -1,5 +1,6 @@
 import React from "react";
 import CircleDotText from "./CircleDotText";
+import OurTeam from "../services-components/about-component/OurTeam";
 
 const FeaturesAndBenefits = () => {
   return (
@@ -53,6 +54,7 @@ const FeaturesAndBenefits = () => {
           </div>
         </div>
       </div>
+      <OurTeam />
     </>
   );
 };
