@@ -1,4 +1,5 @@
 import React from "react";
+import CircleDotText from "./CircleDotText";
 
 const FeaturesAndBenefits = () => {
   return (
@@ -31,6 +32,10 @@ const FeaturesAndBenefits = () => {
             </div>
             <span className="span-text">Enhanced Beauty</span>
           </div>
+          <CircleDotText text="Stress Relief" />
+          <CircleDotText text="Increased Confidence" />
+          <CircleDotText text="Affordable Prices" />
+          <CircleDotText text="Sustained Partnership" />
         </div>
 
         {/* Third Section with Image */}

@@ -12,6 +12,7 @@ import InnerIcons from "./home-page-component/InnerIcons";
 import Customers from "./home-page-component/Customers";
 import ServicesHomePage from "./services-components/ServicesHomePage";
 import FeaturesAndBenefits from "./home-page-component/FeaturesAndBenefits";
+import CircleDotText from "./home-page-component/CircleDotText";
 
 export {
   SharedLayout,
@@ -28,4 +29,5 @@ export {
   Customers,
   ServicesHomePage,
   FeaturesAndBenefits,
+  CircleDotText,
 };
