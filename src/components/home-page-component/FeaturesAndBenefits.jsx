@@ -1,6 +1,7 @@
 import React from "react";
 import CircleDotText from "./CircleDotText";
 import OurTeam from "../services-components/about-component/OurTeam";
+import Clients from "../services-components/Clients";
 
 const FeaturesAndBenefits = () => {
   return (
@@ -57,6 +58,10 @@ const FeaturesAndBenefits = () => {
       <div className="our-team-main-div-home-page">
         <OurTeam isHomePage={true} />
       </div>
+      <Clients
+        h2="Client Testimonials"
+        p="Hear What Our Clients Have to Say About Us"
+      />
     </>
   );
 };
