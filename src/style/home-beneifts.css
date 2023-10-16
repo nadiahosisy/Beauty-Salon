@@ -34,7 +34,6 @@
 .features-benifts-main-div span {
   margin: 0 1px;
 }
-
 .features-benifts-main-div::before,
 .features-benifts-main-div::after {
   content: "";
@@ -43,7 +42,6 @@
   border-top: 1px solid black;
   margin: 0 15px;
 }
-
 .text-features-benifits {
   font-size: 15px;
   color: #4d4d4d;
@@ -58,7 +56,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .dot {
   width: 5px;
   height: 5px;
@@ -109,7 +106,6 @@
   width: 408px;
   padding-left: 5.4rem;
 }
-
 .image-herson-rodriguez {
   border-radius: 6px 6px 6px 6px;
   width: 346px;
