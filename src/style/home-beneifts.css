@@ -118,8 +118,7 @@
 .circle-dot-text-div {
   display: flex;
   flex-direction: row;
-  align-items: start;
-  justify-content: start;
+  align-items: center;
 }
 .header-features {
   color: #212121;
@@ -129,10 +128,11 @@
 }
 .span-text {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
   font-size: 18px;
-  width: fit-content;
-  /* width: 400px; */
-
-  margin-left: 10px;
+  font-family: Monserat-ligth, sans-serif;
+  color: #4d4d4d;
+  margin-left: 8px;
 }
