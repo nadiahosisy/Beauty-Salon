@@ -1,9 +1,13 @@
 import React from "react";
 import TeamMember from "./TeamMember";
 
-const OurTeam = () => {
+const OurTeam = ({ isHomePage }) => {
+  const mainDivClass = isHomePage
+    ? "our-team-main-div-home-page"
+    : "our-team-main-div";
+
   return (
-    <div className="our-team-main-div">
+    <div className={mainDivClass}>
       <div className="our-team-div">
         <h2 className="our-team">Our team</h2>
         <div className="our-team-text">
