@@ -118,7 +118,6 @@
 .circle-dot-text-div {
   display: flex;
   flex-direction: row;
-  padding-right: 10rem;
   align-items: start;
   justify-content: start;
 }
@@ -126,4 +125,14 @@
   color: #212121;
   font-family: Monserat-ligth, sans-serif;
   font-size: 30px;
+  margin-bottom: 1.5rem;
+}
+.span-text {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  width: fit-content;
+  /* width: 400px; */
+
+  margin-left: 10px;
 }

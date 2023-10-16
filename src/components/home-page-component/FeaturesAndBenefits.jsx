@@ -18,7 +18,7 @@ const FeaturesAndBenefits = () => {
             <div className="circle">
               <div className="dot"></div>
             </div>
-            <span className="text">Expert Hair Styling</span>
+            <span className="span-text">Expert Hair Styling</span>
           </div>
         </div>
 
@@ -29,7 +29,7 @@ const FeaturesAndBenefits = () => {
             <div className="circle">
               <div className="dot"></div>
             </div>
-            <span className="text">Another Feature</span>
+            <span className="span-text">Enhanced Beauty</span>
           </div>
         </div>
 
