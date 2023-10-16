@@ -13,7 +13,7 @@ const FeaturesAndBenefits = () => {
       <div className="main-container-features-benifts">
         {/* First Section */}
         <div className="section">
-          <h3 className="header">Features</h3>
+          <h3 className="header-features">Features</h3>
           <div className="circle-dot-text-div">
             <div className="circle">
               <div className="dot"></div>
@@ -24,7 +24,7 @@ const FeaturesAndBenefits = () => {
 
         {/* Second Section */}
         <div className="section">
-          <h3 className="header">Benefits</h3>
+          <h3 className="header-features">Benefits</h3>
           <div className="circle-dot-text-div">
             <div className="circle">
               <div className="dot"></div>

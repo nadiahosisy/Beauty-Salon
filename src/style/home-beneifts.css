@@ -27,14 +27,12 @@
   display: flex;
   align-items: center;
   margin: 0 auto;
-
-  width: 1212px; /* Set a fixed width for the container */
+  width: 1212px;
   position: relative;
 }
 
 .features-benifts-main-div span {
-  margin: 0 1px; /* Equal spacing between spans and text */
-  /* background-color: #fff7f6; */
+  margin: 0 1px;
 }
 
 .features-benifts-main-div::before,
@@ -42,14 +40,14 @@
   content: "";
   flex: 1;
   padding: 0;
-  border-top: 1px solid black; /* Adjust the color and thickness of the line as needed */
-  margin: 0 15px; /* Equal spacing between the lines and the text */
+  border-top: 1px solid black;
+  margin: 0 15px;
 }
 
 .text-features-benifits {
   font-size: 15px;
   color: #4d4d4d;
-  font-family: Monserat-regular, sans-serif; /* Specify the font family */
+  font-family: Monserat-regular, sans-serif;
 }
 .circle {
   width: 15px;
@@ -117,11 +115,15 @@
   width: 346px;
   height: 346px;
 }
-
 .circle-dot-text-div {
   display: flex;
   flex-direction: row;
   padding-right: 10rem;
   align-items: start;
   justify-content: start;
+}
+.header-features {
+  color: #212121;
+  font-family: Monserat-ligth, sans-serif;
+  font-size: 30px;
 }
