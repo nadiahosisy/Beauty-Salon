@@ -1,6 +1,7 @@
 import React from "react";
 import CircleDotText from "./CircleDotText";
 import OurTeam from "../services-components/about-component/OurTeam";
+import TitleClients from "../services-components/TitleClients";
 import Clients from "../services-components/Clients";
 
 const FeaturesAndBenefits = () => {
@@ -58,12 +59,8 @@ const FeaturesAndBenefits = () => {
       <div className="our-team-main-div-home-page">
         <OurTeam isHomePage={true} />
       </div>
-      <div>
-        <Clients
-          h2="Client Testimonials"
-          p="Hear What Our Clients Have to Say About Us"
-        />
-      </div>
+      <TitleClients h2="Client Testimonials" />
+      <Clients />
     </>
   );
 };
