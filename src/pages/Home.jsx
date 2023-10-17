@@ -3,6 +3,7 @@ import {
   FeaturesAndBenefits,
   InnerIcons,
   ServicesHomePage,
+  Clients,
 } from "../components";
 
 const Home = () => {
@@ -42,6 +43,10 @@ const Home = () => {
       <Customers />
       <ServicesHomePage />
       <FeaturesAndBenefits />
+      <Clients
+        h2={"Client Testimonials"}
+        p={"Hear What Our Clients Have to Say About Us"}
+      />
     </>
   );
 };
