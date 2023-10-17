@@ -58,10 +58,12 @@ const FeaturesAndBenefits = () => {
       <div className="our-team-main-div-home-page">
         <OurTeam isHomePage={true} />
       </div>
-      <Clients
-        h2="Client Testimonials"
-        p="Hear What Our Clients Have to Say About Us"
-      />
+      <div>
+        <Clients
+          h2="Client Testimonials"
+          p="Hear What Our Clients Have to Say About Us"
+        />
+      </div>
     </>
   );
 };
