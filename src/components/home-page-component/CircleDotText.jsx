@@ -12,8 +12,4 @@ const CircleDotText = ({ text }) => {
   );
 };
 
-CircleDotText.propTypes = {
-  text: PropTypes.string.isRequired,
-};
-
 export default CircleDotText;
