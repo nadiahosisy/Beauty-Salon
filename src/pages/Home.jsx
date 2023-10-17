@@ -43,10 +43,12 @@ const Home = () => {
       <Customers />
       <ServicesHomePage />
       <FeaturesAndBenefits />
-      <Clients
-        h2={"Client Testimonials"}
-        p={"Hear What Our Clients Have to Say About Us"}
-      />
+      <div className="home-clients-div">
+        <Clients
+          h2={"Client Testimonials"}
+          p={"Hear What Our Clients Have to Say About Us"}
+        />
+      </div>
     </>
   );
 };
