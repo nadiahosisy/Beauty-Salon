@@ -14,7 +14,7 @@ const SignUp = () => {
           <p className="pargraph-register">
             A link to set a new password will be sent to your email address.
           </p>
-          <button className="Button-register">Register</button>
+          <button className="Button-register">Sign Up</button>
         </div>
       </div>
     </div>
