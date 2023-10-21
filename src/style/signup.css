@@ -20,8 +20,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   font-family: "Monserat-medium", sans-serif;
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 .center-signup {
   display: flex;
@@ -29,5 +30,22 @@
   justify-content: center;
   border: 1px solid black;
   align-items: center;
-  max-width: 2000px;
+  border-radius: 2px;
+  max-width: 700px;
+}
+.header-register {
+  margin-bottom: 2rem;
+}
+.label-input-div {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem;
+}
+.label-register {
+  margin-bottom: 1rem;
+}
+.input-register {
+  font-size: 16px;
+  padding: 16px;
+  color: #69727d;
 }
