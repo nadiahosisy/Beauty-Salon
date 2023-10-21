@@ -13,7 +13,6 @@ const ServicesHomePage = () => {
             </a>
           </div>
         </div>
-
         <div className="main-container">
           <Service
             imageSrc={"./images/hair-cut-services.webp"}
