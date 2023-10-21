@@ -1,12 +1,19 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const navStyle = {
     textDecoration: "none",
     fontFamily: "Monserat-ligth, sans-serif",
     color: "#212121",
     fontSize: "18px",
+  };
+  const goToSignUp = () => {
+    navigate("/SignUp");
+  };
+  const goToLogIn = () => {
+    navigate("/LogIn");
   };
   return (
     <div className="main-navbar-container">
@@ -39,10 +46,14 @@ const Navbar = () => {
           </div>
           <div className="nav-btn-div">
             <div className="signup-div">
-              <button className="btn-signup">Sign Up</button>
+              <button onClick={goToSignUp} className="btn-signup">
+                Sign Up
+              </button>
             </div>
             <div className="login-div">
-              <button className="btn-login">Log In</button>
+              <button onClick={goToLogIn} className="btn-login">
+                Log In
+              </button>
             </div>
           </div>
         </div>

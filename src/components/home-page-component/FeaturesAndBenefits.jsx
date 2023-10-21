@@ -9,7 +9,7 @@ const FeaturesAndBenefits = () => {
     <>
       <div className="main-div-container-features-benifts">
         <div className="features-benifts-main-div">
-          <spn className="left-side"></spn>
+          <span className="left-side"></span>
           <div className="text-features-benifits">Features & Benefits</div>
           <span className="right-side"></span>
         </div>

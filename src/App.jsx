@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { SharedLayout } from "./components";
-import { NotFound, Home, Services, About } from "./pages";
+import { NotFound, Home, Services, About, SignUp, LogIn } from "./pages";
 
 const routes = [
   {
@@ -21,10 +21,14 @@ const routes = [
         path: "/About",
         element: <About />,
       },
-      // {
-      //   path: "/Contact",
-      //   element: <Contact />,
-      // },
+      {
+        path: "/SignUp",
+        element: <SignUp />,
+      },
+      {
+        path: "/LogIn",
+        element: <LogIn />,
+      },
       {
         path: "*",
         element: <NotFound />,
