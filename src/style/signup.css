@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Monserat-semi-bold";
+  src: url("../assets/fonts/montserat/Montserrat-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Monserat-ligth";
+  src: url("../assets/fonts/montserat/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: "Monserat-medium";
+  src: url("../assets/fonts/montserat/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "Monserat-regular";
+  src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
+}

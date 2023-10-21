@@ -13,6 +13,7 @@ import "./style/home-icons.css";
 import "./style/home-customers.css";
 import "./style/home-beneifts.css";
 import "./style/clients.css";
+import "./style/signup.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
