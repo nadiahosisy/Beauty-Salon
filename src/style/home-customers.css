@@ -19,6 +19,7 @@
   font-family: "Monserat-Poppins";
   src: url("../../public/fonts/Poppins/Poppins-Bold.ttf");
 }
+
 .main-div-customers {
   display: flex;
   flex-direction: row;
