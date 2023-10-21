@@ -10,7 +10,6 @@ const SignUp = () => {
             <label className="label-register">Email address *</label>
             <input className="input-register"></input>
           </div>
-
           <p className="pargraph-register">
             A link to set a new password will be sent to your email address.
           </p>
