@@ -36,7 +36,6 @@ const routes = [
     ],
   },
 ];
-
 const App = () => {
   const router = createBrowserRouter(routes);
   return (
