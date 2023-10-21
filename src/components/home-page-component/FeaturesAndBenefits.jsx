@@ -1,8 +1,6 @@
 import React from "react";
 import CircleDotText from "./CircleDotText";
 import OurTeam from "../services-components/about-component/OurTeam";
-import TitleClients from "../services-components/TitleClients";
-import Clients from "../services-components/Clients";
 
 const FeaturesAndBenefits = () => {
   return (
