@@ -15,6 +15,7 @@
   font-family: "Monserat-regular";
   src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
 }
+
 .main-div-signUp-page {
   display: flex;
   flex-direction: column;
@@ -23,61 +24,80 @@
   font-family: "Monserat-medium", sans-serif;
   margin-top: 4rem;
 }
-.center-signup {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 1px solid #e4e7eb;
-  align-items: center;
-  border-radius: 2px;
-  max-width: 450px;
-}
+
 .header-register {
+  /* Styles for the header */
   margin-bottom: 2rem;
 }
+
+.form-div-register-page {
+  /* Styles for the form container */
+  background-color: #fff7f6;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  text-align: center;
+}
+
 .label-input-div {
   display: flex;
   flex-direction: column;
-  margin: 2.5rem;
+  margin-bottom: 20px;
 }
+
 .label-register {
-  margin-bottom: 1rem;
-}
-.input-register {
+  /* Styles for the label */
   font-size: 16px;
-  padding: 16px;
-  border-style: solid;
-  border-color: #222222;
-  font-family: "Monserat-medium", sans-serif;
-  border-width: 1px 1px 1px 1px;
-  color: #69727d;
+  margin-bottom: 5px;
+  color: #333;
+  display: block;
+  text-align: left;
 }
-input[type="email" i] {
-  writing-mode: horizontal-tb !important;
-  padding-block: 1px;
-  padding-inline: 2px;
+
+.input-register {
+  /* Styles for the input field */
+  width: calc(100% - 20px);
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
 }
-.pargraph-register {
+
+.paragraph-register {
+  /* Styles for the paragraph */
   font-size: 16px;
   margin-left: 2.5rem;
   margin-right: 2.5rem;
   margin-bottom: 2rem;
   color: #4d4d4d;
 }
+
 .sign-up-btn-div {
+  /* Styles for the button container */
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 }
+
 .Button-register {
+  /* Styles for the button */
   font-size: 14px;
   font-weight: 500;
-  border-radius: 6px 6px 6px 6px;
-  padding: 10px 40px 10px 40px;
-  font-family: Monserat-ligth, sans-serif;
+  border-radius: 6px;
+  padding: 10px 40px;
+  font-family: "Monserat-ligth", sans-serif;
   background-color: #ee6043;
   border: none;
-  margin-bottom: 2rem;
   cursor: pointer;
   color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.Button-register:hover {
+  background-color: #ff725e;
 }
