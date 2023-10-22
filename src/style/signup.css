@@ -92,3 +92,6 @@
 .Button-register:hover {
   background-color: #ff725e;
 }
+.anchor-login-page {
+  text-decoration: none;
+}

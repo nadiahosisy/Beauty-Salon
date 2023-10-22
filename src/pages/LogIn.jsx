@@ -30,7 +30,9 @@ const Login = () => {
             </label>
           </div>
           <p className="paragraph-register">
-            <a href="/forgot-password">Lost your password?</a>
+            <a className="anchor-login-page" href="/forgot-password">
+              Lost your password?
+            </a>
           </p>
           <div className="sign-up-btn-div">
             <button className="Button-register">Login</button>
