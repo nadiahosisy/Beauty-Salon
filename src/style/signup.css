@@ -26,12 +26,10 @@
 }
 
 .header-register {
-  /* Styles for the header */
   margin-bottom: 2rem;
 }
 
 .form-div-register-page {
-  /* Styles for the form container */
   background-color: #fff7f6;
   padding: 40px;
   border-radius: 8px;
@@ -47,7 +45,6 @@
 }
 
 .label-register {
-  /* Styles for the label */
   font-size: 16px;
   margin-bottom: 5px;
   color: #333;
@@ -56,7 +53,6 @@
 }
 
 .input-register {
-  /* Styles for the input field */
   width: calc(100% - 20px);
   padding: 10px;
   font-size: 14px;
@@ -68,7 +64,6 @@
 }
 
 .paragraph-register {
-  /* Styles for the paragraph */
   font-size: 16px;
   margin-left: 2.5rem;
   margin-right: 2.5rem;
@@ -77,7 +72,6 @@
 }
 
 .sign-up-btn-div {
-  /* Styles for the button container */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,7 +79,6 @@
 }
 
 .Button-register {
-  /* Styles for the button */
   font-size: 14px;
   font-weight: 500;
   border-radius: 6px;
