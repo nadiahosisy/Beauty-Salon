@@ -13,6 +13,7 @@ import Customers from "./home-page-component/Customers";
 import ServicesHomePage from "./services-components/ServicesHomePage";
 import FeaturesAndBenefits from "./home-page-component/FeaturesAndBenefits";
 import CircleDotText from "./home-page-component/CircleDotText";
+import AuthForm from "./AuthForm/AuthForm";
 
 export {
   SharedLayout,
@@ -30,4 +31,5 @@ export {
   ServicesHomePage,
   FeaturesAndBenefits,
   CircleDotText,
+  AuthForm,
 };
