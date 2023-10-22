@@ -1,6 +1,14 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { SharedLayout } from "./components";
-import { NotFound, Home, Services, About, SignUp, LogIn } from "./pages";
+import {
+  NotFound,
+  Home,
+  Services,
+  About,
+  SignUp,
+  LogIn,
+  UserPage,
+} from "./pages";
 
 const routes = [
   {
@@ -28,6 +36,10 @@ const routes = [
       {
         path: "/LogIn",
         element: <LogIn />,
+      },
+      {
+        path: "/UserPage",
+        element: <UserPage />,
       },
       {
         path: "*",

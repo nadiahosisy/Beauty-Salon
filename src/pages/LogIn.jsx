@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { InputComponent } from "../components";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
   };
@@ -13,10 +14,9 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Validate the username and password here
+  const logIn = () => {
     if (username === "1111" && password === "1111") {
+      navigate("/UserPage");
       console.log("Login successful");
       // Perform actions for successful login, e.g., redirect to another page
     } else {
@@ -30,35 +30,35 @@ const Login = () => {
       <h2 className="header-register">Login</h2>
       <div className="center-signup">
         <div className="form-div-register-page">
-          <form onSubmit={handleSubmit}>
-            <InputComponent
-              label={"Username or email address *"}
-              type={"text"}
-              placeholder={"Enter your username or email address"}
-              value={username}
-              onChange={handleUsernameChange}
-            />
-            <InputComponent
-              label={"Password *"}
-              type={"password"}
-              placeholder={"Enter your password"}
-              value={password}
-              onChange={handlePasswordChange}
-            />
-            <div className="label-input-div">
-              <label className="label-register">
-                <input type="checkbox" /> Remember me
-              </label>
-            </div>
-            <p className="paragraph-register">
-              <a className="anchor-register" href="/forgot-password">
-                Lost your password?
-              </a>
-            </p>
-            <div className="sign-up-btn-div">
-              <button className="Button-register">Login</button>
-            </div>
-          </form>
+          <InputComponent
+            label={"Username or email address *"}
+            type={"text"}
+            placeholder={"Enter your username or email address"}
+            value={username}
+            onChange={handleUsernameChange}
+          />
+          <InputComponent
+            label={"Password *"}
+            type={"password"}
+            placeholder={"Enter your password"}
+            value={password}
+            onChange={handlePasswordChange}
+          />
+          <div className="label-input-div">
+            <label className="label-register">
+              <input type="checkbox" /> Remember me
+            </label>
+          </div>
+          <p className="paragraph-register">
+            <a className="anchor-register" href="/forgot-password">
+              Lost your password?
+            </a>
+          </p>
+          <div className="sign-up-btn-div">
+            <button onClick={logIn} className="Button-register">
+              Login
+            </button>
+          </div>
         </div>
       </div>
     </div>
