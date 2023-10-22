@@ -1,5 +1,5 @@
 import React from "react";
-import AuthForm from "./AuthForm";
+import AuthForm from "../components/AuthForm/AuthForm";
 
 const Login = () => {
   const handleLoginSubmit = () => {
