@@ -8,10 +8,22 @@ const SignUp = () => {
         <div className="form-div-register-page">
           <div className="label-input-div">
             <label className="label-register">Email address *</label>
-            <input className="input-register"></input>
+            <input
+              className="input-register"
+              type="email"
+              placeholder="Enter your email address"
+            />
+          </div>
+          <div className="label-input-div">
+            <label className="label-register">Password *</label>
+            <input
+              className="input-register"
+              type="password"
+              placeholder="Enter your password"
+            />
           </div>
 
-          <p className="pargraph-register">
+          <p className="paragraph-register">
             A link to set a new password will be sent to your email address.
           </p>
           <div className="sign-up-btn-div">
