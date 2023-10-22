@@ -1,12 +1,46 @@
 import React from "react";
-import AuthForm from "../components/AuthForm/AuthForm";
 
 const Login = () => {
-  const handleLoginSubmit = () => {
-    // Logic for handling login form submission
-  };
-
-  return <AuthForm title="Login" isLogin={true} onSubmit={handleLoginSubmit} />;
+  return (
+    <div className="main-div-sign-up-page ">
+      <h2 className="header-register">Login</h2>
+      <div className="center-signup">
+        <div className="form-div-register-page">
+          <div className="label-input-div">
+            <label className="label-register">
+              Username or Email address *
+            </label>
+            <input
+              className="input-register"
+              type="text"
+              placeholder="Enter your username or email address"
+            />
+          </div>
+          <div className="label-input-div">
+            <label className="label-register">Password *</label>
+            <input
+              className="input-register"
+              type="password"
+              placeholder="Enter your password"
+            />
+          </div>
+          <div className="label-input-div">
+            <label className="label-register">
+              <input type="checkbox" /> Remember me
+            </label>
+          </div>
+          <p className="paragraph-register">
+            <a className="anchor-register" href="/forgot-password">
+              Lost your password?
+            </a>
+          </p>
+          <div className="sign-up-btn-div">
+            <button className="Button-register">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Login;
