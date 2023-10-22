@@ -14,6 +14,7 @@ import ServicesHomePage from "./services-components/ServicesHomePage";
 import FeaturesAndBenefits from "./home-page-component/FeaturesAndBenefits";
 import CircleDotText from "./home-page-component/CircleDotText";
 import AuthForm from "./AuthForm/AuthForm";
+import InputComponent from "./AuthForm/InputComponent";
 
 export {
   SharedLayout,
@@ -32,4 +33,5 @@ export {
   FeaturesAndBenefits,
   CircleDotText,
   AuthForm,
+  InputComponent,
 };

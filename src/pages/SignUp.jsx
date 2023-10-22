@@ -1,4 +1,5 @@
 import React from "react";
+import { InputComponent } from "../components";
 
 const SignUp = () => {
   return (
@@ -6,23 +7,16 @@ const SignUp = () => {
       <h2 className="header-register">Register</h2>
       <div className="center-signup">
         <div className="form-div-register-page">
-          <div className="label-input-div">
-            <label className="label-register">Email address *</label>
-            <input
-              className="input-register"
-              type="email"
-              placeholder="Enter your email address"
-            />
-          </div>
-          <div className="label-input-div">
-            <label className="label-register">Password *</label>
-            <input
-              className="input-register"
-              type="password"
-              placeholder="Enter your password"
-            />
-          </div>
-
+          <InputComponent
+            label={"Email address *"}
+            type={"email"}
+            placeholder={"Enter your email address"}
+          />
+          <InputComponent
+            label={"Password *"}
+            type={"password"}
+            placeholder={"Enter your password"}
+          />
           <div className="sign-up-btn-div">
             <button className="Button-register">Sign Up</button>
           </div>
