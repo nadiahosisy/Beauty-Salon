@@ -14,10 +14,17 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
-  const logIn = () => {
+  const logIn = async () => {
     if (username === "1111" && password === "1111") {
-      navigate("/UserPage");
-      console.log("Login successful");
+      try {
+        //   console.log(emailRef.current.value);
+
+        window.localStorage.setItem("username", username);
+        navigate("/UserPage");
+      } catch (e) {
+        setErrorMessage("something went wrong");
+        console.log(e);
+      }
       // Perform actions for successful login, e.g., redirect to another page
     } else {
       console.log("Invalid username or password");
