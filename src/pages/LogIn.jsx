@@ -1,71 +1,136 @@
-import React, { useState } from "react";
-import { InputComponent } from "../components";
+import React, { useState, useRef } from "react";
+import { useAuth } from "../context/AuthProvider";
 import { useNavigate } from "react-router-dom";
-
-const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+export default function Login() {
+  const [isLogin, setIsLogin] = useState(true);
+  const [errorMessage, setErrorMessage] = useState("");
+  const { login } = useAuth();
+  const { signup } = useAuth();
+  const { logout } = useAuth();
+  const { currentUser } = useAuth();
+  const nameRefSignUp = useRef();
+  const emailRefSignUp = useRef();
+  const passwordRefSignUp = useRef();
+  const emailRefLogin = useRef();
+  const passwordRefLogin = useRef();
   const navigate = useNavigate();
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value);
-  };
 
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
+  async function handleSignUp(e) {
+    e.preventDefault();
 
-  const logIn = async () => {
-    if (username === "1111" && password === "1111") {
-      try {
-        window.localStorage.setItem("username", username);
-        navigate("/UserPage");
-      } catch (e) {
-        setErrorMessage("something went wrong");
-        console.log(e);
-      }
-    } else {
-      console.log("Invalid username or password");
+    if (
+      !nameRefSignUp.current.value ||
+      !emailRefSignUp.current.value ||
+      !passwordRefSignUp.current.value
+    ) {
+      setErrorMessage("All fields required");
+      return;
     }
-  };
+    try {
+      console.log(emailRefSignUp.current.value);
+      await signup(
+        emailRefSignUp.current.value,
+        passwordRefSignUp.current.value
+      );
+      window.localStorage.setItem("email", currentUser?.multiFactor.user.email);
+      navigate("/");
+    } catch (e) {
+      if (passwordRefSignUp.current.value.length < 6) {
+        setErrorMessage("password must be at least 6 characters");
+      }
+      setErrorMessage("something went wrong");
+      console.log(e);
+    }
+  }
+
+  async function handleLogin(e) {
+    e.preventDefault();
+
+    if (
+      //   !nameRefSignUp.current.value ||
+      !emailRefLogin.current.value ||
+      !passwordRefLogin.current.value
+    ) {
+      setErrorMessage("All fields required");
+      return;
+    }
+    try {
+      //   console.log(emailRef.current.value);
+      await login(emailRefLogin.current.value, passwordRefLogin.current.value);
+      console.log(currentUser);
+      window.localStorage.setItem("email", currentUser?.multiFactor.user.email);
+      navigate("/");
+    } catch (e) {
+      setErrorMessage("something went wrong");
+      console.log(e);
+    }
+  }
 
   return (
-    <div className="main-div-sign-up-page ">
-      <h2 className="header-register">Login</h2>
-      <div className="center-signup">
-        <div className="form-div-register-page">
-          <InputComponent
-            label={"Username or email address *"}
-            type={"text"}
-            placeholder={"Enter your username or email address"}
-            value={username}
-            onChange={handleUsernameChange}
+    <div>
+      {isLogin ? (
+        <form
+          className="login"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "20px",
+          }}
+        >
+          <h1>Log In</h1>
+          <input type="email" placeholder="email" ref={emailRefLogin} />
+          <input
+            type="password"
+            placeholder="password"
+            ref={passwordRefLogin}
           />
-          <InputComponent
-            label={"Password *"}
-            type={"password"}
-            placeholder={"Enter your password"}
-            value={password}
-            onChange={handlePasswordChange}
-          />
-          <div className="label-input-div">
-            <label className="label-register">
-              <input type="checkbox" /> Remember me
-            </label>
-          </div>
-          <p className="paragraph-register">
-            <a className="anchor-register" href="/forgot-password">
-              Lost your password?
-            </a>
+          <input type="submit" onClick={handleLogin} />
+          <p>
+            {" "}
+            doesn't have an account yet ?{" "}
+            <span
+              onClick={() => setIsLogin(!isLogin)}
+              style={{ color: "blue", fontWeight: "bold", cursor: "pointer" }}
+            >
+              Click Here
+            </span>{" "}
           </p>
-          <div className="sign-up-btn-div">
-            <button onClick={logIn} className="Button-register">
-              Login
-            </button>
-          </div>
-        </div>
-      </div>
+        </form>
+      ) : (
+        <form
+          className="signup"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "20px",
+          }}
+        >
+          <h1>Register</h1>
+          <input type="text" placeholder="name" ref={nameRefSignUp} />
+          <input type="email" placeholder="email" ref={emailRefSignUp} />
+          <input
+            type="password"
+            placeholder="password"
+            ref={passwordRefSignUp}
+          />
+          <input type="submit" onClick={handleSignUp} />
+          <p>
+            {" "}
+            have an account ?{" "}
+            <span
+              onClick={() => setIsLogin(!isLogin)}
+              style={{ color: "blue", fontWeight: "bold", cursor: "pointer" }}
+            >
+              Click Here
+            </span>{" "}
+          </p>
+          {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+        </form>
+      )}
     </div>
   );
-};
-
-export default Login;
+}
