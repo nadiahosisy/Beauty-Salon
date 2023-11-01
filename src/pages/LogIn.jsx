@@ -17,8 +17,6 @@ const Login = () => {
   const logIn = async () => {
     if (username === "1111" && password === "1111") {
       try {
-        //   console.log(emailRef.current.value);
-
         window.localStorage.setItem("username", username);
         navigate("/UserPage");
       } catch (e) {
