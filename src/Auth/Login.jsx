@@ -10,7 +10,6 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     login(email, password);
-    // Redirect or handle login success as needed
   };
 
   return (

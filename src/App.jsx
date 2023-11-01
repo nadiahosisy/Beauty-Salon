@@ -10,6 +10,8 @@ import {
   UserPage,
 } from "./pages";
 
+import { AuthProvider } from "./context/AuthProvider";
+
 const routes = [
   {
     path: "/",
@@ -52,7 +54,9 @@ const App = () => {
   const router = createBrowserRouter(routes);
   return (
     <>
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </>
   );
 };

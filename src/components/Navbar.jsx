@@ -1,7 +1,9 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthProvider";
 
 const Navbar = () => {
+  const { currentUser } = useAuth();
   const navigate = useNavigate();
   const navStyle = {
     textDecoration: "none",
@@ -44,18 +46,36 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div className="nav-btn-div">
-            <div className="signup-div">
-              <button onClick={goToSignUp} className="btn-signup">
-                Sign Up
-              </button>
+          {currentUser ? (
+            <>
+              <span>
+                {currentUser?.multiFactor.user.email.split("@")[0]}
+                <span
+                  style={{
+                    color: "red",
+                    margin: "0px 20px",
+                    cursor: "pointer",
+                  }}
+                  onClick={handleLogout}
+                >
+                  Log out
+                </span>
+              </span>
+            </>
+          ) : (
+            <div className="nav-btn-div">
+              <div className="signup-div">
+                <button onClick={goToSignUp} className="btn-signup">
+                  Sign Up
+                </button>
+              </div>
+              <div className="login-div">
+                <button onClick={goToLogIn} className="btn-login">
+                  Log In
+                </button>
+              </div>
             </div>
-            <div className="login-div">
-              <button onClick={goToLogIn} className="btn-login">
-                Log In
-              </button>
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
