@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { InputComponent } from "../components";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthProvider";
 
 const Login = () => {
+  const { currentUser } = useAuth();
+  const { setCurrentUser } = useAuth();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -15,9 +18,11 @@ const Login = () => {
   };
 
   const logIn = async () => {
-    if (username === "1111" && password === "1111") {
+    console.log(currentUser);
+    if (username === "1@gmail.com" && password === "1111") {
       try {
-        window.localStorage.setItem("username", username);
+        setCurrentUser(username);
+        window.localStorage.setItem("email", currentUser);
         navigate("/UserPage");
       } catch (e) {
         setErrorMessage("something went wrong");

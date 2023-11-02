@@ -17,6 +17,14 @@ const Navbar = () => {
   const goToLogIn = () => {
     navigate("/LogIn");
   };
+
+  const showUser = () => {
+    console.log(currentUser);
+  };
+
+  const handleLogout = () => {
+    console.log("HEY");
+  };
   return (
     <div className="main-navbar-container">
       <div className="navbar-container">
@@ -49,7 +57,7 @@ const Navbar = () => {
           {currentUser ? (
             <>
               <span>
-                {currentUser?.multiFactor.user.email.split("@")[0]}
+                {currentUser}
                 <span
                   style={{
                     color: "red",
@@ -72,6 +80,9 @@ const Navbar = () => {
               <div className="login-div">
                 <button onClick={goToLogIn} className="btn-login">
                   Log In
+                </button>
+                <button onClick={showUser} className="btn-login">
+                  showUser
                 </button>
               </div>
             </div>

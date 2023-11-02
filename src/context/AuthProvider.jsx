@@ -22,6 +22,7 @@ export function AuthProvider({ children }) {
   }
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
+      console.log(user);
       setCurrentUser(user);
       setLoading(false);
     });
@@ -33,6 +34,7 @@ export function AuthProvider({ children }) {
     login,
     signup,
     logout,
+    setCurrentUser,
   };
   return (
     <AuthContext.Provider value={value}>
