@@ -1,5 +1,5 @@
 import React from "react";
-import { Clients, Footer, Service, Subscribe } from "../components";
+import { Clients, Service, Subscribe } from "../components";
 
 const Services = () => {
   return (
