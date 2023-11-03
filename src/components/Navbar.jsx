@@ -1,9 +1,11 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+
 import { useAuth } from "../context/AuthProvider";
 
 const Navbar = () => {
-  const { currentUser } = useAuth();
+  const { currentUser, localLogout } = useAuth();
   const navigate = useNavigate();
   const navStyle = {
     textDecoration: "none",
@@ -18,13 +20,12 @@ const Navbar = () => {
     navigate("/LogIn");
   };
 
-  const showUser = () => {
-    console.log(currentUser);
+  const handleLogout = () => {
+    localLogout();
+    navigate("/Home");
   };
 
-  const handleLogout = () => {
-    console.log("HEY");
-  };
+  useEffect(() => {}, [currentUser]);
   return (
     <div className="main-navbar-container">
       <div className="navbar-container">
@@ -56,7 +57,9 @@ const Navbar = () => {
           </div>
           {currentUser ? (
             <>
-              <div className="current-user-div">{currentUser}</div>
+              <div>
+                <p className="current-user-paragraph">{currentUser}</p>
+              </div>
               <button className="log-out-btn" onClick={handleLogout}>
                 Log out
               </button>

@@ -95,8 +95,10 @@
   cursor: pointer;
   color: #ffffff;
 }
-.current-user-div {
+.current-user-paragraph {
+  font-family: Monserat-semi-bold, sans-serif;
   margin-top: 8px;
+  font-size: 18px;
 }
 .log-out-btn {
   font-size: 14px;
@@ -109,4 +111,9 @@
   border: none;
   cursor: pointer;
   color: #ffffff;
+}
+
+.nav-links .active {
+  font-weight: bold;
+  /* border-bottom: #ee6043 1px solid; */
 }
