@@ -25,6 +25,7 @@ export function AuthProvider({ children }) {
   function localLogout() {
     setCurrentUser(undefined);
   }
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       console.log(user);
