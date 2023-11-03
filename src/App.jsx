@@ -9,7 +9,6 @@ import {
   LogIn,
   UserPage,
 } from "./pages";
-
 import { AuthProvider } from "./context/AuthProvider";
 
 const routes = [
