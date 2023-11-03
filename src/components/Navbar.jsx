@@ -56,19 +56,10 @@ const Navbar = () => {
           </div>
           {currentUser ? (
             <>
-              <span>
-                {currentUser}
-                <span
-                  style={{
-                    color: "red",
-                    margin: "0px 20px",
-                    cursor: "pointer",
-                  }}
-                  onClick={handleLogout}
-                >
-                  Log out
-                </span>
-              </span>
+              <div className="current-user-div">{currentUser}</div>
+              <button className="log-out-btn" onClick={handleLogout}>
+                Log out
+              </button>
             </>
           ) : (
             <div className="nav-btn-div">
@@ -80,9 +71,6 @@ const Navbar = () => {
               <div className="login-div">
                 <button onClick={goToLogIn} className="btn-login">
                   Log In
-                </button>
-                <button onClick={showUser} className="btn-show-user">
-                  showUser
                 </button>
               </div>
             </div>

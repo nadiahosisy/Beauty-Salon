@@ -95,7 +95,10 @@
   cursor: pointer;
   color: #ffffff;
 }
-.btn-show-user {
+.current-user-div {
+  margin-top: 8px;
+}
+.log-out-btn {
   font-size: 14px;
   font-weight: 500;
   margin-left: 25px;
