@@ -81,7 +81,7 @@ const Navbar = () => {
                 <button onClick={goToLogIn} className="btn-login">
                   Log In
                 </button>
-                <button onClick={showUser} className="btn-login">
+                <button onClick={showUser} className="btn-show-user">
                   showUser
                 </button>
               </div>

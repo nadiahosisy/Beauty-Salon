@@ -95,3 +95,15 @@
   cursor: pointer;
   color: #ffffff;
 }
+.btn-show-user {
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 25px;
+  border-radius: 6px 6px 6px 6px;
+  padding: 10px 40px 10px 40px;
+  font-family: Monserat-ligth, sans-serif;
+  background-color: #ee6043;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
