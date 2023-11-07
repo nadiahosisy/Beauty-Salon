@@ -95,19 +95,13 @@ select::-ms-expand {
   cursor: pointer;
   margin-bottom: 10px;
 }
-.rbc-header {
-  font-family: Monserat-medium, sans-serif;
-}
-.rbc-row,
-.rbc-time-header-cell {
-  font-family: Monserat-medium, sans-serif;
-}
-.rbc-time-header-content {
-  font-family: Monserat-medium, sans-serif;
-}
+
 .rbc-button-link {
   font-family: Monserat-medium, sans-serif;
 }
 .rbc-label {
   font-size: 15px;
+}
+button {
+  font-family: Monserat-medium, sans-serif;
 }
