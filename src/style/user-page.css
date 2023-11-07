@@ -41,12 +41,10 @@ input[type="date"] {
   outline: none;
   background-color: #ffffff;
 }
-
 select {
   font-family: Monserat-medium, sans-serif;
   cursor: pointer;
 }
-
 input[type="date"] {
   cursor: pointer;
   appearance: none;
@@ -58,11 +56,9 @@ input[type="date"] {
   background-position: right 15px center;
   background-repeat: no-repeat;
 }
-
 select::-ms-expand {
   display: none;
 }
-
 .rbc-calendar {
   font-family: Monserat-medium, sans-serif;
   height: 500px;
