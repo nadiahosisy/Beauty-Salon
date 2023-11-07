@@ -6,7 +6,7 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 const localizer = momentLocalizer(moment);
 
 const UserPage = () => {
-  const [events, setEvents] = useState([]); // State to store appointments
+  const [events, setEvents] = useState([]);
   const [selectedService, setSelectedService] = useState(null);
   const [selectedDate, setSelectedDate] = useState(null);
 
@@ -16,12 +16,10 @@ const UserPage = () => {
   };
 
   const handleDateChange = (date) => {
-    // Handle date selection
     setSelectedDate(date);
   };
 
   const handleSelectSlot = ({ start, end }) => {
-    // Handle the selected time slot and create a new event
     if (selectedService && selectedDate) {
       const newEvent = {
         start,
@@ -30,7 +28,7 @@ const UserPage = () => {
           selectedDate
         ).format("MMMM Do, YYYY")}`,
       };
-      setEvents([...events, newEvent]); // Add the new event to the events array
+      setEvents([...events, newEvent]);
     } else {
       alert("Please select a service and date before choosing a time slot.");
     }
