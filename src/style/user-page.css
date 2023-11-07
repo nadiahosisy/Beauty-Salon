@@ -49,7 +49,7 @@ select {
 
 input[type="date"] {
   cursor: pointer;
-  /* Add custom styles for date input dropdown arrow */
+
   appearance: none;
   font-family: Monserat-medium, sans-serif;
   -webkit-appearance: none;
@@ -60,14 +60,13 @@ input[type="date"] {
   background-repeat: no-repeat;
 }
 
-/* Style the dropdown arrow icon */
 select::-ms-expand {
   display: none;
 }
 
 .rbc-calendar {
   font-family: Monserat-medium, sans-serif;
-  height: 500px; /* Set the height of the calendar */
+  height: 500px;
 }
 
 .rbc-time-view,
