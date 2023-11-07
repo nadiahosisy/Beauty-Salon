@@ -21,7 +21,6 @@
 .form-group {
   margin-bottom: 30px;
 }
-
 label {
   display: block;
   font-weight: bold;
@@ -29,7 +28,6 @@ label {
   font-family: Monserat-medium, sans-serif;
   margin-bottom: 10px;
 }
-
 select,
 input[type="date"] {
   width: 100%;
