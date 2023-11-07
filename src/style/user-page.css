@@ -49,7 +49,6 @@ select {
 
 input[type="date"] {
   cursor: pointer;
-
   appearance: none;
   font-family: Monserat-medium, sans-serif;
   -webkit-appearance: none;
