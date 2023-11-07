@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { SharedLayout } from "./components";
+import "bootstrap/dist/css/bootstrap.min.css";
 import {
   NotFound,
   Home,

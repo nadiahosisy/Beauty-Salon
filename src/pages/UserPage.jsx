@@ -1,76 +1,41 @@
-import React, { useState } from "react";
-import { Calendar, momentLocalizer } from "react-big-calendar";
-import moment from "moment";
-import "react-big-calendar/lib/css/react-big-calendar.css";
-
-const localizer = momentLocalizer(moment);
+import React, { useState, useEffect } from "react";
+import SchedulerModal from "../components/SchedulerModal";
+import { auth } from "../firebaseConfig";
 
 const UserPage = () => {
-  const [events, setEvents] = useState([]);
-  const [selectedService, setSelectedService] = useState(null);
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [user, setUser] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleServiceChange = (e) => {
-    // Handle service selection
-    setSelectedService(e.target.value);
-  };
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((authUser) => {
+      setUser(authUser);
+    });
 
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-  };
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
-  const handleSelectSlot = ({ start, end }) => {
-    if (selectedService && selectedDate) {
-      const newEvent = {
-        start,
-        end,
-        title: `Appointment for ${selectedService} on ${moment(
-          selectedDate
-        ).format("MMMM Do, YYYY")}`,
-      };
-      setEvents([...events, newEvent]);
-    } else {
-      alert("Please select a service and date before choosing a time slot.");
-    }
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
   };
 
   return (
-    <div className="scheduler-container">
-      <h2>Make an appointment</h2>
+    <div className="user-page-container">
+      {user ? (
+        <div>
+          <h2>Welcome, {user.email}</h2>
+          {/* List user's appointments here */}
+          {/* For each appointment, you can display the details */}
+        </div>
+      ) : (
+        <h2>No Appointments Listed</h2>
+      )}
 
-      {/* Service selection */}
-      <div className="form-group">
-        <label>Select Service:</label>
-        <select value={selectedService} onChange={handleServiceChange}>
-          <option value="">Select a service</option>
-          <option value="Haircut">Haircut</option>
-          <option value="Manicure">Manicure</option>
-          <option value="Pedicure">Pedicure</option>
-          {/* Add more service options as needed */}
-        </select>
-      </div>
+      <button onClick={toggleModal}>Make New Appointment</button>
 
-      {/* Date selection */}
-      <div className="form-group">
-        <label>Select Date:</label>
-        <input
-          type="date"
-          value={selectedDate}
-          onChange={(e) => handleDateChange(e.target.value)}
-        />
-      </div>
-
-      {/* Calendar for time slot selection */}
-      <Calendar
-        localizer={localizer}
-        events={events}
-        startAccessor="start"
-        endAccessor="end"
-        onSelectSlot={handleSelectSlot}
-        selectable
-        defaultView="week"
-        views={["week", "day"]}
-      />
+      {/* Scheduler Modal */}
+      {isModalOpen && <SchedulerModal closeModal={toggleModal} />}
     </div>
   );
 };

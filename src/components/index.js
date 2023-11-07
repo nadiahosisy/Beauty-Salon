@@ -15,6 +15,8 @@ import FeaturesAndBenefits from "./home-page-component/FeaturesAndBenefits";
 import CircleDotText from "./home-page-component/CircleDotText";
 import AuthForm from "./AuthForm/AuthForm";
 import InputComponent from "./AuthForm/InputComponent";
+import scheduler from "./Scheduler";
+import SchedulerModal from "./SchedulerModal";
 
 export {
   SharedLayout,
@@ -34,4 +36,6 @@ export {
   CircleDotText,
   AuthForm,
   InputComponent,
+  scheduler,
+  SchedulerModal,
 };
