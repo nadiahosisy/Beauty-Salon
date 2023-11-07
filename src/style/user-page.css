@@ -1,19 +1,80 @@
-.calendar-container {
-  width: 300px;
-  margin: 20px auto;
-  background-color: #ffffff;
+.scheduler-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 3rem;
+  border: 1px solid #ccc;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff7f6;
 }
-.user-page-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
+.form-group {
+  margin-bottom: 30px;
 }
-.calendar {
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+select,
+input[type="date"] {
   width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  background-color: #ffffff;
+}
+
+select {
+  cursor: pointer;
+}
+
+input[type="date"] {
+  cursor: pointer;
+  /* Add custom styles for date input dropdown arrow */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/60/60995.png");
+  background-size: 20px;
+  background-position: right 15px center;
+  background-repeat: no-repeat;
+}
+
+/* Style the dropdown arrow icon */
+select::-ms-expand {
+  display: none;
+}
+
+.rbc-calendar {
+  height: 500px; /* Set the height of the calendar */
+}
+
+.rbc-time-view,
+.rbc-day-view,
+.rbc-week-view,
+.rbc-month-view {
   height: 100%;
+}
+
+.rbc-toolbar-label {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.rbc-event {
+  color: white;
   border: none;
-  border-radius: 10px;
+  background-color: #ee6043;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
