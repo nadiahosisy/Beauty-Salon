@@ -67,7 +67,6 @@ select::-ms-expand {
   font-family: Monserat-medium, sans-serif;
   height: 500px;
 }
-
 .rbc-time-view,
 .rbc-day-view,
 .rbc-week-view,
@@ -75,7 +74,6 @@ select::-ms-expand {
   font-family: Monserat-medium, sans-serif;
   height: 100%;
 }
-
 .rbc-toolbar-label {
   font-size: 1.5em;
   font-weight: bold;
