@@ -83,9 +83,7 @@ select::-ms-expand {
   cursor: pointer;
   margin-bottom: 10px;
 }
-.rbc-button-link {
-  font-family: Monserat-medium, sans-serif;
-}
+
 .rbc-label {
   font-size: 15px;
 }
@@ -96,8 +94,6 @@ button {
 .custom-modal .modal-dialog {
   max-width: 80%;
   width: 80%;
-  margin-top: 0;
-  margin-right: 10rem;
 }
 
 .custom-modal .modal-content {
