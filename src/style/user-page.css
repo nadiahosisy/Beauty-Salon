@@ -116,3 +116,9 @@ button {
   height: 800px;
   width: 1000px;
 }
+.user-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
