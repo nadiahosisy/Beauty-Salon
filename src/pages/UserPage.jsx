@@ -24,15 +24,26 @@ const UserPage = () => {
     <div className="user-page-container">
       {user ? (
         <div>
-          <h2>Welcome, {user.email}</h2>
-          {/* List user's appointments here */}
-          {/* For each appointment, you can display the details */}
+          <h2 className="welcome-message">Welcome, {user.email}!</h2>
+          <div className="appointments-list">
+            {/* Display user's appointments here */}
+            {/* You can map over the user's appointments and show details for each */}
+            {/* Example: */}
+            {/* {user.appointments.map((appointment) => (
+              <div key={appointment.id} className="appointment-item">
+                <p>{appointment.service}</p>
+                <p>{appointment.date}</p>
+                <p>{appointment.time}</p>
+              </div>
+            ))} */}
+            <p>No Appointments Listed</p>
+          </div>
         </div>
       ) : (
-        <h2>No Appointments Listed</h2>
+        <h2 className="no-appointments-message">No Appointments Listed ?</h2>
       )}
 
-      <button className="new-appointment" onClick={toggleModal}>
+      <button className="new-appointment-btn" onClick={toggleModal}>
         Make New Appointment
       </button>
 

@@ -139,3 +139,45 @@ button {
   align-items: center;
   justify-content: center;
 }
+.user-page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 8rem;
+  padding: 20px;
+  background-color: #fff7f6;
+  border-radius: 8px;
+}
+
+.welcome-message {
+  color: #333;
+}
+
+.appointments-list {
+  margin-top: 20px;
+}
+
+.appointment-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.no-appointments-message {
+  font-size: 30px;
+  font-family: Monserat-ligth, sans-serif;
+}
+
+.new-appointment-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ee6043;
+  color: #fff;
+  border: none;
+  font-family: Monserat-medium, sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.new-appointment-btn:hover {
+  background-color: #e65032;
+}
