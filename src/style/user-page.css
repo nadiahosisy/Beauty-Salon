@@ -6,6 +6,18 @@
   font-family: "Monserat-medium";
   src: url("../assets/fonts/montserat/Montserrat-Medium.ttf");
 }
+.new-appointment {
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 25px;
+  border-radius: 6px 6px 6px 6px;
+  padding: 10px 40px 10px 40px;
+  /* font-family: Monserat-ligth, sans-serif; */
+  background-color: #ee6043;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
 .scheduler-container {
   font-family: Monserat-medium, sans-serif;
   max-width: 1000px;
@@ -90,10 +102,15 @@ select::-ms-expand {
 button {
   font-family: Monserat-medium, sans-serif;
 }
-
-.custom-modal .modal-dialog {
-  max-width: 80%;
-  width: 80%;
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .custom-modal .modal-content {
@@ -107,7 +124,7 @@ button {
 }
 .modal-content {
   display: flex;
-
+  justify-content: center;
   align-items: center;
   width: 1000px;
 }

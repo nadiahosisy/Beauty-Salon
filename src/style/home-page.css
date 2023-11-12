@@ -59,11 +59,13 @@
 }
 .btn-all-services-div {
   display: flex;
+
   justify-content: flex-start;
 }
 .anchor-all-services {
   display: inline-block;
   height: 1;
+  text-decoration: none;
   cursor: pointer;
   background-color: #ee6043;
   font-size: 15px;

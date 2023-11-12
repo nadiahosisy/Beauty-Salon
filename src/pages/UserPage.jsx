@@ -32,7 +32,9 @@ const UserPage = () => {
         <h2>No Appointments Listed</h2>
       )}
 
-      <button onClick={toggleModal}>Make New Appointment</button>
+      <button className="new-appointment" onClick={toggleModal}>
+        Make New Appointment
+      </button>
 
       {/* Scheduler Modal */}
       {isModalOpen && <SchedulerModal closeModal={toggleModal} />}

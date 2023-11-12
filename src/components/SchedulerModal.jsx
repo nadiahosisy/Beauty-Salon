@@ -4,11 +4,7 @@ import Scheduler from "./Scheduler";
 
 const SchedulerModal = ({ closeModal }) => {
   return (
-    <Modal
-      show={true}
-      onHide={closeModal}
-      className="custom-modal d-flex align-items-start justify-content-center"
-    >
+    <Modal show={true} onHide={closeModal}>
       <Modal.Header closeButton>
         <Modal.Title>Make a New Appointment</Modal.Title>
       </Modal.Header>
