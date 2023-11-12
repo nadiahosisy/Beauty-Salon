@@ -7,11 +7,6 @@ const ServicesHomePage = () => {
       <div className="heading-services">
         <div className="heading-container-home">
           <h2 className="heading-title-home-page">Our services</h2>
-          <div className="btn-all-services-div">
-            <a className="anchor-all-services">
-              <span className="span-all-services">View All Services</span>
-            </a>
-          </div>
         </div>
         <div className="main-container">
           <Service
