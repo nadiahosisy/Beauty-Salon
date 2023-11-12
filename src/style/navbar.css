@@ -15,7 +15,6 @@
   src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
 }
 .main-navbar-container {
-  display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 1650px;
