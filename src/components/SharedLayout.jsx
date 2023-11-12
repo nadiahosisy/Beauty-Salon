@@ -7,10 +7,10 @@ const SharedLayout = () => {
   return (
     <div>
       <Navbar />
-      <main>
+      {/* <main>
         <Outlet />
       </main>
-      <Subscribe />
+      <Subscribe /> */}
     </div>
   );
 };

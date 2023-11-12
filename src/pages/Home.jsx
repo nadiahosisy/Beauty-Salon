@@ -5,6 +5,7 @@ import {
   ServicesHomePage,
   Clients,
 } from "../components";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -22,9 +23,10 @@ const Home = () => {
               achieve your beauty goals.
             </div>
             <div className="btn-all-services-div">
-              <a className="anchor-all-services">
+              {/* Use Link to navigate to the "Services" component */}
+              <Link to="/Services" className="anchor-all-services">
                 <span className="span-all-services">View All Services</span>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="jumba-right">

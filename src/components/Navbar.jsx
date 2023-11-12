@@ -22,7 +22,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     localLogout();
-    navigate("/Home");
+    navigate("/");
   };
 
   useEffect(() => {}, [currentUser]);
@@ -39,7 +39,7 @@ const Navbar = () => {
             <ul className="nav-links">
               <li>
                 {/* <NavLink to="/" activeClassName="active" exact> */}
-                <NavLink style={navStyle} to="/home">
+                <NavLink style={navStyle} to="/">
                   Home
                 </NavLink>
               </li>
