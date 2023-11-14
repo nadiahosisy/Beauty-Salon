@@ -29,7 +29,10 @@
   background-color: #fff7f6;
 }
 .form-group {
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+  justify-content: space-between;
 }
 label {
   display: block;
