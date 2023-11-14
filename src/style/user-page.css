@@ -160,7 +160,6 @@ button {
   font-size: 30px;
   font-family: Monserat-ligth, sans-serif;
 }
-
 .new-appointment-btn {
   margin-top: 20px;
   padding: 10px 20px;
@@ -172,7 +171,6 @@ button {
   cursor: pointer;
   font-size: 14px;
 }
-
 .new-appointment-btn:hover {
   background-color: #e65032;
 }
