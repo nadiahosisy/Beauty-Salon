@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
+import { useNavigate } from "react-router-dom";
 import moment from "moment";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../firebaseConfig";
+
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
 const localizer = momentLocalizer(moment);
 
 const UserPage = () => {
+  const navigate = useNavigate();
   const [events, setEvents] = useState([]);
   const [selectedService, setSelectedService] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
@@ -28,11 +31,11 @@ const UserPage = () => {
       alert("Please select a service and date before submitting.");
     }
   };
-
-  const handleCancel = () => {
+  const handleDelete = () => {
     setSelectedService("");
     setSelectedDate("");
   };
+  const handleCancel = () => {};
 
   const handleServiceChange = (e) => {
     setSelectedService(e.target.value);
@@ -104,12 +107,17 @@ const UserPage = () => {
       />
 
       <div className="form-group">
-        <button className="submit-btn" onClick={handleSubmit}>
-          Submit
-        </button>
-        <button className="cancel-btn" onClick={handleCancel}>
-          Cancel
-        </button>
+        <div className="buttons-scheduler-div">
+          <button className="submit-btn" onClick={handleSubmit}>
+            Submit
+          </button>
+          <button className="cancel-btn" onClick={handleCancel}>
+            Cancel
+          </button>
+          <button className="delete-btn" onClick={handleDelete}>
+            Delete
+          </button>
+        </div>
       </div>
     </div>
   );
