@@ -104,8 +104,12 @@ const UserPage = () => {
       />
 
       <div className="form-group">
-        <button onClick={handleSubmit}>Submit</button>
-        <button onClick={handleCancel}>Cancel</button>
+        <button className="submit-btn" onClick={handleSubmit}>
+          Submit
+        </button>
+        <button className="cancel-btn" onClick={handleCancel}>
+          Cancel
+        </button>
       </div>
     </div>
   );

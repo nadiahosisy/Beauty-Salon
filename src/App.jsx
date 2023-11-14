@@ -18,52 +18,7 @@ import {
 } from "./pages";
 import { AuthProvider } from "./context/AuthProvider";
 
-// const routes = [
-//   {
-//     path: "/",
-//     element: <SharedLayout />,
-//     children: [
-//       {
-//         path: "/",
-//         element: <Home />,
-//       },
-//       {
-//         path: "/Services",
-//         element: <Services />,
-//       },
-
-//       {
-//         path: "/About",
-//         element: <About />,
-//       },
-//       {
-//         path: "/SignUp",
-//         element: <SignUp />,
-//       },
-//       {
-//         path: "/LogIn",
-//         element: <LogIn />,
-//       },
-//       {
-//         path: "/UserPage",
-//         element: <UserPage />,
-//       },
-//       {
-//         path: "*",
-//         element: <NotFound />,
-//       },
-//     ],
-//   },
-// ];
 const App = () => {
-  // const router = createBrowserRouter(routes);
-  // return (
-  //   <>
-  //     <AuthProvider>
-  //       <RouterProvider router={router} />
-  //     </AuthProvider>
-  //   </>
-  // );
   return (
     <AuthProvider>
       <BrowserRouter>

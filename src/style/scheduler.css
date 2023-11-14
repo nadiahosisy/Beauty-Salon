@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "Monserat-regular";
+  src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Monserat-medium";
+  src: url("../assets/fonts/montserat/Montserrat-Medium.ttf");
+}
+.new-appointment {
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 25px;
+  border-radius: 6px 6px 6px 6px;
+  padding: 10px 40px 10px 40px;
+  background-color: #ee6043;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+.scheduler-container {
+  font-family: Monserat-medium, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 3rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff7f6;
+}
+.form-group {
+  margin-bottom: 30px;
+}
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 1.2em;
+  font-family: Monserat-medium, sans-serif;
+  margin-bottom: 10px;
+}
+select,
+input[type="date"] {
+  width: 100%;
+  padding: 15px;
+  font-family: Monserat-medium, sans-serif;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  background-color: #ffffff;
+}
+select {
+  font-family: Monserat-medium, sans-serif;
+  cursor: pointer;
+}
+input[type="date"] {
+  cursor: pointer;
+  appearance: none;
+  font-family: Monserat-medium, sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/60/60995.png");
+  background-size: 20px;
+  background-position: right 15px center;
+  background-repeat: no-repeat;
+}
+select::-ms-expand {
+  display: none;
+}
+.rbc-calendar {
+  font-family: Monserat-medium, sans-serif;
+  height: 500px;
+}
+.rbc-time-view,
+.rbc-day-view,
+.rbc-week-view,
+.rbc-month-view {
+  font-family: Monserat-medium, sans-serif;
+  height: 100%;
+}
+.rbc-toolbar-label {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Monserat-medium, sans-serif;
+  margin: 0 10px;
+}
+.rbc-event {
+  color: white;
+  border: none;
+  background-color: #ee6043;
+  font-family: Monserat-medium, sans-serif;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.rbc-label {
+  font-size: 15px;
+}
+button {
+  font-family: Monserat-medium, sans-serif;
+}
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-modal .modal-content {
+  border-radius: 15px;
+}
+.custom-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10rem;
+}
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+}
+.scheduler-container {
+  align-items: center;
+  height: 800px;
+  width: 1000px;
+}
+.submit-btn {
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px 6px 6px 6px;
+  padding: 10px 40px 10px 40px;
+  font-family: Monserat-ligth, sans-serif;
+  background-color: #ee6043;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+.cancel-btn {
+  font-size: 14px;
+  font-weight: 500;
+  bottom: 5rem;
+  border-radius: 6px 6px 6px 6px;
+  padding: 7px 30px 7px 30px;
+  font-family: Monserat-ligth, sans-serif;
+  background-color: #ee6043;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}

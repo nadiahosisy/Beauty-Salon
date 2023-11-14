@@ -15,6 +15,7 @@ import "./style/home-beneifts.css";
 import "./style/clients.css";
 import "./style/signup.css";
 import "./style/user-page.css";
+import "./style/scheduler.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
