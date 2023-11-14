@@ -152,12 +152,10 @@ button {
 .appointments-list {
   margin-top: 20px;
 }
-
 .appointment-item {
   border-bottom: 1px solid #ddd;
   padding: 10px;
 }
-
 .no-appointments-message {
   font-size: 30px;
   font-family: Monserat-ligth, sans-serif;
