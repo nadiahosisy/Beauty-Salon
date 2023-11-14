@@ -114,11 +114,9 @@
 .nav-links .active {
   font-weight: bold;
 }
-
 .navbar-container-div-right li:hover {
   transform: scale(1.01);
 }
-
 .navbar-container-div-right button:hover {
   transform: scale(1.01);
 }

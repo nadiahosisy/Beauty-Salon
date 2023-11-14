@@ -36,7 +36,9 @@ const UserPage = () => {
                 <p>{appointment.time}</p>
               </div>
             ))} */}
-            <p>No Appointments Listed</p>
+            <h2 className="no-appointments-message">
+              No Appointments Listed ?
+            </h2>
           </div>
         </div>
       ) : (

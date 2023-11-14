@@ -1,14 +1,14 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { auth } from "../firebaseConfig";
 
 export const AuthContext = React.createContext();
 
 export function useAuth() {
-  return useContext(AuthContext);
+  return React.useContext(AuthContext);
 }
 
 export function AuthProvider({ children }) {
-  const [currentUser, setCurrentUser] = useState();
+  const [currentUser, setCurrentUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
   function signup(email, password) {
@@ -24,12 +24,11 @@ export function AuthProvider({ children }) {
   }
 
   function localLogout() {
-    setCurrentUser(undefined);
+    setCurrentUser(null);
   }
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
-      console.log(user);
       setCurrentUser(user);
       setLoading(false);
     });
@@ -44,6 +43,7 @@ export function AuthProvider({ children }) {
     setCurrentUser,
     localLogout,
   };
+
   return (
     <AuthContext.Provider value={value}>
       {!loading && children}

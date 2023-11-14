@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 import { useAuth } from "../context/AuthProvider";
 
@@ -13,9 +12,11 @@ const Navbar = () => {
     color: "#212121",
     fontSize: "18px",
   };
+
   const goToSignUp = () => {
     navigate("/SignUp");
   };
+
   const goToLogIn = () => {
     navigate("/LogIn");
   };
@@ -25,7 +26,6 @@ const Navbar = () => {
     navigate("/");
   };
 
-  useEffect(() => {}, [currentUser]);
   return (
     <div className="main-navbar-container">
       <div className="navbar-container">
@@ -38,7 +38,6 @@ const Navbar = () => {
           <div className="navbar">
             <ul className="nav-links">
               <li>
-                {/* <NavLink to="/" activeClassName="active" exact> */}
                 <NavLink style={navStyle} to="/">
                   Home
                 </NavLink>
@@ -55,29 +54,29 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          {currentUser ? (
-            <>
+          <div className="nav-btn-div">
+            {currentUser && (
               <div>
                 <p className="current-user-paragraph">{currentUser}</p>
               </div>
-              <button className="log-out-btn" onClick={handleLogout}>
-                Log out
-              </button>
-            </>
-          ) : (
-            <div className="nav-btn-div">
-              <div className="signup-div">
-                <button onClick={goToSignUp} className="btn-signup">
-                  Sign Up
+            )}
+            <div className="login-div">
+              {currentUser ? (
+                <button onClick={handleLogout} className="btn-login">
+                  Log Out
                 </button>
-              </div>
-              <div className="login-div">
-                <button onClick={goToLogIn} className="btn-login">
-                  Log In
-                </button>
-              </div>
+              ) : (
+                <>
+                  <button onClick={goToSignUp} className="btn-login mr">
+                    Register
+                  </button>
+                  <button onClick={goToLogIn} className="btn-login">
+                    Log In
+                  </button>
+                </>
+              )}
             </div>
-          )}
+          </div>
         </div>
       </div>
     </div>
