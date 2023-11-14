@@ -32,6 +32,7 @@ const UserPage = () => {
     }
   };
   const handleDelete = () => {
+    setEvents([]);
     setSelectedService("");
     setSelectedDate("");
   };
