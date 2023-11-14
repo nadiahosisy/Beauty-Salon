@@ -35,7 +35,9 @@ const UserPage = () => {
     setSelectedService("");
     setSelectedDate("");
   };
-  const handleCancel = () => {};
+  const handleCancel = () => {
+    navigate(-1);
+  };
 
   const handleServiceChange = (e) => {
     setSelectedService(e.target.value);
