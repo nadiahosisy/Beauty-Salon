@@ -68,9 +68,6 @@ const Navbar = () => {
                 </button>
               ) : (
                 <>
-                  <button onClick={goToSignUp} className="btn-login mr">
-                    Register
-                  </button>
                   <button onClick={goToLogIn} className="btn-login">
                     Log In
                   </button>

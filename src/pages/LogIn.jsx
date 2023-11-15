@@ -4,8 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthProvider";
 
 const Login = () => {
-  const { currentUser } = useAuth();
-  const { setCurrentUser } = useAuth();
+  const { currentUser, setCurrentUser } = useAuth();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -19,7 +18,6 @@ const Login = () => {
   };
 
   const logIn = async () => {
-    console.log(currentUser);
     if (username === "1@gmail.com" && password === "1111") {
       try {
         setCurrentUser(username);
@@ -68,6 +66,11 @@ const Login = () => {
               Login
             </button>
           </div>
+          {!currentUser && (
+            <p className="register-link">
+              Don't have an account? <a href="/signUp">Register here</a>.
+            </p>
+          )}
         </div>
       </div>
     </div>

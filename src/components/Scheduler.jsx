@@ -31,7 +31,7 @@ const UserPage = () => {
       alert("Please select a service and date before submitting.");
     }
   };
-  const handleDelete = () => {
+  const handleClear = () => {
     setEvents([]);
     setSelectedService("");
     setSelectedDate("");
@@ -117,8 +117,8 @@ const UserPage = () => {
           <button className="cancel-btn" onClick={handleCancel}>
             Cancel
           </button>
-          <button className="delete-btn" onClick={handleDelete}>
-            Delete
+          <button className="delete-btn" onClick={handleClear}>
+            Clear
           </button>
         </div>
       </div>
