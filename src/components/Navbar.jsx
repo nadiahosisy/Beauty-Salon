@@ -57,9 +57,10 @@ const Navbar = () => {
           <div className="nav-btn-div">
             {currentUser && (
               <div>
-                <p className="current-user-paragraph">{currentUser}</p>
+                <h2 className="current-user-paragraph">{currentUser.email}</h2>
               </div>
             )}
+
             <div className="login-div">
               {currentUser ? (
                 <button onClick={handleLogout} className="btn-login">
