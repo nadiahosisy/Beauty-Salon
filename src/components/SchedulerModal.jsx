@@ -5,7 +5,7 @@ import Scheduler from "./Scheduler";
 const SchedulerModal = ({ closeModal }) => {
   return (
     <Modal show={true} onHide={closeModal}>
-      <Modal.Header closeButton>
+      <Modal.Header>
         <Modal.Title>Make a New Appointment</Modal.Title>
       </Modal.Header>
       <Modal.Body>

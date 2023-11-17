@@ -1,0 +1,22 @@
+.login-failed-modal {
+  margin-top: 20vh;
+}
+
+.login-failed-modal-body {
+  background-color: #fff7f6;
+}
+.login-failed-modal-closeBtn {
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 25px;
+  border-radius: 6px 6px 6px 6px;
+  padding: 10px 40px 10px 40px;
+  font-family: Monserat-ligth, sans-serif;
+  background-color: #ee6043;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+.login-failed-modal-closeBtn:hover {
+  background-color: #ee6043 !important;
+}

@@ -17,7 +17,7 @@ import AuthForm from "./AuthForm/AuthForm";
 import InputComponent from "./AuthForm/InputComponent";
 import Scheduler from "./Scheduler";
 import SchedulerModal from "./SchedulerModal";
-
+import LoginFailedModal from "./LoginFailedModal";
 export {
   SharedLayout,
   Navbar,
@@ -38,4 +38,5 @@ export {
   InputComponent,
   Scheduler,
   SchedulerModal,
+  LoginFailedModal,
 };

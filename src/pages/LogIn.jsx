@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { InputComponent } from "../components";
 import { useNavigate } from "react-router-dom";
 import { useAuthGlobalContext } from "../context/AuthProvider";
+import LoginFailedModal from "../components/LoginFailedModal";
 
 const Login = () => {
   const { login, isLoggedIn } = useAuthGlobalContext();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [showLoginFailedModal, setShowLoginFailedModal] = useState(false);
   const navigate = useNavigate();
 
   const handleUsernameChange = (e) => {
@@ -17,11 +19,23 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
+  const handleLoginFailedModalClose = () => {
+    setShowLoginFailedModal(false);
+  };
+
   const logInClick = async () => {
     try {
-      await login(username, password);
-      window.localStorage.setItem("email", username);
-      navigate("/UserPage");
+      const isValidLogin = await login(username, password);
+      console.log(isValidLogin);
+      if (isValidLogin !== undefined) {
+        console.log("connected");
+        setShowLoginFailedModal(false);
+        window.localStorage.setItem("email", username);
+        navigate("/UserPage");
+      } else {
+        console.log("not connected");
+        setShowLoginFailedModal(true);
+      }
     } catch (error) {
       console.error("Error during login:", error);
     }
@@ -61,10 +75,14 @@ const Login = () => {
             <button onClick={logInClick} className="Button-register">
               Login
             </button>
+            {showLoginFailedModal && (
+              <LoginFailedModal closeModal={handleLoginFailedModalClose} />
+            )}
           </div>
+
           {!isLoggedIn && (
             <p className="paragraph-sign-up">
-              Dont have an account?
+              Dont have an account? &nbsp;
               <a className="anchor-register" href="/signUp">
                 Sign up here
               </a>
@@ -75,5 +93,4 @@ const Login = () => {
     </div>
   );
 };
-
 export default Login;
