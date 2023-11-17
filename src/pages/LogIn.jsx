@@ -5,7 +5,7 @@ import { useAuthGlobalContext } from "../context/AuthProvider";
 import LoginFailedModal from "../components/LoginFailedModal";
 
 const Login = () => {
-  const { login, isLoggedIn } = useAuthGlobalContext();
+  const { login, isLoggedIn, currentUser } = useAuthGlobalContext();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showLoginFailedModal, setShowLoginFailedModal] = useState(false);
@@ -25,9 +25,8 @@ const Login = () => {
 
   const logInClick = async () => {
     try {
-      const isValidLogin = await login(username, password);
-      console.log(isValidLogin);
-      if (isValidLogin !== undefined) {
+      await login(username, password);
+      if (currentUser !== undefined) {
         console.log("connected");
         setShowLoginFailedModal(false);
         window.localStorage.setItem("email", username);

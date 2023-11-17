@@ -54,7 +54,7 @@ const Navbar = () => {
           </div>
           <div className="nav-btn-div">
             {currentUser && (
-              <div>
+              <div className="current-user-div">
                 <h2 className="current-user-paragraph">{currentUser.email}</h2>
               </div>
             )}
