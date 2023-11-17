@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { InputComponent } from "../components";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthProvider";
+import { useAuthGlobalContext } from "../context/AuthProvider";
 
 const Login = () => {
-  const { currentUser, setCurrentUser } = useAuth();
+  const { login, isLoggedIn } = useAuthGlobalContext();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -17,23 +17,18 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
-  const logIn = async () => {
-    if (username === "1@gmail.com" && password === "1111") {
-      try {
-        setCurrentUser(username);
-        window.localStorage.setItem("email", currentUser);
-        navigate("/UserPage");
-      } catch (e) {
-        setErrorMessage("something went wrong");
-        console.log(e);
-      }
-    } else {
-      console.log("Invalid username or password");
+  const logInClick = async () => {
+    try {
+      await login(username, password);
+      window.localStorage.setItem("email", username);
+      navigate("/UserPage");
+    } catch (error) {
+      console.error("Error during login:", error);
     }
   };
 
   return (
-    <div className="main-div-sign-up-page ">
+    <div className="main-div-sign-up-page">
       <h2 className="header-register">Login</h2>
       <div className="center-signup">
         <div className="form-div-register-page">
@@ -51,6 +46,7 @@ const Login = () => {
             value={password}
             onChange={handlePasswordChange}
           />
+
           <div className="label-input-div">
             <label className="label-register">
               <input type="checkbox" /> Remember me
@@ -62,13 +58,16 @@ const Login = () => {
             </a>
           </p>
           <div className="sign-up-btn-div">
-            <button onClick={logIn} className="Button-register">
+            <button onClick={logInClick} className="Button-register">
               Login
             </button>
           </div>
-          {!currentUser && (
-            <p className="register-link">
-              Don't have an account? <a href="/signUp">Register here</a>.
+          {!isLoggedIn && (
+            <p className="paragraph-sign-up">
+              Dont have an account?
+              <a className="anchor-register" href="/signUp">
+                Sign up here
+              </a>
             </p>
           )}
         </div>

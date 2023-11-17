@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SchedulerModal from "../components/SchedulerModal";
-import { auth } from "../firebaseConfig";
+import { auth } from "../config/firebaseConfig";
 
 const UserPage = () => {
   const [user, setUser] = useState(null);

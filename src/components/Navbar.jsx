@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
-import { useAuth } from "../context/AuthProvider";
+import { useAuthGlobalContext } from "../context/AuthProvider";
 
 const Navbar = () => {
-  const { currentUser, localLogout } = useAuth();
+  const { currentUser, logout } = useAuthGlobalContext();
   const navigate = useNavigate();
   const navStyle = {
     textDecoration: "none",
@@ -13,18 +13,16 @@ const Navbar = () => {
     fontSize: "18px",
   };
 
-  const goToSignUp = () => {
-    navigate("/SignUp");
-  };
-
   const goToLogIn = () => {
     navigate("/LogIn");
   };
 
   const handleLogout = () => {
-    localLogout();
+    logout();
     navigate("/");
   };
+
+  useEffect(() => {}, [currentUser]);
 
   return (
     <div className="main-navbar-container">

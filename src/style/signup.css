@@ -47,7 +47,7 @@
   text-align: left;
 }
 .input-register {
-  font-family: "Monserat-medium", sans-serif;
+  font-family: Monserat-medium, sans-serif;
   width: calc(100% - 20px);
   padding: 10px;
   font-size: 14px;
@@ -69,6 +69,10 @@
   align-items: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+.paragraph-sign-up {
+  font-family: Monserat-medium, sans-serif;
+  margin-bottom: 10px;
 }
 .Button-register {
   font-size: 14px;

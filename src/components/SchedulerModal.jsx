@@ -9,7 +9,7 @@ const SchedulerModal = ({ closeModal }) => {
         <Modal.Title>Make a New Appointment</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Scheduler />
+        <Scheduler closeModal={closeModal} />
       </Modal.Body>
     </Modal>
   );
