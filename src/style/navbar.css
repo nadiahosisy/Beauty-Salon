@@ -118,7 +118,7 @@
   font-weight: bold;
 }
 .navbar-container-div-right li:hover {
-  color: rgba(0, 0, 0, 0.6); /* Adjust the alpha value to make it darker */
+  color: rgba(0, 0, 0, 0.6);
 }
 .navbar-container-div-right button:hover {
   color: rgba(0, 0, 0, 0.8); /* Adjust the alpha value to make it darker */
