@@ -50,7 +50,6 @@ function SignUp() {
       isValid = false;
     }
 
-    // Regex for password validation
     const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     if (!passwordRegex.test(password)) {
       setPasswordError(
