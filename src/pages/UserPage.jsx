@@ -23,7 +23,7 @@ const UserPage = () => {
   return (
     <>
       <div className="user-page-container">
-        <h2 className="welcome-message">Welcome, {user.email}!</h2>
+        <h2 className="welcome-message">Welcome, {user?.email || "Guest"}!</h2>
       </div>
       <div className="user-page-container">
         {user ? (

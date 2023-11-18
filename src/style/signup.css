@@ -79,18 +79,22 @@
   font-weight: 500;
   border-radius: 6px;
   padding: 10px 40px;
-  font-family: "Monserat-ligth", sans-serif;
+  font-family: Monserat-medium, sans-serif;
   background-color: #ee6043;
   border: none;
   cursor: pointer;
   color: #ffffff;
   transition: background-color 0.3s ease;
 }
+
+.Button-register:hover {
+  background-color: #e65032;
+}
 .anchor-register {
   text-decoration: none;
 }
 .error-message {
-  font-family: "Monserat-ligth", sans-serif;
+  font-family: Monserat-ligth, sans-serif;
   color: #d62a2a;
   font-weight: 700;
   font-size: 14px;
