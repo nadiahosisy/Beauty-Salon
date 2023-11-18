@@ -24,9 +24,9 @@ export function AuthProvider({ children }) {
       setLoading(true);
       const promise = createUserWithEmailAndPassword(auth, email, password);
       const user = await promise;
-
-      const userRef = ref(db, "users/" + user.uid);
-      await set(userRef, { email, firstName, lastName });
+      // const userRef = ref(db, "users/" + user.uid);
+      // await set(userRef, { email, firstName, lastName });
+      console.log(user);
       setLoading(false);
       return user;
     } catch (error) {

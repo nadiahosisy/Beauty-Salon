@@ -75,8 +75,7 @@ function SignUp() {
     if (isValid) {
       try {
         const result = await signup(email, password, firstName, lastName);
-        console.log(result);
-
+        console.log("my result", result);
         if (result.error) {
           // Handle the error
           console.error("Error during signup:", result.error);
@@ -84,9 +83,6 @@ function SignUp() {
           if (result.error.code === "auth/email-already-in-use") {
             // Handle email-already-in-use error
             setEmailError(
-              "This email address is already in use. Please use a different email."
-            );
-            console.log(
               "This email address is already in use. Please use a different email."
             );
           } else {
