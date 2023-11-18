@@ -1,10 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import SchedulerModal from "../components/SchedulerModal";
 import { auth } from "../config/firebaseConfig";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../config/firebaseConfig";
+import { AuthContext } from "../context/AuthProvider";
+import AppointmentList from "../components/AppointmentList";
 
 const UserPage = () => {
   const [user, setUser] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { currentUser } = useContext(AuthContext);
+  const [appointments, setAppointments] = useState([]);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
@@ -20,33 +26,57 @@ const UserPage = () => {
     setIsModalOpen(!isModalOpen);
   };
 
+  const handleGet = async () => {
+    console.log("use effect works");
+    const q = query(
+      collection(db, "users"),
+      where("uid", "==", currentUser?.email)
+    );
+
+    const querySnapshot = await getDocs(q);
+    let latestDate = null;
+    let latestDoc = null;
+    let extractedEvents = [];
+
+    querySnapshot.forEach((doc) => {
+      const currentDate = doc.data().date;
+
+      if (!latestDate || currentDate > latestDate) {
+        latestDate = currentDate;
+        latestDoc = doc;
+      }
+    });
+    extractedEvents = latestDoc.data().events || [];
+    const formattedEvents = extractedEvents.map((event) => ({
+      ...event,
+      start: event.start.toDate(),
+      end: event.end.toDate(),
+    }));
+
+    console.log("extracted ", formattedEvents);
+
+    if (latestDoc) {
+      console.log("Latest document ID:", latestDoc.id);
+      console.log("Latest document data:", latestDoc.data());
+      setAppointments(formattedEvents);
+    } else {
+      console.log("No documents found.");
+    }
+  };
+
+  useEffect(() => {
+    // Run handleGet when the component mounts
+    handleGet();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Empty dependency array ensures this runs only once on mount
+
   return (
     <>
       <div className="user-page-container">
         <h2 className="welcome-message">Welcome, {user?.email || "Guest"}!</h2>
       </div>
       <div className="user-page-container">
-        {user ? (
-          <div>
-            <div className="appointments-list">
-              {/* Display user's appointments here */}
-              {/* You can map over the user's appointments and show details for each */}
-              {/* Example: */}
-              {/* {user.appointments.map((appointment) => (
-              <div key={appointment.id} className="appointment-item">
-                <p>{appointment.service}</p>
-                <p>{appointment.date}</p>
-                <p>{appointment.time}</p>
-              </div>
-            ))} */}
-              <h2 className="no-appointments-message">
-                No Appointments Listed ?
-              </h2>
-            </div>
-          </div>
-        ) : (
-          <h2 className="no-appointments-message">No Appointments Listed ?</h2>
-        )}
+        <AppointmentList appointments={appointments} />
 
         <button className="new-appointment-btn" onClick={toggleModal}>
           Make New Appointment
