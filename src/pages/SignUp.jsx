@@ -43,7 +43,6 @@ function SignUp() {
 
     let isValid = true;
 
-    // Regex for email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setEmailError("Please provide a valid email!");
