@@ -20,40 +20,45 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(false);
 
   async function signup(email, password, firstName, lastName) {
-    // try {
-    //   setLoading(true);
-    //   const userCredential = await auth.createUserWithEmailAndPassword(
-    //     email,
-    //     password
-    //   );
+    try {
+      setLoading(true);
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
 
-    //   const user = userCredential.user;
+      const user = userCredential.user;
+      console.log(user);
 
-    //   const userRef = ref(db, "users/" + user.uid);
-    //   await set(userRef, { email, firstName, lastName });
-    //   setLoading(false);
-    // } catch (error) {
-    //   console.error("Error during signup:", error);
-    //   setLoading(false);
-    //   throw error;
-    // }
+      const userRef = ref(db, "users/" + user.uid);
+      await set(userRef, { email, firstName, lastName });
+      setLoading(false);
+      return user;
+    } catch (error) {
+      console.error("Error during signup:", error);
+      setLoading(false);
+      throw error;
+    }
 
-    const auth = getAuth();
-    createUserWithEmailAndPassword(auth, email, password, firstName, lastName)
-      .then((userCredential) => {
-        // Signed up
-        const user = userCredential.user;
+    // const auth = getAuth();
+    // createUserWithEmailAndPassword(auth, email, password, firstName, lastName)
+    //   .then((userCredential) => {
+    //     // Signed up
+    //     const user = userCredential.user;
 
-        const userRef = ref(db, "users/" + user.uid);
-        set(userRef, { email, firstName, lastName });
-        setLoading(false);
-        // ...
-      })
-      .catch((error) => {
-        console.error("Error during signup:", error);
-        setLoading(false);
-        throw error;
-      });
+    //     const userRef = ref(db, "users/" + user.uid);
+    //     set(userRef, { email, firstName, lastName });
+    //     setLoading(false);
+
+    //     return user;
+    //     // ...
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error during signup:", error);
+    //     setLoading(false);
+    //     throw error;
+    //   });
   }
 
   async function fetchUserDetails(userId) {

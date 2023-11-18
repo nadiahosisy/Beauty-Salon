@@ -1,6 +1,13 @@
 import React from "react";
 
-const InputComponent = ({ label, type, placeholder, value, onChange }) => {
+const InputComponent = ({
+  label,
+  type,
+  placeholder,
+  value,
+  onChange,
+  error,
+}) => {
   return (
     <div className="label-input-div">
       <label className="label-register">{label}</label>
@@ -11,6 +18,7 @@ const InputComponent = ({ label, type, placeholder, value, onChange }) => {
         value={value}
         onChange={onChange}
       />
+      <p className="error-message">{error}</p>
     </div>
   );
 };
