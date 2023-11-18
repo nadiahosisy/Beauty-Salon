@@ -66,7 +66,6 @@ function SignUp() {
       isValid = false;
     }
 
-    // Regex for last name validation
     if (!nameRegex.test(lastName)) {
       setLastNameError("Please enter a valid last name!");
       isValid = false;
