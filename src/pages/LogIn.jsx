@@ -3,9 +3,10 @@ import { InputComponent } from "../components";
 import { useNavigate } from "react-router-dom";
 import { useAuthGlobalContext } from "../context/AuthProvider";
 import LoginFailedModal from "../components/LoginFailedModal";
+import { auth } from "../config/firebaseConfig";
 
 const Login = () => {
-  const { login, isLoggedIn, currentUser } = useAuthGlobalContext();
+  const { login, isLoggedIn } = useAuthGlobalContext();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showLoginFailedModal, setShowLoginFailedModal] = useState(false);
@@ -25,18 +26,15 @@ const Login = () => {
 
   const logInClick = async () => {
     try {
-      await login(username, password);
-      if (currentUser !== undefined) {
+      const user = await login(username, password);
+      if (user) {
         console.log("connected");
         setShowLoginFailedModal(false);
         window.localStorage.setItem("email", username);
         navigate("/UserPage");
-      } else {
-        console.log("not connected");
-        setShowLoginFailedModal(true);
       }
     } catch (error) {
-      console.error("Error during login:", error);
+      setShowLoginFailedModal(true);
     }
   };
 

@@ -74,50 +74,47 @@ export function AuthProvider({ children }) {
   }
 
   async function login(email, password) {
-    // try {
-    //   const userCredential = await auth.signInWithEmailAndPassword(
-    //     email,
-    //     password
-    //   );
-    //   const user = userCredential.user;
-    //   console.log(user);
-    //   const userDetails = await fetchUserDetails(user.uid);
-    //   console.log(userDetails);
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+      // const userDetails = await fetchUserDetails(user.uid);
+      // console.log(userDetails);
+      setCurrentUser(user);
+      localStorage.setItem("userData", JSON.stringify(user));
 
-    //   setCurrentUser({
-    //     user, // decide which one to use
-    //     userDetails,
+      return user;
+    } catch (error) {
+      console.error("Error during login:", error);
+      throw error;
+    }
+
+    // let user = null;
+    // const auth = getAuth();
+    // signInWithEmailAndPassword(auth, email, password)
+    //   .then((userCredential) => {
+    //     // Signed in
+    //     user = userCredential.email;
+    //     //console.log(userCredential.user);
+    //     const userDetails = fetchUserDetails(user.uid);
+    //     console.log(userDetails);
+
+    //     setCurrentUser({
+    //       userCredential, // decide which one to use
+    //       //userDetails,
+    //     });
+
+    //     localStorage.setItem("userData", JSON.stringify(user));
+    //     // ...
+    //   })
+    //   .catch((error) => {
+    //     const errorCode = error.code;
+    //     const errorMessage = error.message;
     //   });
-
-    //   localStorage.setItem("userData", JSON.stringify(user));
-
-    //   return user;
-    // } catch (error) {
-    //   console.error("Error during login:", error);
-    //   throw error;
-    // }
-
-    const auth = getAuth();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.email;
-        console.log(user);
-        const userDetails = fetchUserDetails(user.uid);
-        console.log(userDetails);
-
-        setCurrentUser({
-          user, // decide which one to use
-          //userDetails,
-        });
-
-        localStorage.setItem("userData", JSON.stringify(user));
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      });
+    // console.log(user);
   }
 
   async function logout() {

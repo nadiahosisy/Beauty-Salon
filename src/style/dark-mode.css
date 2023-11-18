@@ -1,0 +1,16 @@
+
+/* Dark Mode CSS Styles */
+:root {
+    /* Define dark mode color variables */
+    --background-color: #121212; /* Dark background */
+    --text-color: #ffffff; /* Light text */
+    --border-color: #333333; /* Darker borders */
+}
+
+/* Apply dark mode styles */
+.home-page-jumba {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Other styles can be added here following the same pattern */
