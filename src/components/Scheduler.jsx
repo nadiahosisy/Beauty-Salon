@@ -12,7 +12,7 @@ const localizer = momentLocalizer(moment);
 
 const Scheduler = ({ closeModal }) => {
   const navigate = useNavigate();
-  const { currentUser } = useContext(AuthContext); // Corrected context usage
+  const { currentUser } = useContext(AuthContext);
   const [events, setEvents] = useState([]);
   const [selectedService, setSelectedService] = useState("");
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -25,9 +25,9 @@ const Scheduler = ({ closeModal }) => {
 
     try {
       const newAppointment = {
-        uid: currentUser.uid, // Get UID from current user context
+        uid: currentUser.uid,
         service: selectedService,
-        date: selectedDate.toISOString(), // Convert date to ISO string
+        date: selectedDate.toISOString(),
       };
       const docRef = await addDoc(
         collection(db, "appointments"),
