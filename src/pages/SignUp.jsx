@@ -75,7 +75,6 @@ function SignUp() {
     if (isValid) {
       try {
         const result = await signup(email, password, firstName, lastName);
-        console.log("my result", result);
         if (result.error) {
           console.error("Error during signup:", result.error);
 
