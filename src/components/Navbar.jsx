@@ -22,6 +22,10 @@ const Navbar = () => {
     navigate("/");
   };
 
+  const navigateToUserPage = () => {
+    navigate("/userPage");
+  };
+
   useEffect(() => {}, [currentUser]);
 
   return (
@@ -55,7 +59,11 @@ const Navbar = () => {
           <div className="nav-btn-div">
             {currentUser && (
               <div className="current-user-div">
-                <h2 className="current-user-paragraph">{currentUser.email}</h2>
+                <a className="current-user-anchor" onClick={navigateToUserPage}>
+                  <h2 className="current-user-paragraph">
+                    {currentUser.email}
+                  </h2>
+                </a>
               </div>
             )}
 

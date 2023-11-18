@@ -123,3 +123,8 @@
 .navbar-container-div-right button:hover {
   color: rgba(0, 0, 0, 0.8); /* Adjust the alpha value to make it darker */
 }
+
+.current-user-anchor {
+  cursor: pointer;
+  text-decoration: none;
+}
