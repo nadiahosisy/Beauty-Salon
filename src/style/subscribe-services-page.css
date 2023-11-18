@@ -96,11 +96,15 @@
   font-weight: 500;
   border-radius: 6px 6px 6px 6px;
   padding: 10px 40px 10px 40px;
-  font-family: Monserat-ligth, sans-serif;
+  font-family: Monserat-medium, sans-serif;
   background-color: #ee6043;
   border: none;
   cursor: pointer;
   color: #ffffff;
+}
+
+.send-btn:hover {
+  background-color: #e65032;
 }
 .send-btn-div {
   margin-top: -1rem;

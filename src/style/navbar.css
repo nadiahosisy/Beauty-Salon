@@ -80,7 +80,7 @@
   font-weight: 500;
   border-radius: 6px 6px 6px 6px;
   padding: 10px 40px 10px 40px;
-  font-family: Monserat-ligth, sans-serif;
+  font-family: Monserat-medium, sans-serif;
   background-color: #ee6043;
   border: none;
   cursor: pointer;
@@ -91,7 +91,7 @@
   font-weight: 500;
   border-radius: 6px 6px 6px 6px;
   padding: 10px 40px 10px 40px;
-  font-family: Monserat-ligth, sans-serif;
+  font-family: Monserat-medium, sans-serif;
   background-color: #ee6043;
   border: none;
   cursor: pointer;
@@ -103,16 +103,18 @@
   font-size: 18px;
 }
 .log-out-btn {
-  font-size: 14px;
-  font-weight: 500;
-  margin-left: 25px;
-  border-radius: 6px 6px 6px 6px;
-  padding: 10px 40px 10px 40px;
-  font-family: Monserat-ligth, sans-serif;
+  margin-top: 20px;
+  padding: 10px 20px;
   background-color: #ee6043;
+  color: #fff;
   border: none;
+  font-family: Monserat-medium, sans-serif;
+  border-radius: 5px;
   cursor: pointer;
-  color: #ffffff;
+  font-size: 14px;
+}
+.log-out-btn:hover {
+  background-color: #e65032;
 }
 .nav-links .active {
   font-weight: bold;
@@ -121,7 +123,7 @@
   color: rgba(0, 0, 0, 0.6);
 }
 .navbar-container-div-right button:hover {
-  color: rgba(0, 0, 0, 0.8);
+  background-color: #e65032;
 }
 
 .current-user-anchor {

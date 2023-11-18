@@ -10,6 +10,10 @@
   font-family: "Monserat-regular";
   src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
 }
+@font-face {
+  font-family: "Monserat-medium";
+  src: url("../assets/fonts/montserat/Montserrat-Medium.ttf");
+}
 .home-page-jumba {
   display: flex;
   align-items: center;
@@ -74,8 +78,12 @@
   text-align: center;
   transition: all 0.3s;
 }
+
 .span-all-services {
-  font-family: Monserat-regular, sans-serif;
+  font-family: Monserat-medium, sans-serif;
+}
+.anchor-all-services:hover {
+  background-color: #e65032;
 }
 .main-container-services-div {
   display: flex;
