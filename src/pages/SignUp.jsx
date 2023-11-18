@@ -59,7 +59,6 @@ function SignUp() {
       isValid = false;
     }
 
-    // Regex for first name validation
     const nameRegex = /^[A-Za-z0-9\s'".(),-]{5,}$/;
     if (!nameRegex.test(firstName)) {
       setFirstNameError("Please enter a valid first name!");
