@@ -42,7 +42,6 @@ function SignUp() {
     event.preventDefault();
 
     let isValid = true;
-    const newErrors = {};
 
     // Regex for email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -75,12 +74,35 @@ function SignUp() {
 
     if (isValid) {
       try {
-        const promise = await signup(email, password, firstName, lastName);
-        console.log(promise);
-        navigate("/UserPage");
-        // Optionally reset state here
+        const result = await signup(email, password, firstName, lastName);
+        console.log(result);
+
+        if (result.error) {
+          // Handle the error
+          console.error("Error during signup:", result.error);
+
+          if (result.error.code === "auth/email-already-in-use") {
+            // Handle email-already-in-use error
+            setEmailError(
+              "This email address is already in use. Please use a different email."
+            );
+            console.log(
+              "This email address is already in use. Please use a different email."
+            );
+          } else {
+            // Handle other errors
+            setError(result.errorMessage);
+          }
+        } else {
+          // Signup successful
+          const user = result;
+          navigate("/UserPage");
+          // Optionally reset state here
+        }
       } catch (error) {
-        setError("Failed to create an account. " + error.message);
+        // Handle unexpected errors
+        console.error("Unexpected error during signup:", error);
+        setError("An unexpected error occurred during signup.");
       }
     }
   };

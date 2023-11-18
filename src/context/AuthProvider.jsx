@@ -22,43 +22,26 @@ export function AuthProvider({ children }) {
   async function signup(email, password, firstName, lastName) {
     try {
       setLoading(true);
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-
-      const user = userCredential.user;
-      console.log(user);
+      const promise = createUserWithEmailAndPassword(auth, email, password);
+      const user = await promise;
 
       const userRef = ref(db, "users/" + user.uid);
       await set(userRef, { email, firstName, lastName });
       setLoading(false);
       return user;
     } catch (error) {
-      console.error("Error during signup:", error);
       setLoading(false);
-      throw error;
+
+      let errorMessage = "An error occurred during signup.";
+
+      if (error.code) {
+        errorMessage = `Firebase Error (${error.code}): ${error.message}`;
+      } else if (error.message) {
+        errorMessage = error.message;
+      }
+
+      return { error, errorMessage };
     }
-
-    // const auth = getAuth();
-    // createUserWithEmailAndPassword(auth, email, password, firstName, lastName)
-    //   .then((userCredential) => {
-    //     // Signed up
-    //     const user = userCredential.user;
-
-    //     const userRef = ref(db, "users/" + user.uid);
-    //     set(userRef, { email, firstName, lastName });
-    //     setLoading(false);
-
-    //     return user;
-    //     // ...
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error during signup:", error);
-    //     setLoading(false);
-    //     throw error;
-    //   });
   }
 
   async function fetchUserDetails(userId) {
