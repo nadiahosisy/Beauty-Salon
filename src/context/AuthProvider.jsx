@@ -91,30 +91,6 @@ export function AuthProvider({ children }) {
       console.error("Error during login:", error);
       throw error;
     }
-
-    // let user = null;
-    // const auth = getAuth();
-    // signInWithEmailAndPassword(auth, email, password)
-    //   .then((userCredential) => {
-    //     // Signed in
-    //     user = userCredential.email;
-    //     //console.log(userCredential.user);
-    //     const userDetails = fetchUserDetails(user.uid);
-    //     console.log(userDetails);
-
-    //     setCurrentUser({
-    //       userCredential, // decide which one to use
-    //       //userDetails,
-    //     });
-
-    //     localStorage.setItem("userData", JSON.stringify(user));
-    //     // ...
-    //   })
-    //   .catch((error) => {
-    //     const errorCode = error.code;
-    //     const errorMessage = error.message;
-    //   });
-    // console.log(user);
   }
 
   async function logout() {
