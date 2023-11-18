@@ -2,7 +2,14 @@ import React, { useState, useContext, useEffect } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import { useNavigate } from "react-router-dom";
 import moment from "moment";
-import { collection, addDoc } from "firebase/firestore";
+import {
+  collection,
+  addDoc,
+  getDocs,
+  query,
+  where,
+  orderBy,
+} from "firebase/firestore";
 import { db } from "../config/firebaseConfig";
 import { AuthContext } from "../context/AuthProvider";
 import "react-big-calendar/lib/css/react-big-calendar.css";
@@ -17,6 +24,40 @@ const Scheduler = ({ closeModal }) => {
   const [selectedService, setSelectedService] = useState("");
   const [selectedDate, setSelectedDate] = useState(new Date());
 
+  const [forceRender, setForceRender] = useState(false);
+
+  const handleGet = async () => {
+    const q = query(
+      collection(db, "users"),
+      where("uid", "==", currentUser.email)
+    );
+
+    const querySnapshot = await getDocs(q);
+    let latestDate = null;
+    let latestDoc = null;
+    let extractedEvents = [];
+
+    querySnapshot.forEach((doc) => {
+      const currentDate = doc.data().date;
+
+      if (!latestDate || currentDate > latestDate) {
+        latestDate = currentDate;
+        latestDoc = doc;
+      }
+    });
+    extractedEvents = latestDoc.data().events || [];
+
+    console.log("extracted ", extractedEvents[0]);
+    // Set the extracted events to the state
+    setEvents([extractedEvents[0]]);
+    setForceRender((prev) => !prev);
+    if (latestDoc) {
+      console.log("Latest document ID:", latestDoc.id);
+      console.log("Latest document data:", latestDoc.data());
+    } else {
+      console.log("No documents found.");
+    }
+  };
   const handleSubmit = async () => {
     if (!selectedService || !selectedDate) {
       alert("Please select a service and date before submitting.");
@@ -25,14 +66,12 @@ const Scheduler = ({ closeModal }) => {
 
     try {
       const newAppointment = {
-        uid: currentUser.uid,
+        uid: currentUser.email,
         service: selectedService,
         date: selectedDate.toISOString(),
+        events: events,
       };
-      const docRef = await addDoc(
-        collection(db, "appointments"),
-        newAppointment
-      );
+      const docRef = await addDoc(collection(db, "users"), newAppointment);
       console.log("Document written with ID: ", docRef.id);
       alert("Appointment successfully scheduled!");
     } catch (error) {
@@ -107,6 +146,7 @@ const Scheduler = ({ closeModal }) => {
       </div>
       {/* Calendar */}
       <Calendar
+        key={forceRender}
         localizer={localizer}
         events={events}
         startAccessor="start"
@@ -127,6 +167,9 @@ const Scheduler = ({ closeModal }) => {
           </button>
           <button className="delete-btn" onClick={handleClear}>
             Clear
+          </button>
+          <button className="delete-btn" onClick={handleGet}>
+            get
           </button>
         </div>
       </div>

@@ -21,37 +21,41 @@ const UserPage = () => {
   };
 
   return (
-    <div className="user-page-container">
-      {user ? (
-        <div>
-          <h2 className="welcome-message">Welcome, {user.email}!</h2>
-          <div className="appointments-list">
-            {/* Display user's appointments here */}
-            {/* You can map over the user's appointments and show details for each */}
-            {/* Example: */}
-            {/* {user.appointments.map((appointment) => (
+    <>
+      <div className="user-page-container">
+        <h2 className="welcome-message">Welcome, {user.email}!</h2>
+      </div>
+      <div className="user-page-container">
+        {user ? (
+          <div>
+            <div className="appointments-list">
+              {/* Display user's appointments here */}
+              {/* You can map over the user's appointments and show details for each */}
+              {/* Example: */}
+              {/* {user.appointments.map((appointment) => (
               <div key={appointment.id} className="appointment-item">
                 <p>{appointment.service}</p>
                 <p>{appointment.date}</p>
                 <p>{appointment.time}</p>
               </div>
             ))} */}
-            <h2 className="no-appointments-message">
-              No Appointments Listed ?
-            </h2>
+              <h2 className="no-appointments-message">
+                No Appointments Listed ?
+              </h2>
+            </div>
           </div>
-        </div>
-      ) : (
-        <h2 className="no-appointments-message">No Appointments Listed ?</h2>
-      )}
+        ) : (
+          <h2 className="no-appointments-message">No Appointments Listed ?</h2>
+        )}
 
-      <button className="new-appointment-btn" onClick={toggleModal}>
-        Make New Appointment
-      </button>
+        <button className="new-appointment-btn" onClick={toggleModal}>
+          Make New Appointment
+        </button>
 
-      {/* Scheduler Modal */}
-      {isModalOpen && <SchedulerModal closeModal={toggleModal} />}
-    </div>
+        {/* Scheduler Modal */}
+        {isModalOpen && <SchedulerModal closeModal={toggleModal} />}
+      </div>
+    </>
   );
 };
 
