@@ -2,23 +2,14 @@ import React, { useState, useContext, useEffect } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import { useNavigate } from "react-router-dom";
 import moment from "moment";
-import {
-  collection,
-  addDoc,
-  getDocs,
-  query,
-  where,
-  orderBy,
-} from "firebase/firestore";
+import { collection, addDoc, getDocs, query, where } from "firebase/firestore";
 import { db } from "../config/firebaseConfig";
 import { AuthContext } from "../context/AuthProvider";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import closeModal from "./SchedulerModal";
 
 const localizer = momentLocalizer(moment);
 
 const Scheduler = ({ closeModal }) => {
-  const navigate = useNavigate();
   const { currentUser } = useContext(AuthContext);
   const [events, setEvents] = useState([]);
   const [selectedService, setSelectedService] = useState("");
@@ -46,10 +37,15 @@ const Scheduler = ({ closeModal }) => {
       }
     });
     extractedEvents = latestDoc.data().events || [];
+    const formattedEvents = extractedEvents.map((event) => ({
+      ...event,
+      start: event.start.toDate(),
+      end: event.end.toDate(),
+    }));
 
-    console.log("extracted ", extractedEvents[0]);
+    console.log("extracted ", formattedEvents);
     // Set the extracted events to the state
-    setEvents([extractedEvents[0]]);
+    setEvents(formattedEvents);
     setForceRender((prev) => !prev);
     if (latestDoc) {
       console.log("Latest document ID:", latestDoc.id);
@@ -58,6 +54,7 @@ const Scheduler = ({ closeModal }) => {
       console.log("No documents found.");
     }
   };
+
   const handleSubmit = async () => {
     if (!selectedService || !selectedDate) {
       alert("Please select a service and date before submitting.");
@@ -104,6 +101,8 @@ const Scheduler = ({ closeModal }) => {
       return;
     }
 
+    console.log(start);
+
     const newEvent = {
       start,
       end,
@@ -111,7 +110,6 @@ const Scheduler = ({ closeModal }) => {
         selectedDate
       ).format("MMMM Do, YYYY")}`,
     };
-
     setEvents([...events, newEvent]);
   };
 
@@ -122,6 +120,12 @@ const Scheduler = ({ closeModal }) => {
       // Optionally, redirect or show a message
     }
   }, [currentUser]);
+
+  useEffect(() => {
+    // Run handleGet when the component mounts
+    handleGet();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Empty dependency array ensures this runs only once on mount
 
   return (
     <div className="scheduler-container">
@@ -167,9 +171,6 @@ const Scheduler = ({ closeModal }) => {
           </button>
           <button className="delete-btn" onClick={handleClear}>
             Clear
-          </button>
-          <button className="delete-btn" onClick={handleGet}>
-            get
           </button>
         </div>
       </div>
