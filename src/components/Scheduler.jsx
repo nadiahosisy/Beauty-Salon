@@ -101,8 +101,6 @@ const Scheduler = ({ closeModal }) => {
       return;
     }
 
-    console.log(start);
-
     const newEvent = {
       start,
       end,

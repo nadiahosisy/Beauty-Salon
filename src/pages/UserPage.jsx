@@ -72,8 +72,11 @@ const UserPage = () => {
 
   return (
     <>
-      <div className="user-page-container">
-        <h2 className="welcome-message">Welcome, {user?.email || "Guest"}!</h2>
+      <div className="welcome-page-container">
+        <h2 className="welcome-message">
+          Welcome,{" "}
+          <span className="welcome-message-user">{user?.email || "Guest"}</span>{" "}
+        </h2>
       </div>
       <div className="user-page-container">
         <AppointmentList appointments={appointments} />

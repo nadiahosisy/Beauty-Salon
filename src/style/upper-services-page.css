@@ -25,8 +25,9 @@
 .heading-services {
   display: flex;
   flex-direction: column;
-  max-width: 2024px;
+  width: 3000px;
   margin-left: 6%;
+  background: #fff7f6;
   margin-right: 4%;
 }
 .heading-title {

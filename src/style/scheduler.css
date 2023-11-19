@@ -18,8 +18,9 @@
   color: #ffffff;
 }
 .scheduler-container {
+  /* width: 1400px !important; */
   font-family: Monserat-medium, sans-serif;
-  max-width: 1000px;
+
   margin: 0 auto;
   padding: 20px;
   margin-top: 3rem;
@@ -59,7 +60,7 @@ input[type="date"] {
   font-family: Monserat-medium, sans-serif;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url("https://cdn-icons-png.flaticon.com/512/60/60995.png");
+  /* background-image: url("https://cdn-icons-png.flaticon.com/512/60/60995.png"); */
   background-size: 20px;
   background-position: right 15px center;
   background-repeat: no-repeat;
@@ -102,6 +103,8 @@ button {
 }
 .modal-dialog {
   display: flex;
+
+  max-width: 1000px !important;
   justify-content: center;
   align-items: center;
 }
@@ -123,12 +126,11 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1000px;
 }
+
 .scheduler-container {
   align-items: center;
   height: 800px;
-  width: 1000px;
 }
 .buttons-scheduler-div {
   display: flex;
@@ -178,4 +180,8 @@ button {
   border-radius: 4px;
   line-height: normal;
   white-space: nowrap;
+}
+
+.rbc-timeslot-group {
+  min-height: 180px !important;
 }
