@@ -34,7 +34,7 @@ const AppointmentList = ({ appointments }) => {
         {renderAppointmentsByCategory("Haircut")}
       </div>
       <div className="category-wrapper">
-        {renderAppointmentsByCategory("Nails")}
+        {renderAppointmentsByCategory("Nails Design")}
       </div>
     </div>
   );

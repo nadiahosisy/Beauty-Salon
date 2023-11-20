@@ -68,7 +68,7 @@ const UserPage = () => {
     // Run handleGet when the component mounts
     handleGet();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // Empty dependency array ensures this runs only once on mount
+  }, []);
 
   return (
     <>
