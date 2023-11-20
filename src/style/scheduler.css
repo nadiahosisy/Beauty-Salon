@@ -20,10 +20,9 @@
 .scheduler-container {
   /* width: 1400px !important; */
   font-family: Monserat-medium, sans-serif;
-
   margin: 0 auto;
   padding: 20px;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -38,17 +37,17 @@
 .instruction-text {
   font-size: 16px; /* Increase font size */
   color: black; /* Green text color */
-  font-family: "Monserat-medium", sans-serif; /* Choose a stylish font */
+  font-family: Monserat-medium, sans-serif; /* Choose a stylish font */
   margin-top: 10px; /* Add some space at the top */
   padding: 15px; /* Add padding for a comfortable feel */
   border-radius: 8px; /* Rounded corners */
   background-color: white; /* Light blue background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
-  transition: background-color 0.3s ease; /* Smooth background color transition */
+  transition: background-color 0.3s ease;
+  border: 1px solid #ccc; /* Smooth background color transition */
 }
 
 .instruction-text:hover {
-  background-color: #fff7f6; /* Lighter blue on hover */
+  background-color: #e6e6e6; /* Lighter blue on hover */
 }
 
 label {
@@ -72,17 +71,6 @@ input[type="date"] {
 select {
   font-family: Monserat-medium, sans-serif;
   cursor: pointer;
-}
-input[type="date"] {
-  cursor: pointer;
-  appearance: none;
-  font-family: Monserat-medium, sans-serif;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  /* background-image: url("https://cdn-icons-png.flaticon.com/512/60/60995.png"); */
-  background-size: 20px;
-  background-position: right 15px center;
-  background-repeat: no-repeat;
 }
 select::-ms-expand {
   display: none;
@@ -122,7 +110,7 @@ button {
 }
 .modal-dialog {
   display: flex;
-
+  max-height: fit-content !important;
   max-width: 1000px !important;
   justify-content: center;
   align-items: center;
@@ -170,6 +158,9 @@ button {
   line-height: normal;
   white-space: nowrap;
 }
+.submit-btn:hover {
+  background-color: #e6e6e6; /* Lighter blue on hover */
+}
 .cancel-btn {
   color: #373a3c;
   display: inline-block;
@@ -185,6 +176,9 @@ button {
   line-height: normal;
   white-space: nowrap;
 }
+.cancel-btn:hover {
+  background-color: #e6e6e6;
+}
 .delete-btn {
   color: #373a3c;
   display: inline-block;
@@ -199,6 +193,9 @@ button {
   border-radius: 4px;
   line-height: normal;
   white-space: nowrap;
+}
+.delete-btn:hover {
+  background-color: #e6e6e6; /* Lighter blue on hover */
 }
 
 .rbc-timeslot-group {

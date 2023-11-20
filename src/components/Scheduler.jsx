@@ -140,8 +140,8 @@ const Scheduler = ({ closeModal }) => {
       {/* Date Selection */}
       <div className="form-group">
         <p className="instruction-text">
-          Select a date and time by clicking on the available slots in the
-          calendar.
+          Click on an available slot in the calendar to schedule your
+          appointment.
         </p>
       </div>
       {/* Calendar */}
