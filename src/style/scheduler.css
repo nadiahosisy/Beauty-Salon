@@ -37,8 +37,8 @@
   font-family: Monserat-medium, sans-serif;
   margin-top: 10px;
   padding: 15px;
-  border-radius: 8px; /* Rounded corners */
-  background-color: white; /* Light blue background */
+  border-radius: 8px;
+  background-color: white;
   transition: background-color 0.3s ease;
   border: 1px solid #ccc; /* Smooth background color transition */
 }
