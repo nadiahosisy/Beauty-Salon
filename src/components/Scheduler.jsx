@@ -139,12 +139,10 @@ const Scheduler = ({ closeModal }) => {
       </div>
       {/* Date Selection */}
       <div className="form-group">
-        <label>Select Date:</label>
-        <input
-          type="date"
-          value={moment(selectedDate).format("YYYY-MM-DD")}
-          onChange={(e) => handleDateChange(e.target.value)}
-        />
+        <p className="instruction-text">
+          Select a date and time by clicking on the available slots in the
+          calendar.
+        </p>
       </div>
       {/* Calendar */}
       <Calendar

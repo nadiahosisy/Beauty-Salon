@@ -32,6 +32,25 @@
 .form-group {
   margin-bottom: 30px;
 }
+
+/* Add these styles to your existing stylesheet or create a new one */
+
+.instruction-text {
+  font-size: 16px; /* Increase font size */
+  color: black; /* Green text color */
+  font-family: "Monserat-medium", sans-serif; /* Choose a stylish font */
+  margin-top: 10px; /* Add some space at the top */
+  padding: 15px; /* Add padding for a comfortable feel */
+  border-radius: 8px; /* Rounded corners */
+  background-color: white; /* Light blue background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.instruction-text:hover {
+  background-color: #fff7f6; /* Lighter blue on hover */
+}
+
 label {
   display: block;
   font-weight: bold;
