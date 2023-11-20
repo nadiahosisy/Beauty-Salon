@@ -44,7 +44,7 @@ const Scheduler = ({ closeModal }) => {
     }));
 
     console.log("extracted ", formattedEvents);
-    // Set the extracted events to the state
+
     setEvents(formattedEvents);
     setForceRender((prev) => !prev);
     if (latestDoc) {
@@ -68,15 +68,18 @@ const Scheduler = ({ closeModal }) => {
         date: selectedDate.toISOString(),
         events: events,
       };
+
       const docRef = await addDoc(collection(db, "users"), newAppointment);
       console.log("Document written with ID: ", docRef.id);
+
+      closeModal(true);
+
       alert("Appointment successfully scheduled!");
     } catch (error) {
       console.error("Error adding document: ", error);
       alert("Failed to schedule the appointment.");
     }
   };
-
   const handleClear = () => {
     setEvents([]);
     setSelectedService("");
@@ -113,17 +116,13 @@ const Scheduler = ({ closeModal }) => {
 
   useEffect(() => {
     if (!currentUser) {
-      // Handle the case where currentUser is not defined
       console.log("No current user found");
-      // Optionally, redirect or show a message
     }
   }, [currentUser]);
 
   useEffect(() => {
-    // Run handleGet when the component mounts
     handleGet();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // Empty dependency array ensures this runs only once on mount
+  }, []);
 
   return (
     <div className="scheduler-container">
