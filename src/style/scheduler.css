@@ -18,7 +18,6 @@
   color: #ffffff;
 }
 .scheduler-container {
-  /* width: 1400px !important; */
   font-family: Monserat-medium, sans-serif;
   margin: 0 auto;
   padding: 20px;
@@ -37,7 +36,7 @@
   color: black;
   font-family: Monserat-medium, sans-serif;
   margin-top: 10px;
-  padding: 15px; /* Add padding for a comfortable feel */
+  padding: 15px;
   border-radius: 8px; /* Rounded corners */
   background-color: white; /* Light blue background */
   transition: background-color 0.3s ease;
