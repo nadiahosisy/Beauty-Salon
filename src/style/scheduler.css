@@ -40,11 +40,11 @@
   border-radius: 8px;
   background-color: white;
   transition: background-color 0.3s ease;
-  border: 1px solid #ccc; /* Smooth background color transition */
+  border: 1px solid #ccc;
 }
 
 .instruction-text:hover {
-  background-color: #e6e6e6; /* Lighter blue on hover */
+  background-color: #e6e6e6;
 }
 
 label {
