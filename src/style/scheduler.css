@@ -133,6 +133,7 @@ button {
   height: 800px;
 }
 .buttons-scheduler-div {
+  margin-top: 1rem;
   display: flex;
   flex-direction: row;
 }
