@@ -128,7 +128,6 @@ button {
   justify-content: center;
   align-items: center;
 }
-
 .scheduler-container {
   align-items: center;
   height: 800px;
@@ -153,7 +152,7 @@ button {
   white-space: nowrap;
 }
 .submit-btn:hover {
-  background-color: #e6e6e6; /* Lighter blue on hover */
+  background-color: #e6e6e6;
 }
 .cancel-btn {
   color: #373a3c;
@@ -189,9 +188,8 @@ button {
   white-space: nowrap;
 }
 .delete-btn:hover {
-  background-color: #e6e6e6; /* Lighter blue on hover */
+  background-color: #e6e6e6;
 }
-
 .rbc-timeslot-group {
   min-height: 180px !important;
 }
