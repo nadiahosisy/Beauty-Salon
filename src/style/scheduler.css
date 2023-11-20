@@ -30,7 +30,6 @@
 .form-group {
   margin-bottom: 30px;
 }
-
 .instruction-text {
   font-size: 16px;
   color: black;
@@ -42,11 +41,9 @@
   transition: background-color 0.3s ease;
   border: 1px solid #ccc;
 }
-
 .instruction-text:hover {
   background-color: #e6e6e6;
 }
-
 label {
   display: block;
   font-weight: bold;
