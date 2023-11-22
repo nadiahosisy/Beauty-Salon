@@ -1,16 +1,232 @@
-
-/* Dark Mode CSS Styles */
-:root {
-    /* Define dark mode color variables */
-    --background-color: #121212; /* Dark background */
-    --text-color: #ffffff; /* Light text */
-    --border-color: #333333; /* Darker borders */
+.dark-mode * {
+  transition: background-color 0.01s, color 0.9s, border-color 0.1s;
 }
 
-/* Apply dark mode styles */
-.home-page-jumba {
-    background-color: var(--background-color);
-    color: var(--text-color);
+* {
+  transition: background-color 0.01s, color 0.9s, border-color 0.1s;
 }
 
-/* Other styles can be added here following the same pattern */
+.dark-mode p,
+.dark-mode div,
+.dark-mode h3,
+.dark-mode li,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h2,
+.dark-mode .span-text,
+.dark-mode a {
+  background-color: #292828;
+  color: #ffffff;
+}
+
+body.dark-mode .main-navbar-div {
+  background-color: #292828;
+  color: #ffffff;
+}
+body.dark-mode .left-navbar-name {
+  color: #ffffff;
+}
+body.dark-mode .nav-links a {
+  color: #ffffff !important;
+}
+body.dark-mode .btn-login {
+  transition: background-color 0.2s, color 0.9s, border-color 0.1s;
+  background-color: #0d6efd;
+  color: #ffffff;
+}
+body.dark-mode .current-user-paragraph {
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+
+  color: #0d6efd;
+}
+body.dark-mode {
+  color: #ffffff;
+}
+body.dark-mode .home-page-jumba {
+  background-color: #221f1f;
+  color: #ffffff;
+}
+body.dark-mode .home-page-inside-jumba {
+  background-color: #221f1f;
+  color: #ffffff;
+}
+body.dark-mode .jumba-left {
+  background-color: #221f1f;
+  color: #ffffff;
+}
+body.dark-mode .jumba-left-h1 {
+  background-color: #221f1f;
+  color: #ffffff;
+}
+body.dark-mode .jumba-left-h1 h1 {
+  color: #ffffff;
+}
+body.dark-mode .jumba-left-p {
+  background-color: #221f1f;
+  color: #ffffff;
+}
+body.dark-mode .btn-all-services-div {
+  background-color: #221f1f;
+  color: #ffffff;
+}
+body.dark-mode .anchor-all-services {
+  background-color: #0d6efd;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .main-container-services-div {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .heading-services {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .heading-container-home {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .heading-title-home-page {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .main-container {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .card-container {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .anchor {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .content-div-services {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .anchor-read-more {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .features-benifts-main-div {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .main-div-container-features-benifts {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .main-container-features-benifts {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .text-features-benifits {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .features-benifts-main-div::before {
+  background-color: #eeeeee;
+  transition: background-color 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .section {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .header-features {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .circle-dot-text-div {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .circle {
+  background-color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .dot {
+  background-color: #221f1f;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .span-text {
+  background-color: #221f1f;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .name-client-fives {
+  color: #0d6efd;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .fa.fa-star.checked {
+  color: #ffffff;
+  font-size: 16px;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+
+/* Subscribe*/
+
+body.dark-mode .center-subscribe {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .main-subscribe-div {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .header-subscribe-div {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .pargraph-subscribe-div {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .pargraph {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .input-subscribe {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .send-btn {
+  background-color: #0d6efd;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+
+/* Services*/
+
+body.dark-mode .heading-title {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .heading-container {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}

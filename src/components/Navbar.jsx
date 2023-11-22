@@ -42,33 +42,33 @@ const Navbar = () => {
     <div className="main-navbar-container">
       <div className="navbar-container">
         <div className="navbar-container-div-left">
-          <div className="left-navbar-name-div">
-            <DarkModeSwitch
-              className="dark-mode-toggle"
-              moonColor="#0d6efd"
-              sunColor="#e65032"
-              checked={isDarkMode}
-              onChange={toggleDarkMode}
-              size={35}
-              animationProperties={{
-                springConfig: { mass: 7, tension: 250, friction: 40 },
-                light: {
-                  circle: {
-                    r: 5,
-                  },
-                  mask: {
-                    cx: "100%",
-                    cy: "0%",
-                  },
-                  svg: {
-                    transform: "rotate(120deg)",
-                  },
-                  lines: {
-                    opacity: 1,
-                  },
+          <DarkModeSwitch
+            className="dark-mode-toggle"
+            moonColor="#0d6efd"
+            sunColor="#e65032"
+            checked={isDarkMode}
+            onChange={toggleDarkMode}
+            size={35}
+            animationProperties={{
+              springConfig: { mass: 7, tension: 250, friction: 40 },
+              light: {
+                circle: {
+                  r: 5,
                 },
-              }}
-            />
+                mask: {
+                  cx: "100%",
+                  cy: "0%",
+                },
+                svg: {
+                  transform: "rotate(120deg)",
+                },
+                lines: {
+                  opacity: 1,
+                },
+              },
+            }}
+          />
+          <div className="left-navbar-name-div">
             <h2 className="left-navbar-name">BEAUTY-SALON-NADIA</h2>
           </div>
         </div>

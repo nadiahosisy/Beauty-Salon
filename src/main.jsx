@@ -17,6 +17,7 @@ import "./style/signup.css";
 import "./style/user-page.css";
 import "./style/scheduler.css";
 import "./style/loginFailedModal.css";
+import "./style/dark-mode.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
