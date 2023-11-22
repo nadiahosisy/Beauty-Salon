@@ -145,7 +145,6 @@
   top: -270px;
   left: 88px;
 }
-
 @keyframes flicker {
   0% {
     opacity: 0.4;
