@@ -27,11 +27,15 @@ const UserPage = () => {
   };
 
   const handleGet = async () => {
+    if (currentUser === null) {
+      return;
+    }
     console.log("use effect works");
     const q = query(
       collection(db, "users"),
       where("uid", "==", currentUser?.email)
     );
+    console.log(currentUser);
 
     const querySnapshot = await getDocs(q);
     let latestDate = null;
@@ -68,7 +72,13 @@ const UserPage = () => {
     // Run handleGet when the component mounts
     handleGet();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [currentUser]);
+
+  useEffect(() => {
+    // Run handleGet when the component mounts
+    handleGet();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [toggleModal]);
 
   return (
     <>

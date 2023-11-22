@@ -71,7 +71,7 @@ const Scheduler = ({ closeModal }) => {
 
       const docRef = await addDoc(collection(db, "users"), newAppointment);
       console.log("Document written with ID: ", docRef.id);
-
+      handleGet();
       closeModal(true);
 
       alert("Appointment successfully scheduled!");
@@ -122,6 +122,7 @@ const Scheduler = ({ closeModal }) => {
 
   useEffect(() => {
     handleGet();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

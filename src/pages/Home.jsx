@@ -37,6 +37,9 @@ const Home = () => {
                 height={480}
                 src="./public/images/main.webp"
               ></img>
+              <div className="flame-1"></div>
+              <div className="flame-2"></div>
+              <div className="flame-3"></div>
             </div>
           </div>
         </div>
