@@ -1,18 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
 import { useAuthGlobalContext } from "../context/AuthProvider";
-
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 const Navbar = () => {
   const { currentUser, logout } = useAuthGlobalContext();
+  const [isDarkMode, setDarkMode] = useState(false);
   const navigate = useNavigate();
+
   const navStyle = {
     textDecoration: "none",
     fontFamily: "Monserat-ligth, sans-serif",
     color: "#212121",
     fontSize: "18px",
   };
-
+  const toggleDarkMode = (checked) => {
+    setDarkMode(checked);
+  };
   const goToLogIn = () => {
     navigate("/LogIn");
   };
@@ -27,12 +31,44 @@ const Navbar = () => {
   };
 
   useEffect(() => {}, [currentUser]);
-
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [isDarkMode]);
   return (
     <div className="main-navbar-container">
       <div className="navbar-container">
         <div className="navbar-container-div-left">
           <div className="left-navbar-name-div">
+            <DarkModeSwitch
+              className="dark-mode-toggle"
+              moonColor="#0d6efd"
+              sunColor="#e65032"
+              checked={isDarkMode}
+              onChange={toggleDarkMode}
+              size={35}
+              animationProperties={{
+                springConfig: { mass: 7, tension: 250, friction: 40 },
+                light: {
+                  circle: {
+                    r: 5,
+                  },
+                  mask: {
+                    cx: "100%",
+                    cy: "0%",
+                  },
+                  svg: {
+                    transform: "rotate(120deg)",
+                  },
+                  lines: {
+                    opacity: 1,
+                  },
+                },
+              }}
+            />
             <h2 className="left-navbar-name">BEAUTY-SALON-NADIA</h2>
           </div>
         </div>
