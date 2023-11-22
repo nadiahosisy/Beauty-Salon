@@ -13,7 +13,7 @@ const Home = () => {
       <div className="home-page-jumba">
         <div className="home-page-inside-jumba">
           <div className="jumba-left">
-            <div>
+            <div className="jumba-left-h1">
               <h1>Welcome to Beauty-Salon-Nadia!</h1>
             </div>
             <div className="jumba-left-p">
