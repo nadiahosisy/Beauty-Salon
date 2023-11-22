@@ -78,7 +78,6 @@
   text-align: center;
   transition: all 0.3s;
 }
-
 .span-all-services {
   font-family: Monserat-medium, sans-serif;
 }
@@ -147,7 +146,6 @@
   left: 88px;
 }
 
-/* Keyframes for flickering effect */
 @keyframes flicker {
   0% {
     opacity: 0.4;
