@@ -34,6 +34,11 @@ body.dark-mode .btn-login {
   background-color: #0d6efd;
   color: #ffffff;
 }
+body.dark-mode .new-appointment-btn {
+  transition: background-color 0.2s, color 0.9s, border-color 0.1s;
+  background-color: #0d6efd;
+  color: #ffffff;
+}
 body.dark-mode .current-user-paragraph {
   transition: background-colory 0s, color 0.9s, border-color 0s;
 
