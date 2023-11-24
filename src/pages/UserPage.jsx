@@ -78,7 +78,7 @@ const UserPage = () => {
     // Run handleGet when the component mounts
     handleGet();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [toggleModal]);
+  }, [isModalOpen]);
 
   return (
     <>
