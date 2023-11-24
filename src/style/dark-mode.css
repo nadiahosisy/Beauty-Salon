@@ -35,7 +35,7 @@ body.dark-mode .btn-login {
   color: #ffffff;
 }
 body.dark-mode .current-user-paragraph {
-  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+  transition: background-colory 0s, color 0.9s, border-color 0s;
 
   color: #0d6efd;
 }
@@ -226,6 +226,66 @@ body.dark-mode .heading-title {
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
 }
 body.dark-mode .heading-container {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .our-team-main-div {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .our-team-div {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .our-team {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .our-team-text {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .left-description-div {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .nadia-img {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .container-text-div {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .founder-stylist-div {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .left-text-div {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .right-description-div {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .left-img {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .description-main-div {
   background-color: #221f1f;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
