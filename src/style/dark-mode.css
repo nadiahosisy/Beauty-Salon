@@ -183,6 +183,10 @@ body.dark-mode .fa.fa-star.checked {
   font-size: 16px;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
 }
+/* body.dark-mode .our-team-main-div-home-page {
+  background-color: #221f1f;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+} */
 
 /* Subscribe*/
 
@@ -234,66 +238,66 @@ body.dark-mode .heading-container {
   color: #ffffff;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
 }
-body.dark-mode .our-team-main-div {
+/* body.dark-mode .our-team-main-div {
   background-color: #221f1f;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
-}
-body.dark-mode .our-team-div {
+} */
+/* body.dark-mode .our-team-div {
   background-color: #221f1f;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
-}
-body.dark-mode .our-team {
+} */
+/* body.dark-mode .our-team {
   background-color: #221f1f;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
-}
-body.dark-mode .our-team-text {
+} */
+/* body.dark-mode .our-team-text {
   background-color: #221f1f;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
-}
-body.dark-mode .left-description-div {
+} */
+/* body.dark-mode .left-description-div {
   background-color: #221f1f;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
-}
-body.dark-mode .nadia-img {
+} */
+/* body.dark-mode .nadia-img {
   background-color: #221f1f;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
-}
-body.dark-mode .container-text-div {
+} */
+/* body.dark-mode .container-text-div {
   background-color: #221f1f;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
-}
-body.dark-mode .founder-stylist-div {
+} */
+/* body.dark-mode .founder-stylist-div {
   background-color: #221f1f;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
-}
-body.dark-mode .left-text-div {
+} */
+/* body.dark-mode .left-text-div {
   background-color: #221f1f;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
-}
-body.dark-mode .right-description-div {
+} */
+/* body.dark-mode .right-description-div {
   background-color: #221f1f;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
-}
-body.dark-mode .left-img {
+} */
+/* body.dark-mode .left-img {
   background-color: #221f1f;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
-}
-body.dark-mode .description-main-div {
+} */
+/* body.dark-mode .description-main-div {
   background-color: #221f1f;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
-}
+} */
 
 /* Scheduler */
 
@@ -364,9 +368,9 @@ body.dark-mode .rbc-calendar div > * > * > * > * {
 
 /* user page */
 
-body.dark-mode .list-header {
+/* body.dark-mode .list-header {
   background-color: #221f1f;
 }
 body.dark-mode .appointments-list-container {
   background-color: #221f1f;
-}
+} */
