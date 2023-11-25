@@ -361,3 +361,12 @@ body.dark-mode .rbc-event-content {
 body.dark-mode .rbc-calendar div > * > * > * > * {
   z-index: 1;
 }
+
+/* user page */
+
+body.dark-mode .list-header {
+  background-color: #221f1f;
+}
+body.dark-mode .appointments-list-container {
+  background-color: #221f1f;
+}
