@@ -51,7 +51,6 @@
 .welcome-message {
   color: #333;
 }
-
 .welcome-message-user {
   color: #0d6efd;
 }
@@ -92,7 +91,6 @@
   background-color: #fff7f6;
   width: 800px;
 }
-
 .list-header {
   display: flex;
   justify-content: center;
