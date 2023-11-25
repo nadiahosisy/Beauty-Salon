@@ -103,15 +103,13 @@
   margin-bottom: 20px;
   color: #1f1f1f;
 }
-
 .card-container-div {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-color: white; /* specify background color if needed */
+  background-color: white;
 }
-
 .appointment-card {
   border: 1px solid #ddd;
   border-radius: 8px;
