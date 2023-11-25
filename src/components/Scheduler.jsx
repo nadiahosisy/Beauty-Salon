@@ -145,17 +145,20 @@ const Scheduler = ({ closeModal }) => {
         </p>
       </div>
       {/* Calendar */}
-      <Calendar
-        key={forceRender}
-        localizer={localizer}
-        events={events}
-        startAccessor="start"
-        endAccessor="end"
-        onSelectSlot={handleSelectSlot}
-        selectable
-        defaultView="week"
-        views={["week", "day"]}
-      />
+      <div className="my-calendar">
+        <Calendar
+          key={forceRender}
+          localizer={localizer}
+          events={events}
+          startAccessor="start"
+          endAccessor="end"
+          onSelectSlot={handleSelectSlot}
+          selectable
+          defaultView="week"
+          views={["week", "day"]}
+        />
+      </div>
+
       {/* Action Buttons */}
       <div className="form-group">
         <div className="buttons-scheduler-div">

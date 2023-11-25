@@ -313,7 +313,7 @@ body.dark-mode.rbc-toolbar button.rbc-active:hover,
 body.dark-mode.rbc-toolbar button.rbc-active:focus {
   background-color: #0d6efd;
   color: #ffffff !important;
-  border-color: #292828;
+
   transition: background-colory 0.4s, color 2s, border-color 0.1s;
 }
 
@@ -332,22 +332,7 @@ body.dark-mode .delete-btn {
   color: #ffffff;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
 }
-body.dark-mode .rbc-event-label {
-  background-color: #0d6efd;
-  color: #ffffff;
-  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
-}
-body.dark-mode .rbc-event {
-  border: 1px solid #ffffff;
-  background-color: #0d6efd;
-  color: #ffffff;
-  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
-}
-body.dark-mode .rbc-event-content {
-  background-color: #0d6efd;
-  color: #ffffff;
-  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
-}
+
 body.dark-mode .modal-dialog {
   background-color: #7c7c7c !important;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
@@ -356,7 +341,7 @@ body.dark-mode .modal-content {
   border-radius: 10px;
 }
 body.dark-mode .fade.modal.show {
-  background-color: #7c7c7c !important;
+  background-color: #383737 !important;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
 }
 /* body.dark-mode .modal-content {
@@ -373,3 +358,27 @@ body.dark-mode .modal-body {
 body.dark-mode .rbc-calendar {
   background-color: #000000;
 } */
+
+body.dark-mode .rbc-event-label {
+  background-color: #0d6efd;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .rbc-event {
+  border: 1px solid #ffffff;
+  background-color: #0d6efd;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+body.dark-mode .rbc-day-bg {
+  border: none;
+}
+body.dark-mode .rbc-event-content {
+  background-color: #0d6efd;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
+
+body.dark-mode .rbc-calendar div > * > * > * > * {
+  z-index: 1;
+}
