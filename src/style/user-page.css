@@ -125,7 +125,10 @@
   background-color: #fff7f6;
   padding: 10px;
   width: 200px;
+  box-sizing: border-box;
+  cursor: pointer;
   animation: gradientAnimation 5s linear infinite;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 @keyframes gradientAnimation {
@@ -137,7 +140,8 @@
   }
 }
 .appointment-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  box-shadow: inset 0 0 0 3px #e65032; /* Inner border */
 }
 .card-title {
   font-size: 18px;
@@ -172,7 +176,7 @@
   flex-wrap: wrap;
   gap: 10px;
 }
-
+/* 
 .appointment-card {
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -185,7 +189,7 @@
 
 .appointment-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .no-appointments {
   text-align: center;
