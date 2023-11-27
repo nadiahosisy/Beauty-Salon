@@ -57,17 +57,6 @@ const Login = () => {
             value={password}
             onChange={handlePasswordChange}
           />
-
-          <div className="label-input-div">
-            <label className="label-register">
-              <input type="checkbox" /> Remember me
-            </label>
-          </div>
-          <p className="paragraph-register">
-            <a className="anchor-register" href="/forgot-password">
-              Lost your password?
-            </a>
-          </p>
           <div className="sign-up-btn-div">
             <button onClick={logInClick} className="Button-register">
               Login
