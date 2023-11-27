@@ -1,21 +1,14 @@
-// Import the functions you need from the SDKs you need
-// import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
-// import { getFirestore } from "firebase/firestore";
-// import firebase from "firebase/compat/app";
-// import { getAuth } from "firebase/auth";
+// Import the necessary functions from the SDKs
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getFirestore } from "firebase/firestore";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Import the environment variables
+const { VITE_API_KEY } = import.meta.env;
+
+// Firebase configuration
 const firebaseConfig = {
-  // apiKey: import.meta.env.VITE_API_KEY,
-  apiKey: "AIzaSyDbEY-3r_yhaRizofR0ZJHa3IOBNVoqExE",
+  apiKey: VITE_API_KEY,
   authDomain: "beauty-salon-ce18d.firebaseapp.com",
   projectId: "beauty-salon-ce18d",
   storageBucket: "beauty-salon-ce18d.appspot.com",
@@ -25,12 +18,6 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-
-// const app = initializeApp(firebaseConfig);
-// // export const auth = firebase.auth();
-// export const auth = getAuth(app);
-
-// export const db = getFirestore(app); // Initialize Firestore
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
