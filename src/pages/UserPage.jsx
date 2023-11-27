@@ -1,7 +1,16 @@
 import React, { useState, useEffect, useContext } from "react";
 import SchedulerModal from "../components/SchedulerModal";
 import { auth } from "../config/firebaseConfig";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  query,
+  where,
+  doc,
+  updateDoc,
+  arrayRemove,
+  getDoc,
+} from "firebase/firestore";
 import { db } from "../config/firebaseConfig";
 import { AuthContext } from "../context/AuthProvider";
 import AppointmentList from "../components/AppointmentList";
@@ -11,6 +20,7 @@ const UserPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { currentUser } = useContext(AuthContext);
   const [appointments, setAppointments] = useState([]);
+  const [latDoc, setLatDoc] = useState(null);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
@@ -35,7 +45,7 @@ const UserPage = () => {
       collection(db, "users"),
       where("uid", "==", currentUser?.email)
     );
-    console.log(currentUser);
+    //console.log(currentUser);
 
     const querySnapshot = await getDocs(q);
     let latestDate = null;
@@ -50,6 +60,7 @@ const UserPage = () => {
         latestDoc = doc;
       }
     });
+    setLatDoc(latestDoc);
     extractedEvents = latestDoc.data().events || [];
     const formattedEvents = extractedEvents.map((event) => ({
       ...event,
@@ -57,14 +68,40 @@ const UserPage = () => {
       end: event.end.toDate(),
     }));
 
-    console.log("extracted ", formattedEvents);
+    // console.log("extracted ", formattedEvents);
 
     if (latestDoc) {
-      console.log("Latest document ID:", latestDoc.id);
-      console.log("Latest document data:", latestDoc.data());
+      // console.log("Latest document ID:", latestDoc.id);
+      // console.log("Latest document data:", latestDoc.data());
       setAppointments(formattedEvents);
     } else {
       console.log("No documents found.");
+    }
+  };
+
+  const handleDeleteAppointment = async (appointmentId) => {
+    const userDocRef = doc(db, "users", latDoc.id);
+
+    const docSnapshot = await getDoc(userDocRef);
+
+    try {
+      // Get the current events array from the document data
+      const currentEvents = docSnapshot.data().events || [];
+
+      // Remove the element with the specified id from the events array
+      const updatedEvents = currentEvents.filter(
+        (event) => event.id !== appointmentId
+      );
+
+      // Update the document with the modified events array
+      await updateDoc(userDocRef, { events: updatedEvents });
+
+      // Refresh the appointments list
+      handleGet();
+
+      console.log("Event deleted successfully.");
+    } catch (error) {
+      console.error("Error deleting event: ", error);
     }
   };
 
@@ -89,7 +126,10 @@ const UserPage = () => {
         </h2>
       </div>
       <div className="user-page-container">
-        <AppointmentList appointments={appointments} />
+        <AppointmentList
+          appointments={appointments}
+          onDelete={handleDeleteAppointment}
+        />
 
         <button className="new-appointment-btn" onClick={toggleModal}>
           Make New Appointment

@@ -6,6 +6,7 @@ import { collection, addDoc, getDocs, query, where } from "firebase/firestore";
 import { db } from "../config/firebaseConfig";
 import { AuthContext } from "../context/AuthProvider";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import { v4 as uuidv4 } from "uuid";
 
 const localizer = momentLocalizer(moment);
 
@@ -110,6 +111,7 @@ const Scheduler = ({ closeModal }) => {
       title: `Appointment for ${selectedService} on ${moment(
         selectedDate
       ).format("MMMM Do, YYYY")}`,
+      id: uuidv4(),
     };
     setEvents([...events, newEvent]);
   };

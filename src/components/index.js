@@ -19,6 +19,7 @@ import Scheduler from "./Scheduler";
 import SchedulerModal from "./SchedulerModal";
 import LoginFailedModal from "./LoginFailedModal";
 import AppointmentList from "./AppointmentList";
+import Appointment from "./Appointment";
 export {
   SharedLayout,
   Navbar,
@@ -41,4 +42,5 @@ export {
   SchedulerModal,
   LoginFailedModal,
   AppointmentList,
+  Appointment,
 };
