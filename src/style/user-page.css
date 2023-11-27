@@ -288,3 +288,13 @@
   width: 750px; /* Set the width to 100% */
   /* Add other styles as needed */
 }
+
+.appointment-details-h2 {
+  color: #1f1f1f;
+}
+.appointment-details-p-title {
+  color: #1f1f1f;
+}
+.appointment-details-p-date {
+  color: #1f1f1f;
+}

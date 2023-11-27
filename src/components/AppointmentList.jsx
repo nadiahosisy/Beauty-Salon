@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import moment from "moment";
 import Appointment from "./Appointment";
+import lightModeImage from "../../public/images/12.jpg";
+import darkModeImage from "../../public/images/6.avif";
+import { useDarkMode } from "../context/DarkModeProvider";
 
 const AppointmentList = ({ appointments, onDelete }) => {
   const [selectedAppointment, setSelectedAppointment] = useState(null);
+  const [imageSrc, setImageSrc] = useState(lightModeImage);
+  const { isDarkMode } = useDarkMode();
 
   const handleDelete = async () => {
     if (selectedAppointment) {
@@ -24,15 +29,15 @@ const AppointmentList = ({ appointments, onDelete }) => {
     setSelectedAppointment(null);
   };
 
+  useEffect(() => {
+    setImageSrc(isDarkMode ? darkModeImage : lightModeImage);
+  }, [isDarkMode]);
+
   return (
     <>
       <div className="main-div-appointment-list">
         <div className="left-photo-div">
-          <img
-            src="../public/images/12.jpg"
-            alt="Left Photo"
-            className="left-photo"
-          />
+          <img src={imageSrc} alt="Left Photo" className="left-photo" />
         </div>
         <div className="appointments-list-container">
           {appointments.length > 0 ? (
