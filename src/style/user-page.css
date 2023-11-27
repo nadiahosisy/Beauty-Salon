@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  margin-top: 5rem;
+  margin-top: 2rem;
   padding: 30px;
   border-radius: 8px;
 }
@@ -163,7 +163,17 @@
 /* Add these styles to your CSS or within your component */
 .appointments-list-container {
   max-width: 30%;
-  background-color: #fed7d9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.appointments-list-container-h2-div {
+  color: #1f1f1f;
+}
+.appointments-list-container-h2-div-h2 {
+  color: #e65032;
 }
 
 .list-header-div {

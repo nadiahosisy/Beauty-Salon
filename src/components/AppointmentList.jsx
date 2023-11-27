@@ -40,51 +40,58 @@ const AppointmentList = ({ appointments, onDelete }) => {
           <img src={imageSrc} alt="Left Photo" className="left-photo" />
         </div>
         <div className="appointments-list-container">
-          {appointments.length > 0 ? (
-            <div className="card-container-div">
-              {appointments.map((appointment, index) => (
-                <Appointment
-                  key={index}
-                  appointment={appointment}
-                  onClick={handleCardClick}
-                />
-              ))}
-            </div>
-          ) : (
-            <p className="no-appointments">No appointments scheduled</p>
-          )}
+          <div className="appointments-list-container-h2-div">
+            <h2 className="appointments-list-container-h2-div-h2">
+              My Appointments
+            </h2>
+          </div>
+          <div className="appointments-list-container-appointments">
+            {appointments.length > 0 ? (
+              <div className="card-container-div">
+                {appointments.map((appointment, index) => (
+                  <Appointment
+                    key={index}
+                    appointment={appointment}
+                    onClick={handleCardClick}
+                  />
+                ))}
+              </div>
+            ) : (
+              <p className="no-appointments">No appointments scheduled</p>
+            )}
 
-          {selectedAppointment && (
-            <div className="modal">
-              <div className="modal-content-div">
-                <div className="appointment-details">
-                  <h2 className="appointment-details-h2">
-                    Appointment Details
-                  </h2>
-                  <div className="icon-container">
-                    {/* You can use the same logic to display the service icon */}
+            {selectedAppointment && (
+              <div className="modal">
+                <div className="modal-content-div">
+                  <div className="appointment-details">
+                    <h2 className="appointment-details-h2">
+                      Appointment Details
+                    </h2>
+                    <div className="icon-container">
+                      {/* You can use the same logic to display the service icon */}
+                    </div>
+                  </div>
+                  <p className="appointment-details-p-title">
+                    Title: {selectedAppointment.title}
+                  </p>
+                  <p className="appointment-details-p-date">
+                    Time:{" "}
+                    {`${moment(selectedAppointment.start).format(
+                      "MMMM Do, YYYY h:mm a"
+                    )} - ${moment(selectedAppointment.end).format("h:mm a")}`}
+                  </p>
+                  <div className="modal-actions">
+                    <button className="delete-btn-modal" onClick={handleDelete}>
+                      Delete
+                    </button>
+                    <button className="close-btn" onClick={handleCloseModal}>
+                      Close
+                    </button>
                   </div>
                 </div>
-                <p className="appointment-details-p-title">
-                  Title: {selectedAppointment.title}
-                </p>
-                <p className="appointment-details-p-date">
-                  Time:{" "}
-                  {`${moment(selectedAppointment.start).format(
-                    "MMMM Do, YYYY h:mm a"
-                  )} - ${moment(selectedAppointment.end).format("h:mm a")}`}
-                </p>
-                <div className="modal-actions">
-                  <button className="delete-btn-modal" onClick={handleDelete}>
-                    Delete
-                  </button>
-                  <button className="close-btn" onClick={handleCloseModal}>
-                    Close
-                  </button>
-                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </>
