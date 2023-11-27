@@ -332,3 +332,23 @@ body.dark-mode .modal-actions {
   color: #ffffff;
   transition: background-colory 0.01s, color 0.1s, border-color 0.1s;
 }
+body.dark-mode .close-btn {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.4s, border-color 0.1s;
+}
+body.dark-mode .close-btn:hover {
+  color: #221f1f;
+  background-color: #e6e6e6;
+  transition: background-colory 0.01s, color 0.1s, border-color 0.1s;
+}
+body.dark-mode .delete-btn-modal {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.4s, border-color 0.1s;
+}
+body.dark-mode .delete-btn-modal:hover {
+  color: #221f1f;
+  background-color: #e6e6e6;
+  transition: background-colory 0.01s, color 0.1s, border-color 0.1s;
+}

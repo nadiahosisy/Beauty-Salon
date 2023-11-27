@@ -7,7 +7,7 @@ const InnerIcons = () => {
         <h5 className="header-featured-in">Featured In</h5>
       </div>
       <div>
-        <img src="../images/Logo-ipsum.webp"></img>
+        <img className="logo-ipsum" src="../images/Logo-ipsum.svg"></img>
       </div>
       <div>
         <img src="../images/second-logo-ipsum.webp"></img>
