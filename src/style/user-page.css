@@ -195,20 +195,6 @@
   flex-wrap: wrap;
   gap: 10px;
 }
-/* 
-.appointment-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  width: calc(33.33% - 20px);
-  box-sizing: border-box;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.appointment-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-} */
 
 .no-appointments {
   text-align: center;
