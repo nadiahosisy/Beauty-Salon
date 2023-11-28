@@ -100,12 +100,6 @@
 .new-appointment-btn:hover {
   background-color: #e65032;
 }
-/* .appointments-list-container {
-  border: 1px solid;
-
-  border-color: #ffe4df;
-  background-color: #fff7f6;
-} */
 .list-header {
   display: flex;
   justify-content: center;
