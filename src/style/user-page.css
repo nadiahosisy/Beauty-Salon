@@ -184,18 +184,15 @@
   color: #e65032;
   font-family: Monserat-medium, sans-serif;
 }
-
 .list-header-div {
   text-align: center;
   padding: 20px;
 }
-
 .card-container-div {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
-
 .no-appointments {
   text-align: center;
   margin: 20px;
