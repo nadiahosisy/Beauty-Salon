@@ -36,6 +36,9 @@ const Login = () => {
       setShowLoginFailedModal(true);
     }
   };
+  const goToSignupPage = () => {
+    navigate("/SignUp");
+  };
 
   return (
     <div className="main-div-sign-up-page">
@@ -68,7 +71,7 @@ const Login = () => {
           {!isLoggedIn && (
             <p className="paragraph-sign-up">
               Dont have an account? &nbsp;
-              <a className="anchor-register" href="/signUp">
+              <a className="anchor-register" onClick={goToSignupPage}>
                 Sign up here
               </a>
             </p>

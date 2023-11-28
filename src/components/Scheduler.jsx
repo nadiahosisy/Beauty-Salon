@@ -12,7 +12,7 @@ import Modal from "./Modal";
 
 const localizer = momentLocalizer(moment);
 
-const Scheduler = ({ closeModal, showIcon }) => {
+const Scheduler = ({ closeModal }) => {
   const { currentUser } = useContext(AuthContext);
   const [events, setEvents] = useState([]);
   const [selectedService, setSelectedService] = useState("");
@@ -21,8 +21,8 @@ const Scheduler = ({ closeModal, showIcon }) => {
   const [modalContent, setModalContent] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = (title, message) => {
-    setModalContent({ title, message });
+  const openModal = (title, message, showIcon) => {
+    setModalContent({ title, message, showIcon });
   };
 
   const closeModalHandler = () => {

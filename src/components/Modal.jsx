@@ -8,11 +8,11 @@ const Modal = ({ title, children, onClose, showIcon }) => {
           {showIcon && (
             <img
               src={
-                showIcon === "success"
-                  ? "../../piblic/icons/check.png"
+                showIcon === true
+                  ? "../../public/icons/check.png"
                   : "/icons/error.png"
               }
-              alt={showIcon === "success" ? "Check Icon" : "Error Icon"}
+              alt={showIcon === true ? "Check Icon" : "Error Icon"}
             />
           )}
           <h2>{title}</h2>
