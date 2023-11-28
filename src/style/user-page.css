@@ -301,8 +301,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 100%; /* Set the width to 100% */
-  /* Add other styles as needed */
+  max-width: 100%;
+
   border-radius: 10px; /* Optional: Add border-radius for rounded corners */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
