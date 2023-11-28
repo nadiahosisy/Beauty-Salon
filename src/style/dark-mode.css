@@ -421,6 +421,6 @@ body.dark-mode .Button-register {
 }
 body.dark-mode .error-message {
   background-color: #221f1f;
-  color: #ffffff;
+  color: #d62a2a;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
 }
