@@ -296,7 +296,6 @@
 .appointment-details-p-date {
   transition: background-colory 0.01s, color 0.0001s, border-color 0.1s;
 }
-
 .left-photo-div {
   display: flex;
   justify-content: center;
@@ -306,11 +305,9 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .left-photo {
   width: 750px;
 }
-
 .appointment-details-h2 {
   color: #1f1f1f;
 }
