@@ -252,6 +252,26 @@
 .close-btn:hover {
   background-color: #e6e6e6;
 }
+
+.scheduler-modal-close-btn-div {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+.modal-header-h2 {
+  color: #1f1f1f;
+}
+
+.modal-content-body-message {
+  color: #1f1f1f;
+}
+
 .service-icon {
   width: 30px;
   margin-left: 25px;

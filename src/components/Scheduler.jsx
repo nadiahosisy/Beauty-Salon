@@ -12,7 +12,7 @@ import Modal from "./Modal";
 
 const localizer = momentLocalizer(moment);
 
-const Scheduler = ({ closeModal }) => {
+const Scheduler = ({ closeModal, showIcon }) => {
   const { currentUser } = useContext(AuthContext);
   const [events, setEvents] = useState([]);
   const [selectedService, setSelectedService] = useState("");
@@ -20,9 +20,10 @@ const Scheduler = ({ closeModal }) => {
   const [forceRender, setForceRender] = useState(false);
   const [modalContent, setModalContent] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalErrorOrSuccess, setModalErrorOrSuccess] = useState("");
 
-  const openModal = (title, message, showIcon) => {
-    setModalContent({ title, message, showIcon });
+  const openModal = (title, message) => {
+    setModalContent({ title, message });
   };
 
   const closeModalHandler = () => {
@@ -79,6 +80,7 @@ const Scheduler = ({ closeModal }) => {
         type: "error",
         message: "Please select a service and date before submitting.",
       });
+      console.log("Error");
       setIsModalOpen(true);
       return;
     }
@@ -94,7 +96,7 @@ const Scheduler = ({ closeModal }) => {
       const docRef = await addDoc(collection(db, "users"), newAppointment);
       console.log("Document written with ID: ", docRef.id);
       handleGet();
-
+      setModalErrorOrSuccess("Ok");
       setModalContent({
         type: "success",
         message: "Appointment successfully scheduled!",
@@ -103,10 +105,12 @@ const Scheduler = ({ closeModal }) => {
 
       setIsModalOpen(true);
 
-      setTimeout(() => {
-        setIsModalOpen(false);
-        closeModal(true);
-      }, 2000);
+      // setTimeout(() => {
+      //   setIsModalOpen(false);
+      //   closeModal(true);
+      // }, 2000);
+
+      setIsModalOpen(false);
     } catch (error) {
       console.error("Error adding document: ", error);
       setModalContent({
@@ -132,12 +136,10 @@ const Scheduler = ({ closeModal }) => {
     setSelectedService(e.target.value);
   };
 
-  const handleDateChange = (date) => {
-    setSelectedDate(moment(date).toDate());
-  };
-
   const handleSelectSlot = ({ start, end }) => {
     if (!selectedService || !selectedDate) {
+      setModalErrorOrSuccess("Error");
+
       openModal(
         "Error",
         "Please select a service and date before choosing a time slot."
@@ -217,8 +219,13 @@ const Scheduler = ({ closeModal }) => {
 
       {/* Modal */}
       {modalContent && (
-        <Modal title={modalContent.title} onClose={closeModalHandler}>
-          <p>{modalContent.message}</p>
+        <Modal
+          title={modalContent.title}
+          onClose={closeModalHandler}
+          showIcon={modalErrorOrSuccess}
+          closeScheduler={closeModal}
+        >
+          <p className="modal-content-body-message">{modalContent.message}</p>
         </Modal>
       )}
     </div>

@@ -1,6 +1,14 @@
 import React from "react";
 
-const Modal = ({ title, children, onClose, showIcon }) => {
+const Modal = ({ title, children, onClose, showIcon, closeScheduler }) => {
+  const handleClose = () => {
+    if (onClose) onClose();
+
+    if (showIcon === "Ok" && closeScheduler) {
+      closeScheduler();
+    }
+  };
+
   return (
     <div className="modal">
       <div className="modal-content-div">
@@ -8,19 +16,21 @@ const Modal = ({ title, children, onClose, showIcon }) => {
           {showIcon && (
             <img
               src={
-                showIcon === true
-                  ? "../../public/icons/check.png"
-                  : "/icons/error.png"
+                showIcon === "Ok"
+                  ? "../public/icons/check.png"
+                  : "../public/icons/error.png"
               }
-              alt={showIcon === true ? "Check Icon" : "Error Icon"}
+              alt={showIcon === "Ok" ? "Check Icon" : "Error Icon"}
             />
           )}
-          <h2>{title}</h2>
-          <button className="close-btn" onClick={onClose}>
-            &times;
-          </button>
+          <h2 className="modal-header-h2">{title}</h2>
         </div>
         <div className="modal-body">{children}</div>
+        <div className="scheduler-modal-close-btn-div">
+          <button className="close-btn" onClick={handleClose}>
+            OK
+          </button>
+        </div>
       </div>
     </div>
   );

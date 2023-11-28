@@ -431,3 +431,6 @@ body.dark-mode .social-icons {
 body.dark-mode .fab .fa-twitter-icons {
   background-color: #0d6efd;
 }
+body.dark-mode .header-subscribe {
+  color: #ffffff;
+}

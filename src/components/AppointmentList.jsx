@@ -4,19 +4,23 @@ import Appointment from "./Appointment";
 import lightModeImage from "../../public/images/12.jpg";
 import darkModeImage from "../../public/images/6.avif";
 import { useDarkMode } from "../context/DarkModeProvider";
+import Modal from "./Modal";
 
 const AppointmentList = ({ appointments, onDelete }) => {
   const [selectedAppointment, setSelectedAppointment] = useState(null);
   const [imageSrc, setImageSrc] = useState(lightModeImage);
   const { isDarkMode } = useDarkMode();
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const handleDelete = async () => {
     if (selectedAppointment) {
+      setIsModalVisible(true);
       try {
         await onDelete(selectedAppointment.id);
         setSelectedAppointment(null);
       } catch (error) {
         console.error("Error deleting appointment: ", error);
+        // Optionally, keep the modal open or handle error state here
       }
     }
   };
@@ -94,6 +98,16 @@ const AppointmentList = ({ appointments, onDelete }) => {
           </div>
         </div>
       </div>
+      {isModalVisible && (
+        <Modal
+          title="Delete Appointment"
+          onClose={handleCloseModal}
+          showIcon="Ok"
+          closeScheduler={setIsModalVisible}
+        >
+          <p>The Appointment was deleted Successfully</p>
+        </Modal>
+      )}
     </>
   );
 };
