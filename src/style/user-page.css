@@ -162,13 +162,11 @@
   font-family: Monserat-ligth, sans-serif;
   margin-bottom: 10px;
 }
-
 .bellow-appointment-div {
   background-color: #fff7f6;
   width: 100px;
   height: 50px;
 }
-/* Add these styles to your CSS or within your component */
 .appointments-list-container {
   max-width: 30%;
   display: flex;
@@ -176,7 +174,6 @@
   align-items: center;
   gap: 15px;
 }
-
 .appointments-list-container-h2-div {
   color: #1f1f1f;
 }
