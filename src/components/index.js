@@ -20,6 +20,9 @@ import SchedulerModal from "./SchedulerModal";
 import LoginFailedModal from "./LoginFailedModal";
 import AppointmentList from "./AppointmentList";
 import Appointment from "./Appointment";
+import Modal from "./Modal";
+// import CustomCheckIcon from "./CustomCheckIcon";
+
 export {
   SharedLayout,
   Navbar,
@@ -43,4 +46,6 @@ export {
   LoginFailedModal,
   AppointmentList,
   Appointment,
+  Modal,
+  // CustomCheckIcon,
 };

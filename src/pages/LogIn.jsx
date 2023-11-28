@@ -3,7 +3,6 @@ import { InputComponent } from "../components";
 import { useNavigate } from "react-router-dom";
 import { useAuthGlobalContext } from "../context/AuthProvider";
 import LoginFailedModal from "../components/LoginFailedModal";
-import { auth } from "../config/firebaseConfig";
 
 const Login = () => {
   const { login, isLoggedIn } = useAuthGlobalContext();

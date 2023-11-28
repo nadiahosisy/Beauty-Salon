@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
-import { useNavigate } from "react-router-dom";
 import moment from "moment";
 import { collection, addDoc, getDocs, query, where } from "firebase/firestore";
 import { db } from "../config/firebaseConfig";
@@ -8,57 +7,79 @@ import { AuthContext } from "../context/AuthProvider";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import { v4 as uuidv4 } from "uuid";
 
+// Import your Modal component here
+import Modal from "./Modal";
+
 const localizer = momentLocalizer(moment);
 
-const Scheduler = ({ closeModal }) => {
+const Scheduler = ({ closeModal, showIcon }) => {
   const { currentUser } = useContext(AuthContext);
   const [events, setEvents] = useState([]);
   const [selectedService, setSelectedService] = useState("");
   const [selectedDate, setSelectedDate] = useState(new Date());
-
   const [forceRender, setForceRender] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (title, message) => {
+    setModalContent({ title, message });
+  };
+
+  const closeModalHandler = () => {
+    setModalContent(null);
+  };
 
   const handleGet = async () => {
-    const q = query(
-      collection(db, "users"),
-      where("uid", "==", currentUser.email)
-    );
+    try {
+      const q = query(
+        collection(db, "users"),
+        where("uid", "==", currentUser.email)
+      );
 
-    const querySnapshot = await getDocs(q);
-    let latestDate = null;
-    let latestDoc = null;
-    let extractedEvents = [];
+      const querySnapshot = await getDocs(q);
 
-    querySnapshot.forEach((doc) => {
-      const currentDate = doc.data().date;
+      let latestDate = null;
+      let latestDoc = null;
+      let extractedEvents = [];
 
-      if (!latestDate || currentDate > latestDate) {
-        latestDate = currentDate;
-        latestDoc = doc;
+      querySnapshot.forEach((doc) => {
+        const currentDate = doc.data().date;
+
+        if (!latestDate || currentDate > latestDate) {
+          latestDate = currentDate;
+          latestDoc = doc;
+        }
+      });
+
+      extractedEvents = latestDoc?.data().events || [];
+      const formattedEvents = extractedEvents.map((event) => ({
+        ...event,
+        start: event.start.toDate(),
+        end: event.end.toDate(),
+      }));
+
+      setEvents(formattedEvents);
+      setForceRender((prev) => !prev);
+
+      if (latestDoc) {
+        console.log("Latest document ID:", latestDoc.id);
+        console.log("Latest document data:", latestDoc.data());
+      } else {
+        console.log("No documents found.");
       }
-    });
-    extractedEvents = latestDoc.data().events || [];
-    const formattedEvents = extractedEvents.map((event) => ({
-      ...event,
-      start: event.start.toDate(),
-      end: event.end.toDate(),
-    }));
-
-    console.log("extracted ", formattedEvents);
-
-    setEvents(formattedEvents);
-    setForceRender((prev) => !prev);
-    if (latestDoc) {
-      console.log("Latest document ID:", latestDoc.id);
-      console.log("Latest document data:", latestDoc.data());
-    } else {
-      console.log("No documents found.");
+    } catch (error) {
+      console.error("Error fetching data: ", error);
+      openModal("Error", "Failed to fetch data.");
     }
   };
 
   const handleSubmit = async () => {
     if (!selectedService || !selectedDate) {
-      alert("Please select a service and date before submitting.");
+      setModalContent({
+        type: "error",
+        message: "Please select a service and date before submitting.",
+      });
+      setIsModalOpen(true);
       return;
     }
 
@@ -73,14 +94,30 @@ const Scheduler = ({ closeModal }) => {
       const docRef = await addDoc(collection(db, "users"), newAppointment);
       console.log("Document written with ID: ", docRef.id);
       handleGet();
-      closeModal(true);
 
-      alert("Appointment successfully scheduled!");
+      setModalContent({
+        type: "success",
+        message: "Appointment successfully scheduled!",
+        showIcon: true,
+      });
+
+      setIsModalOpen(true);
+
+      setTimeout(() => {
+        setIsModalOpen(false);
+        closeModal(true);
+      }, 2000);
     } catch (error) {
       console.error("Error adding document: ", error);
-      alert("Failed to schedule the appointment.");
+      setModalContent({
+        type: "error",
+        message: "Failed to schedule the appointment.",
+        showIcon: false,
+      });
+      setIsModalOpen(true);
     }
   };
+
   const handleClear = () => {
     setEvents([]);
     setSelectedService("");
@@ -101,7 +138,10 @@ const Scheduler = ({ closeModal }) => {
 
   const handleSelectSlot = ({ start, end }) => {
     if (!selectedService || !selectedDate) {
-      alert("Please select a service and date before choosing a time slot.");
+      openModal(
+        "Error",
+        "Please select a service and date before choosing a time slot."
+      );
       return;
     }
 
@@ -161,7 +201,6 @@ const Scheduler = ({ closeModal }) => {
         />
       </div>
 
-      {/* Action Buttons */}
       <div className="form-group">
         <div className="buttons-scheduler-div">
           <button className="submit-btn" onClick={handleSubmit}>
@@ -175,6 +214,13 @@ const Scheduler = ({ closeModal }) => {
           </button>
         </div>
       </div>
+
+      {/* Modal */}
+      {modalContent && (
+        <Modal title={modalContent.title} onClose={closeModalHandler}>
+          <p>{modalContent.message}</p>
+        </Modal>
+      )}
     </div>
   );
 };
