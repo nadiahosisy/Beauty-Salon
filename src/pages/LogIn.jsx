@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { InputComponent } from "../components";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuthGlobalContext } from "../context/AuthProvider";
 import Modal from "../components/Modal";
 
@@ -74,9 +74,9 @@ const Login = () => {
           {!isLoggedIn && (
             <p className="paragraph-sign-up">
               Dont have an account? &nbsp;
-              <a className="anchor-register" href="/signUp">
+              <Link className="anchor-register" to="/signup">
                 Sign up here
-              </a>
+              </Link>
             </p>
           )}
         </div>

@@ -29,8 +29,8 @@ const App = () => {
             <Route path="/" exact element={<Home />} />
             <Route path="/services" exact element={<Services />} />
             <Route path="/about" exact element={<About />} />
-            <Route path="/signUp" exact element={<SignUp />} />
-            <Route path="/logIn" exact element={<LogIn />} />
+            <Route path="/signup" exact element={<SignUp />} />
+            <Route path="/login" exact element={<LogIn />} />
             <Route path="/user-page" exact element={<UserPage />} />
             <Route path="*" exact element={<NotFound />} />
           </Routes>
