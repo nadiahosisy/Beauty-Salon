@@ -1,8 +1,8 @@
 import React from "react";
 import moment from "moment";
-import nailsIcon from "../../public/icons/nail-polish.png";
-import makeupIcon from "../../public/icons/cosmetics.png";
-import haircutIcon from "../../public/icons/hair-cutting.png";
+import nailsIcon from "../assets/icons/nail-polish.png";
+import makeupIcon from "../assets/icons/cosmetics.png";
+import haircutIcon from "../assets/icons/hair-cutting.png";
 
 const Appointment = ({ appointment, onClick }) => {
   const getServiceIcon = (serviceType) => {

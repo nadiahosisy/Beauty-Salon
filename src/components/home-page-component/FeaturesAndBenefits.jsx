@@ -47,7 +47,7 @@ const FeaturesAndBenefits = () => {
         <div className="section">
           <div className="image-container">
             <img
-              src="./images/herson-rodriguez.webp"
+              src="/images/herson-rodriguez.webp"
               alt="Sample"
               className="image-herson-rodriguez"
             />

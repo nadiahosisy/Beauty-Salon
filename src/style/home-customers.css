@@ -4,20 +4,20 @@
 }
 @font-face {
   font-family: "Monserat-ligth";
-  src: url("../assets/fonts/montserat/Montserrat-Light.ttf");
+  src: url("/fonts/montserat/Montserrat-Light.ttf");
 }
 
 @font-face {
   font-family: "Monserat-medium";
-  src: url("../assets/fonts/montserat/Montserrat-Medium.ttf");
+  src: url("/fonts/montserat/Montserrat-Medium.ttf");
 }
 @font-face {
   font-family: "Monserat-regular";
-  src: url("../assets/fonts/montserat/Montserrat-Regular.ttf");
+  src: url("/fonts/montserat/Montserrat-Regular.ttf");
 }
 @font-face {
   font-family: "Monserat-Poppins";
-  src: url("../../public/fonts/Poppins/Poppins-Bold.ttf");
+  src: url("/fonts/Poppins/Poppins-Bold.ttf");
 }
 .main-div-customers {
   display: flex;

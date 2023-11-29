@@ -18,7 +18,7 @@ const OurTeam = ({ isHomePage }) => {
       <div className="description-main-div">
         <div className="left-description-div">
           <TeamMember
-            img={"./images/beauty-nadia.jpg"}
+            img={"/images/beauty-nadia.jpg"}
             name={"Nadia"}
             job={"Founder & Master Stylist"}
             text={
@@ -28,7 +28,7 @@ const OurTeam = ({ isHomePage }) => {
         </div>
         <div className="right-description-div">
           <TeamMember
-            img={"./images/Emma.webp"}
+            img={"/images/Emma.webp"}
             name={"Emma"}
             job={"Nail Artist"}
             text={

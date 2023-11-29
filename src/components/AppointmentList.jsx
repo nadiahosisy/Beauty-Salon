@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
 import Appointment from "./Appointment";
-import lightModeImage from "../../public/images/12.jpg";
-import darkModeImage from "../../public/images/6.avif";
+import lightModeImage from "../assets/images/12.jpg";
+import darkModeImage from "../assets/images/6.avif";
 import { useDarkMode } from "../context/DarkModeProvider";
 import Modal from "./Modal";
 

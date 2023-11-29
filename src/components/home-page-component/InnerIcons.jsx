@@ -7,19 +7,19 @@ const InnerIcons = () => {
         <h5 className="header-featured-in">Featured In</h5>
       </div>
       <div>
-        <img className="logo-ipsum" src="../images/Logo-ipsum.svg"></img>
+        <img className="logo-ipsum" src="./images/Logo-ipsum.svg"></img>
       </div>
       <div>
-        <img src="../images/second-logo-ipsum.webp"></img>
+        <img src="./images/second-logo-ipsum.webp"></img>
       </div>
       <div>
-        <img src="../images/third-logo-ipsum.webp"></img>
+        <img src="./images/third-logo-ipsum.webp"></img>
       </div>
       <div>
-        <img src="../images/fourth-logo-ipsum.webp"></img>
+        <img src="./images/fourth-logo-ipsum.webp"></img>
       </div>
       <div>
-        <img src="../images/last-logo-ipsum.webp"></img>
+        <img src="./images/last-logo-ipsum.webp"></img>
       </div>
     </div>
   );
