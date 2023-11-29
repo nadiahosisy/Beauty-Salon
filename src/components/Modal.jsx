@@ -1,9 +1,9 @@
 import React from "react";
 
 const ICON_PATHS = {
-  Ok: "../public/icons/check.png",
-  Error: "../public/icons/error.png",
-  Warning: "../public/icons/warning.png",
+  Ok: "/icons/check.png",
+  Error: "/icons/error.png",
+  Warning: "/icons/warning.png",
 };
 
 const Modal = ({ title, children, onClose, showIcon, closeScheduler }) => {

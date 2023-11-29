@@ -35,7 +35,7 @@ const Home = () => {
                 className="jumba-right-image"
                 width={480}
                 height={480}
-                src="./public/images/main.webp"
+                src="/images/main.webp"
               ></img>
               <div className="flame-1"></div>
               <div className="flame-2"></div>
