@@ -29,7 +29,7 @@ const Navbar = () => {
   };
 
   const navigateToUserPage = () => {
-    navigate("/userPage");
+    navigate("/user-page");
   };
 
   useEffect(() => {}, [currentUser]);

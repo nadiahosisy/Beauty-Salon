@@ -57,16 +57,14 @@ function SignUp() {
       isValid = false;
     }
 
-    const nameRegex = /^[A-Za-z0-9\s'".(),-]{5,}$/;
+    const nameRegex = /^[A-Za-z0-9\s'".(),-]{2,}$/;
     if (!nameRegex.test(firstName)) {
-      setFirstNameError(
-        "Please enter a valid first name! At least 6 characters"
-      );
+      setFirstNameError("Please enter a valid first name!");
       isValid = false;
     }
 
     if (!nameRegex.test(lastName)) {
-      setLastNameError("Please enter a valid last name! At least 6 characters");
+      setLastNameError("Please enter a valid last name!");
       isValid = false;
     }
 
