@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { InputComponent } from "../components";
 import { useNavigate } from "react-router-dom";
 import { useAuthGlobalContext } from "../context/AuthProvider";
-import LoginFailedModal from "../components/LoginFailedModal";
+import Modal from "../components/Modal";
 
 const Login = () => {
   const { login, isLoggedIn } = useAuthGlobalContext();
@@ -36,9 +36,6 @@ const Login = () => {
       setShowLoginFailedModal(true);
     }
   };
-  const goToSignupPage = () => {
-    navigate("/SignUp");
-  };
 
   return (
     <div className="main-div-sign-up-page">
@@ -64,14 +61,20 @@ const Login = () => {
               Login
             </button>
             {showLoginFailedModal && (
-              <LoginFailedModal closeModal={handleLoginFailedModalClose} />
+              <Modal
+                title=""
+                onClose={handleLoginFailedModalClose}
+                showIcon="Warning"
+              >
+                <p>Please Enter valid Username or Password </p>
+              </Modal>
             )}
           </div>
 
           {!isLoggedIn && (
             <p className="paragraph-sign-up">
               Dont have an account? &nbsp;
-              <a className="anchor-register" onClick={goToSignupPage}>
+              <a className="anchor-register" href="/signUp">
                 Sign up here
               </a>
             </p>

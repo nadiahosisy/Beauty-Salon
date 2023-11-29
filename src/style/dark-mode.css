@@ -303,32 +303,32 @@ body.dark-mode .rbc-calendar div > * > * > * > * {
 }
 
 body.dark-mode .appointment-details-h2 {
-  background-color: #221f1f;
+  background-color: #292828;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.1s, border-color 0.1s;
 }
 body.dark-mode .appointment-details-p-title {
-  background-color: #221f1f;
+  background-color: #292828;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.1s, border-color 0.1s;
 }
 body.dark-mode .appointment-details-p-date {
-  background-color: #221f1f;
+  background-color: #292828;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.1s, border-color 0.1s;
 }
 body.dark-mode .modal-content-div {
-  background-color: #221f1f;
+  background-color: #292828;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.1s, border-color 0.1s;
 }
 body.dark-mode .appointment-details {
-  background-color: #221f1f;
+  background-color: #292828;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.1s, border-color 0.1s;
 }
 body.dark-mode .modal-actions {
-  background-color: #221f1f;
+  background-color: #292828;
   color: #ffffff;
   transition: background-colory 0.01s, color 0.1s, border-color 0.1s;
 }
@@ -407,7 +407,7 @@ body.dark-mode .paragraph-sign-up {
 }
 body.dark-mode .anchor-register {
   background-color: #221f1f;
-  color: #e65032;
+  color: #ffffff;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
 }
 body.dark-mode .label-register {
@@ -424,13 +424,16 @@ body.dark-mode .error-message {
   color: #d62a2a;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
 }
-/* icons */
-body.dark-mode .social-icons {
-  background-color: #221f1f;
-}
-body.dark-mode .fab .fa-twitter-icons {
-  background-color: #0d6efd;
-}
+
+/*Subscribe*/
 body.dark-mode .header-subscribe {
+  color: #ffffff;
+}
+body.dark-mode .paragraph-subscribe {
+  background-color: #221f1f;
+  color: #ffffff;
+}
+body.dark-mode .paragraph-subscribe-div {
+  background-color: #221f1f;
   color: #ffffff;
 }

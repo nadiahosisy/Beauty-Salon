@@ -72,6 +72,7 @@
 .paragraph-sign-up {
   font-family: Monserat-medium, sans-serif;
   margin-bottom: 10px;
+  color: #1f1f1f;
 }
 .Button-register {
   font-size: 14px;
@@ -89,7 +90,6 @@
   background-color: #e65032;
 }
 .anchor-register {
-  cursor: pointer;
   text-decoration: none;
 }
 .error-message {

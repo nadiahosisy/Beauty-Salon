@@ -102,6 +102,10 @@
   cursor: pointer;
   color: #ffffff;
 }
+.paragraph-subscribe {
+  font-family: Monserat-medium, sans-serif;
+  color: #1f1f1f;
+}
 .send-btn:hover {
   background-color: #e65032;
 }

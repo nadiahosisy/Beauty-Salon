@@ -9,7 +9,7 @@ import "./style/inner-services-page.css";
 import "./style/subscribe-services-page.css";
 import "./style/about-page.css";
 import "./style/about-our-team-page.css";
-import "./style/home-icons.css";
+import "./style/icons-home.css";
 import "./style/home-customers.css";
 import "./style/home-beneifts.css";
 import "./style/clients.css";

@@ -1,12 +1,39 @@
 import React from "react";
 
+const ICON_PATHS = {
+  Ok: "../public/icons/check.png",
+  Error: "../public/icons/error.png",
+  Warning: "../public/icons/warning.png",
+};
+
 const Modal = ({ title, children, onClose, showIcon, closeScheduler }) => {
   const handleClose = () => {
     if (onClose) onClose();
-
     if (showIcon === "Ok" && closeScheduler) {
       closeScheduler();
     }
+  };
+
+  const getIconPath = (iconType) => {
+    return ICON_PATHS[iconType] || ICON_PATHS.Error;
+  };
+
+  const getIconAlt = (iconType) => {
+    switch (iconType) {
+      case "Ok":
+        return "Check Icon";
+      case "Warning":
+        return "Warning Icon";
+      default:
+        return "Error Icon";
+    }
+  };
+
+  // Inline style for the icon
+  const iconStyle = {
+    width: "30px", // Fixed width
+    height: "30px", // Fixed height
+    objectFit: "contain",
   };
 
   return (
@@ -15,12 +42,9 @@ const Modal = ({ title, children, onClose, showIcon, closeScheduler }) => {
         <div className="modal-header">
           {showIcon && (
             <img
-              src={
-                showIcon === "Ok"
-                  ? "../public/icons/check.png"
-                  : "../public/icons/error.png"
-              }
-              alt={showIcon === "Ok" ? "Check Icon" : "Error Icon"}
+              style={iconStyle}
+              src={getIconPath(showIcon)}
+              alt={getIconAlt(showIcon)}
             />
           )}
           <h2 className="modal-header-h2">{title}</h2>

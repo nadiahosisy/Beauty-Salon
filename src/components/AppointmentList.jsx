@@ -100,7 +100,7 @@ const AppointmentList = ({ appointments, onDelete }) => {
       </div>
       {isModalVisible && (
         <Modal
-          title="Delete Appointment"
+          title=""
           onClose={handleCloseModal}
           showIcon="Ok"
           closeScheduler={setIsModalVisible}

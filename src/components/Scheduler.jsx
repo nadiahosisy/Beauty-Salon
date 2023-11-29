@@ -76,9 +76,11 @@ const Scheduler = ({ closeModal, showIcon }) => {
 
   const handleSubmit = async () => {
     if (!selectedService || !selectedDate) {
+      setModalErrorOrSuccess("Warning");
       setModalContent({
         type: "error",
         message: "Please select a service and date before submitting.",
+        showIcon: true,
       });
       console.log("Error");
       setIsModalOpen(true);
@@ -138,10 +140,10 @@ const Scheduler = ({ closeModal, showIcon }) => {
 
   const handleSelectSlot = ({ start, end }) => {
     if (!selectedService || !selectedDate) {
-      setModalErrorOrSuccess("Error");
+      setModalErrorOrSuccess("Warning");
 
       openModal(
-        "Error",
+        "",
         "Please select a service and date before choosing a time slot."
       );
       return;
