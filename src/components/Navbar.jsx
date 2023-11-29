@@ -83,12 +83,12 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink style={navStyle} to="/Services">
+                <NavLink style={navStyle} to="/services">
                   Services
                 </NavLink>
               </li>
               <li>
-                <NavLink style={navStyle} to="/About">
+                <NavLink style={navStyle} to="/about">
                   About
                 </NavLink>
               </li>

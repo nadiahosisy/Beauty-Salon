@@ -30,7 +30,7 @@ const Login = () => {
         console.log("connected");
         setShowLoginFailedModal(false);
         window.localStorage.setItem("email", username);
-        navigate("/UserPage");
+        navigate("/user-page");
       }
     } catch (error) {
       setShowLoginFailedModal(true);

@@ -84,7 +84,7 @@ function SignUp() {
             setError(result.errorMessage);
           }
         } else {
-          navigate("/UserPage");
+          navigate("/user-page");
         }
       } catch (error) {
         console.error("Unexpected error during signup:", error);
