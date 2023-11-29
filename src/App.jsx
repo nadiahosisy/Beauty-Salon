@@ -27,11 +27,11 @@ const App = () => {
           <SharedLayout />
           <Routes>
             <Route path="/" exact element={<Home />} />
-            <Route path="/Services" exact element={<Services />} />
-            <Route path="/About" exact element={<About />} />
-            <Route path="/SignUp" exact element={<SignUp />} />
-            <Route path="/LogIn" exact element={<LogIn />} />
-            <Route path="/UserPage" exact element={<UserPage />} />
+            <Route path="/services" exact element={<Services />} />
+            <Route path="/about" exact element={<About />} />
+            <Route path="/signUp" exact element={<SignUp />} />
+            <Route path="/logIn" exact element={<LogIn />} />
+            <Route path="/userPage" exact element={<UserPage />} />
             <Route path="*" exact element={<NotFound />} />
           </Routes>
           <Subscribe />
