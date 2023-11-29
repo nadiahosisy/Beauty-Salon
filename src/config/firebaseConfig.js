@@ -4,11 +4,11 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 // Import the environment variables
-const { VITE_API_KEY } = import.meta.env;
+// const { VITE_API_KEY } =;
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: VITE_API_KEY,
+  apiKey: import.meta.env.VITE_API_KEY,
   authDomain: "beauty-salon-ce18d.firebaseapp.com",
   projectId: "beauty-salon-ce18d",
   storageBucket: "beauty-salon-ce18d.appspot.com",
