@@ -18,7 +18,7 @@
 .description-main-div {
   display: flex;
   max-width: 1200px;
-  margin-left: 8rem;
+  margin-left: 5.5rem;
   margin-bottom: 5rem;
   flex-direction: row;
 }
@@ -35,7 +35,7 @@
 .our-team-div {
   display: flex;
   flex-direction: column;
-  margin-right: 23rem;
+  margin-right: 25rem;
   margin-bottom: 2rem;
   flex-grow: 0;
   max-width: 100%;
