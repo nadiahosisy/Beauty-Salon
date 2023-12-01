@@ -136,3 +136,26 @@
   cursor: pointer;
   text-decoration: none;
 }
+
+.navbar-container-div-left-click-to-darkmode-div {
+  position: relative;
+  right: 20px;
+  top: 5px;
+}
+.navbar-container-div-left-click-to-darkmode-p {
+  font-family: Monserat-medium, sans-serif;
+  font-size: 12px;
+  opacity: 0.6;
+  animation: fade 2s linear infinite;
+  color: #212121;
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

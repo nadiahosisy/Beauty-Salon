@@ -44,6 +44,17 @@ const Navbar = () => {
     <div className="main-navbar-container">
       <div className="navbar-container">
         <div className="navbar-container-div-left">
+          <div className="navbar-container-div-left-click-to-darkmode-div">
+            {isDarkMode ? (
+              <p className="navbar-container-div-left-click-to-darkmode-p">
+                Dark Mode{" "}
+              </p>
+            ) : (
+              <p className="navbar-container-div-left-click-to-darkmode-p">
+                Light Mode{" "}
+              </p>
+            )}
+          </div>
           <DarkModeSwitch
             className="dark-mode-toggle"
             moonColor="#0d6efd"
