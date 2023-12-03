@@ -20,7 +20,6 @@ const AppointmentList = ({ appointments, onDelete }) => {
         setSelectedAppointment(null);
       } catch (error) {
         console.error("Error deleting appointment: ", error);
-        // Optionally, keep the modal open or handle error state here
       }
     }
   };
@@ -71,9 +70,7 @@ const AppointmentList = ({ appointments, onDelete }) => {
                     <h2 className="appointment-details-h2">
                       Appointment Details
                     </h2>
-                    <div className="icon-container">
-                      {/* You can use the same logic to display the service icon */}
-                    </div>
+                    <div className="icon-container"></div>
                   </div>
                   <p className="appointment-details-p-title">
                     Title: {selectedAppointment.title}
