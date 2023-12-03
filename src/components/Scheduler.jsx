@@ -7,7 +7,6 @@ import { AuthContext } from "../context/AuthProvider";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import { v4 as uuidv4 } from "uuid";
 
-// Import your Modal component here
 import Modal from "./Modal";
 
 const localizer = momentLocalizer(moment);
@@ -106,11 +105,6 @@ const Scheduler = ({ closeModal, showIcon }) => {
       });
 
       setIsModalOpen(true);
-
-      // setTimeout(() => {
-      //   setIsModalOpen(false);
-      //   closeModal(true);
-      // }, 2000);
 
       setIsModalOpen(false);
     } catch (error) {
