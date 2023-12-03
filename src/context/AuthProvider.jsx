@@ -24,8 +24,7 @@ export function AuthProvider({ children }) {
       setLoading(true);
       const promise = createUserWithEmailAndPassword(auth, email, password);
       const user = await promise;
-      // const userRef = ref(db, "users/" + user.uid);
-      // await set(userRef, { email, firstName, lastName });
+
       setLoading(false);
       return user;
     } catch (error) {
@@ -68,8 +67,7 @@ export function AuthProvider({ children }) {
         password
       );
       const user = userCredential.user;
-      // const userDetails = await fetchUserDetails(user.uid);
-      // console.log(userDetails);
+
       setCurrentUser(user);
       localStorage.setItem("userData", JSON.stringify(user));
 
