@@ -6,7 +6,7 @@ import { useDarkMode } from "../context/DarkModeProvider";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 const Navbar = () => {
   const { currentUser, logout } = useAuthGlobalContext();
-  //const [isDarkMode, setDarkMode] = useState(false);
+
   const { isDarkMode, toggleDarkMode } = useDarkMode();
   const navigate = useNavigate();
 
@@ -16,9 +16,7 @@ const Navbar = () => {
     color: "#212121",
     fontSize: "18px",
   };
-  // const toggleDarkMode = (checked) => {
-  //   setDarkMode(checked);
-  // };
+
   const goToLogIn = () => {
     navigate("/LogIn");
   };
