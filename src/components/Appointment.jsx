@@ -38,9 +38,7 @@ const Appointment = ({ appointment, onClick }) => {
           </p>
         </div>
       </div>
-      <div className="card-actions">
-        {/* Add any additional actions or buttons here */}
-      </div>
+      <div className="card-actions"></div>
     </div>
   );
 };
