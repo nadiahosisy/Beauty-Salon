@@ -8,7 +8,6 @@ import {
   where,
   doc,
   updateDoc,
-  arrayRemove,
   getDoc,
 } from "firebase/firestore";
 import { db } from "../config/firebaseConfig";
@@ -45,7 +44,6 @@ const UserPage = () => {
       collection(db, "users"),
       where("uid", "==", currentUser?.email)
     );
-    //console.log(currentUser);
 
     const querySnapshot = await getDocs(q);
     let latestDate = null;
@@ -68,11 +66,7 @@ const UserPage = () => {
       end: event.end.toDate(),
     }));
 
-    // console.log("extracted ", formattedEvents);
-
     if (latestDoc) {
-      // console.log("Latest document ID:", latestDoc.id);
-      // console.log("Latest document data:", latestDoc.data());
       setAppointments(formattedEvents);
     } else {
       console.log("No documents found.");
@@ -85,18 +79,14 @@ const UserPage = () => {
     const docSnapshot = await getDoc(userDocRef);
 
     try {
-      // Get the current events array from the document data
       const currentEvents = docSnapshot.data().events || [];
 
-      // Remove the element with the specified id from the events array
       const updatedEvents = currentEvents.filter(
         (event) => event.id !== appointmentId
       );
 
-      // Update the document with the modified events array
       await updateDoc(userDocRef, { events: updatedEvents });
 
-      // Refresh the appointments list
       handleGet();
 
       console.log("Event deleted successfully.");
