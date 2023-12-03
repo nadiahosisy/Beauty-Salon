@@ -1,4 +1,4 @@
-# Beauty-Salon-Nadia ![icon]("./../src/assets/icons/cosmetics.png)
+# Beauty-Salon-Nadia ![icon]("./../src/assets/icons/beauty-salon-logo.html)
 
 Welcome to Beauty-Salon-Nadia, your ultimate destination for a premium beauty experience. Discover a world of top-notch services, seamless appointment management, and a chic interface designed to make you look and feel your best.
 
