@@ -29,10 +29,9 @@ const Modal = ({ title, children, onClose, showIcon, closeScheduler }) => {
     }
   };
 
-  // Inline style for the icon
   const iconStyle = {
-    width: "30px", // Fixed width
-    height: "30px", // Fixed height
+    width: "30px",
+    height: "30px",
     objectFit: "contain",
   };
 
