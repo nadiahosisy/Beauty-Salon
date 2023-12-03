@@ -216,6 +216,11 @@ body.dark-mode .input-subscribe {
   color: #ffffff;
   transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
 }
+body.dark-mode .social-icons {
+  background-color: #221f1f;
+  color: #ffffff;
+  transition: background-colory 0.01s, color 0.9s, border-color 0.1s;
+}
 body.dark-mode .send-btn {
   background-color: #0d6efd;
   color: #ffffff;
