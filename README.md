@@ -18,7 +18,7 @@ Indulge in a visually appealing experience with our sophisticated Dark Mode. Tog
 
 ## Getting Started
 
-1. Visit [website](insert_website_url_here).
+1. Visit [website](https://nadia-beauty-salon.netlify.app).
 2. Explore our range of services, from expert haircuts to flawless makeup and stunning nail designs.
 3. Sign up for an account or log in if you're already a member to unlock exclusive benefits and features.
 
@@ -31,10 +31,14 @@ Beauty-Salon-Nadia is powered by Firebase, ensuring secure and scalable data man
 ### Light Mode
 
 ![Light Mode Screenshot]("./../src/screen%20shots/light%20mode.PNG)
+![Light Mode Screenshot]("./../src/screen%20shots/scheduler%20light%20mode.PNG)
+![Light Mode Screenshot]("./../src/screen%20shots/services%20light%20mode.PNG)
 
 ### Dark Mode
 
 ![Dark Mode Screenshot](././src/screen%20shots/darkmode.PNG)
+![Dark Mode Screenshot](././src/screen%20shots/services%20darkmode.PNG)
+![Dark Mode Screenshot](././src/screen%20shots/userpage%20dakmode.PNG)
 
 
 ## Contributing
